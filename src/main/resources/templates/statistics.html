@@ -19,11 +19,28 @@
   <div class="jumbotron mt-3">
 
 
-    <h3 class="lead" th:text="|#{app.welcome}|">Placeholder only.</h3>
-    <h5>(testing FR, IR, SRO, NLRV)</h5>
-    <p th:text="'Average response time: ' + ${averageResponseTime} + 'ms'"></p>
-    <p th:text="'Minimum response time: ' + ${minResponseTime} + 'ms'"></p>
-    <p th:text="'Maximum response time: ' + ${maxResponseTime} + 'ms'"></p>
+    <h3 class="lead" th:text="|#{app.welcome}|" title="Testing: FR, IR, SRO, NLRV">Placeholder only.</h3>
+
+
+    <div class="container">
+      <table class="table table-bordered" style="width:50%; margin:auto;">
+        <tbody>
+        <tr>
+          <td><p th:text="'Letztes Maximum (ms): '"></p></td>
+          <td><p th:text="${maxResponseTime}"></p></td>
+        </tr>
+        <tr>
+          <td><p th:text="'Aktuelle Durchschnittszeit (ms): '"></p></td>
+          <td><p th:text="${averageResponseTime}"></p></td>
+        </tr>
+        <tr>
+          <td><p th:text="'Letztes Minimum (ms): '"></p></td>
+          <td><p th:text="${minResponseTime} "></p></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
     <canvas id="myChart" width="800" height="200"></canvas>
     <div id="countdown"></div>
     <!-- <p th:text="'Last averages: ' + ${averages} + 'ms'"></p> -->
@@ -73,7 +90,10 @@
                         beginAtZero: true
                     }
                 }]
-            }
+            },
+        legend: {
+            position: 'bottom'
+        }
         }
     });
 </script>

@@ -69,7 +69,7 @@ public class WSOnlineMonitor {
 
 
 
-	@Scheduled(fixedRate = 20000) // trigger new run all 20 seconds
+	@Scheduled(fixedRate = 10000) // trigger new run all 20 seconds
 	private static void performTestRequests() {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 		LocalDateTime now = LocalDateTime.now();
