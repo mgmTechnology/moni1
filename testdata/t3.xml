@@ -1,0 +1,178 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tar="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:bas="http://www.bipro.net/namespace/basis" xmlns:nac="http://www.bipro.net/namespace/nachrichten" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:all="http://www.bipro.net/namespace/allgemein" xmlns:xm="http://www.w3.org/2005/05/xmlmime" xmlns:par="http://www.bipro.net/namespace/partner" xmlns:prod="http://www.bipro.net/namespace/produktmodell" xmlns:ver="http://www.bipro.net/namespace/vertrag" xmlns:prod1="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:kapanl-basis="http://www.bipro.net/namespace/kapitalanlage/basis" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:vb-leben="urn:de:vb:bipro:taa:leben:1.12" xmlns:vbl="urn:de:vb:bipro:taa:vbl:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsc="http://schemas.xmlsoap.org/ws/2005/02/sc">
+    <soapenv:Body>
+        <tarif:getOrder xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:kapanl-basis="http://www.bipro.net/namespace/kapitalanlage/basis" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:vbl="urn:de:vb:bipro:taa:vbl:1.12" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:vb-leben="urn:de:vb:bipro:taa:leben:1.12" xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell">
+            <tarif:Request>
+                <nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+                <nachr:ConsumerID>WS Monitor Ragin</nachr:ConsumerID>
+                <tarif:Antrag>
+                    <basis:Erweiterung xsi:type="vb-leben:CT_AntragErweiterung">
+                        <vb-leben:PolitischExponiertePerson>false</vb-leben:PolitischExponiertePerson>
+                        <vb-leben:SteuerpflichtInDenUSA>false</vb-leben:SteuerpflichtInDenUSA>
+                        <vb-leben:SteuerlicheAnsaessigkeitImAusland>
+                            <vb-leben:SteuerlichAnsaessig>false</vb-leben:SteuerlichAnsaessig>
+                        </vb-leben:SteuerlicheAnsaessigkeitImAusland>
+                        <vb-leben:AbweichenderZielmarkt>false</vb-leben:AbweichenderZielmarkt>
+                        <vb-leben:AngabeZielmarkt>true</vb-leben:AngabeZielmarkt>
+                        <vb-leben:UnterschriftenKonfiguration>true</vb-leben:UnterschriftenKonfiguration>
+                    </basis:Erweiterung>
+                    <gevo:Vermittler>
+                        <allg:Vermittlernummer>121/233</allg:Vermittlernummer>
+                        <allg:PartnerID>1366213797</allg:PartnerID>
+                        <allg:IHKRegistrierungsnummer>D-MBKN-NKVDO-64</allg:IHKRegistrierungsnummer>
+                        <allg:Vermittlerrolle>
+                            <allg:ArtID>10</allg:ArtID>
+                            <allg:Vermittlertyp>02</allg:Vermittlertyp>
+                        </allg:Vermittlerrolle>
+                    </gevo:Vermittler>
+                    <gevo:Vermittler>
+                        <allg:Vermittlernummer>111/222</allg:Vermittlernummer>
+                        <allg:PartnerID>1366213797</allg:PartnerID>
+                        <allg:Vermittlerrolle>
+                            <allg:ArtID>01</allg:ArtID>
+                            <allg:Vermittlertyp>01</allg:Vermittlertyp>
+                        </allg:Vermittlerrolle>
+                    </gevo:Vermittler>
+                    <tarif:Partner xsi:type="partner:CT_JuristischePerson">
+                        <partner:Name>Susanne vom Stein</partner:Name>
+                        <partner:Partnernummer>Infofeld1</partner:Partnernummer>
+                        <partner:PartnerID>1366213797</partner:PartnerID>
+                        <partner:Anschrift>
+                            <allg:Strasse>Petunienweg</allg:Strasse>
+                            <allg:Hausnummer>121</allg:Hausnummer>
+                            <allg:Postleitzahl>42349</allg:Postleitzahl>
+                            <allg:Ort>Wuppertal</allg:Ort>
+                            <allg:Landname>Deutschland</allg:Landname>
+                            <partner:ArtID>1</partner:ArtID>
+                        </partner:Anschrift>
+                        <partner:Kommunikationsverbindung>
+                            <partner:ArtID>60</partner:ArtID>
+                            <partner:Kommunikationsadresse>www.svs.org</partner:Kommunikationsadresse>
+                        </partner:Kommunikationsverbindung>
+                        <partner:Kommunikationsverbindung>
+                            <partner:ArtID>20</partner:ArtID>
+                            <partner:Kommunikationsadresse>0202-334455</partner:Kommunikationsadresse>
+                        </partner:Kommunikationsverbindung>
+                        <partner:Kommunikationsverbindung>
+                            <partner:ArtID>40</partner:ArtID>
+                            <partner:Kommunikationsadresse>0202-334454</partner:Kommunikationsadresse>
+                        </partner:Kommunikationsverbindung>
+                        <partner:Kommunikationsverbindung>
+                            <partner:ArtID>50</partner:ArtID>
+                            <partner:Kommunikationsadresse>svs@gmail.com</partner:Kommunikationsadresse>
+                        </partner:Kommunikationsverbindung>
+                    </tarif:Partner>
+                    <tarif:Partner xsi:type="partner:CT_Person">
+                        <basis:Erweiterung xsi:type="vb-leben:CT_PersonErweiterung">
+                            <vb-leben:Namenszusatz1>Kornelia</vb-leben:Namenszusatz1>
+                            <vb-leben:Name>Pticar</vb-leben:Name>
+                        </basis:Erweiterung>
+                        <partner:Anrede>1</partner:Anrede>
+                        <partner:Name>Pticar</partner:Name>
+                        <partner:PartnerID>1585342768</partner:PartnerID>
+                        <partner:Anschrift>
+                            <allg:Strasse>Hauptstr.</allg:Strasse>
+                            <allg:Hausnummer>121</allg:Hausnummer>
+                            <allg:Postleitzahl>42349</allg:Postleitzahl>
+                            <allg:Ort>Wuppertal</allg:Ort>
+                            <allg:Landname>Deutschland</allg:Landname>
+                            <partner:ArtID>1</partner:ArtID>
+                        </partner:Anschrift>
+                        <partner:Bankverbindung>
+                            <partner:Institut>Deutsche Kreditbank Berlin</partner:Institut>
+                            <partner:IBAN>DE02120300000000202051</partner:IBAN>
+                            <partner:BIC>BYLADEM1001</partner:BIC>
+                            <partner:Einzugsermaechtigung>true</partner:Einzugsermaechtigung>
+                        </partner:Bankverbindung>
+                        <partner:Vorname>Kornelia</partner:Vorname>
+                        <partner:Geburtsdatum>1997-07-15</partner:Geburtsdatum>
+                        <partner:Geschlecht>1</partner:Geschlecht>
+                        <partner:Titel>Doktor</partner:Titel>
+                        <partner:Staatsangehoerigkeit>D</partner:Staatsangehoerigkeit>
+                        <partner:Steueridentifikationsnummer>12345678995</partner:Steueridentifikationsnummer>
+                    </tarif:Partner>
+                    <tarif:Partner xsi:type="partner:CT_Person">
+                        <basis:Erweiterung xsi:type="vb-leben:CT_PersonErweiterung">
+                            <vb-leben:Namenszusatz1>Christel</vb-leben:Namenszusatz1>
+                            <vb-leben:Name>Litauer</vb-leben:Name>
+                        </basis:Erweiterung>
+                        <partner:Anrede>2</partner:Anrede>
+                        <partner:Name>Litauer</partner:Name>
+                        <partner:PartnerID>149586755</partner:PartnerID>
+                        <partner:Anschrift>
+                            <allg:Landname>Deutschland</allg:Landname>
+                            <partner:ArtID>1</partner:ArtID>
+                        </partner:Anschrift>
+                        <partner:Vorname>Christel</partner:Vorname>
+                        <partner:Geburtsdatum>1971-12-12</partner:Geburtsdatum>
+                        <partner:Geschlecht>2</partner:Geschlecht>
+                    </tarif:Partner>
+                    <tarif:Versicherungsnehmer>
+                        <partner:PartnerID>1585342768</partner:PartnerID>
+                    </tarif:Versicherungsnehmer>
+                    <tarif:Verkaufsprodukt>
+                        <basis:Erweiterung xsi:type="vb-leben:CT_VerkaufsproduktErweiterung">
+                            <vb-leben:Konsortium>Ohne</vb-leben:Konsortium>
+                        </basis:Erweiterung>
+                        <pm:Produkt xsi:type="pm-leben:CT_Produkt">
+                            <basis:Erweiterung xsi:type="vb-leben:CT_ProduktErweiterung">
+                                <vb-leben:Tarifgruppe>Normal</vb-leben:Tarifgruppe>
+                            </basis:Erweiterung>
+                            <pm:GewuenschteZahlungsweise>6</pm:GewuenschteZahlungsweise>
+                            <pm:Beitrag>
+                                <pm:ArtID xsi:type="dt:STE_BeitragBasis">01</pm:ArtID>
+                                <pm:Zahlungsweise>6</pm:Zahlungsweise>
+                            </pm:Beitrag>
+                            <pm:Versicherungsdauer>
+                                <allg:Beginn>2023-05-01T12:00</allg:Beginn>
+                            </pm:Versicherungsdauer>
+                            <pm:Kennung>SRO</pm:Kennung>
+                            <pm:Elementarprodukt xsi:type="pm-leben:CT_Rente">
+                                <basis:Erweiterung xsi:type="vb-leben:CT_RenteErweiterung">
+                                    <vb-leben:TodesfallleistungImBezug>Restkapital</vb-leben:TodesfallleistungImBezug>
+                                </basis:Erweiterung>
+                                <pm:Dynamik>
+                                    <pm:Wert>0</pm:Wert>
+                                    <pm:KategorieID>Beitrag</pm:KategorieID>
+                                </pm:Dynamik>
+                                <vs-pm:VersicherungssummeOderLeistung>
+                                    <vs-pm:ArtID xsi:type="dt:STE_VersicherungssummeOderLeistungBasis">GarantierteRente</vs-pm:ArtID>
+                                    <vs-pm:Wert>234</vs-pm:Wert>
+                                    <vs-pm:Wertschluessel xsi:type="vb-leben:STE_LeistungSchluesselErweitert">Klassisch</vs-pm:Wertschluessel>
+                                    <vs-pm:Werteinheit>20</vs-pm:Werteinheit>
+                                    <vs-pm:Waehrung>EUR</vs-pm:Waehrung>
+                                    <vs-pm:Auszahlungsweise>8</vs-pm:Auszahlungsweise>
+                                </vs-pm:VersicherungssummeOderLeistung>
+                                <vs-pm:Bezugsrecht>
+                                    <vs-pm:Leistungsfall>Todesfall</vs-pm:Leistungsfall>
+                                    <vs-pm:IndexBerechtigter>9</vs-pm:IndexBerechtigter>
+                                    <vs-pm:Bezugsberechtigter>
+                                        <partner:PartnerID>149586755</partner:PartnerID>
+                                    </vs-pm:Bezugsberechtigter>
+                                </vs-pm:Bezugsrecht>
+                                <vs-pm:Bezugsrecht>
+                                    <vs-pm:Leistungsfall>Erlebensfall</vs-pm:Leistungsfall>
+                                    <vs-pm:IndexBerechtigter>1</vs-pm:IndexBerechtigter>
+                                </vs-pm:Bezugsrecht>
+                                <pm-leben:IstHauptversicherung>true</pm-leben:IstHauptversicherung>
+                                <pm-leben:UeberschussverwendungNachLeistung xsi:type="dt:STE_UeberschussverwendungBasis">14</pm-leben:UeberschussverwendungNachLeistung>
+                                <pm-leben:VersichertePerson>
+                                    <partner:PartnerID>1585342768</partner:PartnerID>
+                                </pm-leben:VersichertePerson>
+                            </pm:Elementarprodukt>
+                            <pm-leben:VorgabeBerechnung>
+                                <pm-leben:ArtID xsi:type="dt:STE_VorgabeBerechnungBasis">GarantierteRente</pm-leben:ArtID>
+                                <pm-leben:Kontext xsi:type="dt:STE_VorgabeBerechnungKontextBasis">Rente</pm-leben:Kontext>
+                            </pm-leben:VorgabeBerechnung>
+                        </pm:Produkt>
+                    </tarif:Verkaufsprodukt>
+                    <tarif:BesondereVereinbarungen>keine</tarif:BesondereVereinbarungen>
+                    <tarif:Unterschriftsverfahren>03</tarif:Unterschriftsverfahren>
+                    <tarif:Antragsart>01</tarif:Antragsart>
+                    <tarif:Beitragszahler>
+                        <partner:PartnerID>1585342768</partner:PartnerID>
+                    </tarif:Beitragszahler>
+                </tarif:Antrag>
+            </tarif:Request>
+        </tarif:getOrder>
+    </soapenv:Body>
+</soapenv:Envelope>
