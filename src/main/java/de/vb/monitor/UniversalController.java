@@ -18,6 +18,8 @@ public class UniversalController {
 
     private static final Logger log = LoggerFactory.getLogger(UniversalController.class);
     Queue<Long> averages = new LinkedList<>();
+    Queue<Long> mins = new LinkedList<>();
+    Queue<Long> maxs = new LinkedList<>();
     @RequestMapping(value = "/hello")
     public String index(Model model) {
         // return "index";
@@ -59,6 +61,8 @@ public class UniversalController {
 
         long average = sum / count;
         averages.add(average);
+        mins.add(min);
+        maxs.add(max);
         if (averages.size() > 20) {
             averages.poll();
         }
@@ -72,9 +76,8 @@ public class UniversalController {
         model.addAttribute("minResponseTime", min);
         model.addAttribute("maxResponseTime", max);
         model.addAttribute("averages", averages);
-        List<Long> last20Averages = (List<Long>) averages;
-        AverageData averageData = new AverageData(last20Averages);
-        model.addAttribute("averageData", averageData);
+        model.addAttribute("mins", mins);
+        model.addAttribute("maxs", maxs);
 
         return "statistics";
     }

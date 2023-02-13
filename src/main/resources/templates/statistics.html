@@ -20,6 +20,7 @@
 
 
     <h3 class="lead" th:text="|#{app.welcome}|">Placeholder only.</h3>
+    <h5>(testing FR, IR, SRO, NLRV)</h5>
     <p th:text="'Average response time: ' + ${averageResponseTime} + 'ms'"></p>
     <p th:text="'Minimum response time: ' + ${minResponseTime} + 'ms'"></p>
     <p th:text="'Maximum response time: ' + ${maxResponseTime} + 'ms'"></p>
@@ -33,6 +34,8 @@
 <script>
     var ctx = document.getElementById('myChart').getContext('2d');
     var averages = [[${averages}]] ;
+    var mins = [[${mins}]] ;
+    var maxs = [[${maxs}]] ;
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -42,8 +45,26 @@
                 data: averages,
                 backgroundColor: 'rgba(33, 152, 197, 0.2)',
                 borderColor: 'rgba(2, 115, 158, 1)',
-                borderWidth: 1
-            }]
+                borderWidth: 1,
+                fill: false
+            },
+            {
+                label: 'Response minimum (ms)',
+                data: mins,
+                backgroundColor: 'green',
+                borderColor: 'rgba(98, 120, 63, 1)',
+                borderWidth: 1,
+                fill: false
+            },
+            {
+                label: 'Response maximums(ms)',
+                data: maxs,
+                backgroundColor: 'red',
+                borderColor: 'rgba(179, 0, 0, 1)',
+                borderWidth: 1,
+                fill: false
+            }
+            ]
         },
         options: {
             scales: {
