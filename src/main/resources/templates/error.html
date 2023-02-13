@@ -1,8 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title th:text="${message}"></title>
-</head>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head th:replace="fragments/header :: head"></head>
+
 <body>
 <table border="1">
     <tr><td>Error Message</td><td th:text="${message}"></td></tr>
@@ -11,5 +10,9 @@
     <tr><td>Stacktrace</td><td><pre th:text="${trace}"></pre></td></tr>
     <tr><td>Binding Errors</td><td th:text="${errors}"></td></tr>
 </table>
+<footer th:replace="fragments/footer :: footer"></footer>
+</div>
 </body>
 </html>
+
+

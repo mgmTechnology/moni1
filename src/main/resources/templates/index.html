@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Spring Boot Thymeleaf Example</title>
-</head>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head th:replace="~{fragments/header :: head}"></head>
 <body>
-<h1>Hello, Thymeleaf!</h1>
+<div class="container">
+  <h2 th:text="#{app.title}" class="text-center text-primary">placeholder only</h2>
+  <div class="jumbotron mt-3">
+    <p class="lead" th:text="|#{app.welcome}|">Placeholder only.</p>
+  </div>
+</div>
+
+<footer th:replace="~{fragments/footer :: footer}"></footer>
 </body>
 </html>

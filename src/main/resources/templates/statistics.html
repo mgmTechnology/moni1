@@ -1,13 +1,77 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+
   <meta charset="UTF-8"/>
   <title>Statistics Page</title>
-  <link rel="stylesheet" th:href="@{/css/style.css}"/>
+  <head th:replace="~{fragments/header :: head}">
+
+
+  </head>
 </head>
 
 <body>
-<h1>Statistics Page</h1>
-<p th:text="'Average response time: ' + ${averageResponseTime} + 'ms'"></p>
+
+<div class="container">
+  <h2 th:text="#{app.title}" class="text-center text-primary">placeholder only</h2>
+  <div class="jumbotron mt-3">
+
+
+    <h3 class="lead" th:text="|#{app.welcome}|">Placeholder only.</h3>
+    <p th:text="'Average response time: ' + ${averageResponseTime} + 'ms'"></p>
+    <p th:text="'Minimum response time: ' + ${minResponseTime} + 'ms'"></p>
+    <p th:text="'Maximum response time: ' + ${maxResponseTime} + 'ms'"></p>
+    <canvas id="myChart" width="800" height="200"></canvas>
+    <div id="countdown"></div>
+    <!-- <p th:text="'Last averages: ' + ${averages} + 'ms'"></p> -->
+
+  </div>
+</div>
+
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var averages = [[${averages}]] ;
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: Array.from(Array(averages.length).keys()), // Create labels for each data point
+            datasets: [{
+                label: 'Response time average (ms)',
+                data: averages,
+                backgroundColor: 'rgba(33, 152, 197, 0.2)',
+                borderColor: 'rgba(2, 115, 158, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+</script>
+
+<script>
+    var refreshInterval = 10; // refresh interval in seconds
+    var countdown = refreshInterval;
+    setInterval(function() {
+        document.getElementById('countdown').innerHTML = 'Refreshing in ' + countdown + ' seconds...';
+        if (countdown === 0) {
+            location.reload();
+            countdown = refreshInterval;
+        } else {
+            countdown--;
+        }
+    }, 1000);
+</script>
+
+
+<footer th:replace="~{fragments/footer :: footer}"></footer>
 </body>
 </html>

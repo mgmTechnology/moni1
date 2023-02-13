@@ -12,6 +12,8 @@ import java.nio.file.Paths;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -67,10 +69,12 @@ public class WSOnlineMonitor {
 
 
 
-	@Scheduled(fixedRate = 20000)
+	@Scheduled(fixedRate = 20000) // trigger new run all 20 seconds
 	private static void performTestRequests() {
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+		LocalDateTime now = LocalDateTime.now();
+		log.info("\nStarting new run at " + dtf.format(now));
 		new Thread(() -> {
-			while (true) {
 				try {
 					Path startPath = Paths.get("C:\\Projects\\moni1\\testdata");
 					Files.walkFileTree(startPath, new SimpleFileVisitor<Path>() {
@@ -94,7 +98,7 @@ public class WSOnlineMonitor {
 
 											appendToCSVFile(endpoint, rdto, timestamp, vbKennung, vbStatusID);
 
-											log.info(String.valueOf(rdto.getrTime() + " - " + vbKennung + " : " + vbStatusID + " - " + endpoint.substring(0,15)));
+											log.info(String.valueOf(rdto.getrTime() + " - " + vbKennung + " : " + vbStatusID + " - " + endpoint.substring(0,20)));
 										} catch (IOException | ParserConfigurationException e) {
 											e.printStackTrace();
 										} catch (Exception e) {
@@ -112,7 +116,6 @@ public class WSOnlineMonitor {
 				} catch (IOException | InterruptedException e) {
 					e.printStackTrace();
 				}
-			}
 		}).start();
 	}
 	private static ResponseDTO sendPostRequest(String urlString, String requestBody) throws IOException {
