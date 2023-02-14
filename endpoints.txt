@@ -1,2 +1,4 @@
-https://vbtest3.volkswohl-bund.de/vbl/ws/taa/2022-10/bipro/VBLService_2.4.6.1.12
+#https://vbtest3.volkswohl-bund.de/vbl/ws/taa/2022-10/bipro/VBLService_2.4.6.1.12
 #https://vbnet3.volkswohl-bund.de/vbl/ws/taa/2022-10/bipro/VBLService_2.4.6.1.12
+https://vbtest3.volkswohl-bund.de/vbl/ws/taa/2023-01/bipro/VBLService_2.4.6.1.12
+#https://vbnet3.volkswohl-bund.de/vbl/ws/taa/2023-01/bipro/VBLService_2.4.6.1.12
