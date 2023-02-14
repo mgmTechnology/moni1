@@ -49,7 +49,15 @@ public class WSOnlineMonitor {
         return "err_parsing"; // the name of your error page
     }
 
-    private static ArrayList<String> ENDPOINTS = new ArrayList<String>();
+    public static ArrayList<String> getENDPOINTS() {
+        return ENDPOINTS;
+    }
+
+    public static void setENDPOINTS(ArrayList<String> ENDPOINTS) {
+        WSOnlineMonitor.ENDPOINTS = ENDPOINTS;
+    }
+
+    public static ArrayList<String> ENDPOINTS = new ArrayList<String>();
     public static Properties appProps = new Properties();
     private static final Logger log = LoggerFactory.getLogger(WSOnlineMonitor.class);
     private static List<Long> responseTimes = new ArrayList<>();
@@ -110,7 +118,7 @@ public class WSOnlineMonitor {
         for (int i = 1; i <= threadSize; i++) {
             new Thread(() -> {
                 try {
-                    Path startPath = Paths.get("C:\\Projects\\moni1\\testdata");
+                    Path startPath = Paths.get(appProps.getProperty("test.dir"));
                     Files.walkFileTree(startPath, new SimpleFileVisitor<Path>() {
                         @Override
                         public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
@@ -165,6 +173,9 @@ public class WSOnlineMonitor {
         }
 
     }
+
+
+
 
     private static ResponseDTO sendPostRequest(String urlString, String requestBody) throws IOException {
 //		System.out.println("Endpoint: " + urlString);

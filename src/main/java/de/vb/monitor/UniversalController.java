@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -98,7 +100,23 @@ public class UniversalController {
         model.addAttribute("averages", averagesQueue);
         model.addAttribute("mins", minsQueue);
         model.addAttribute("maxs", maxsQueue);
+        model.addAttribute("endpoint", WSOnlineMonitor.getENDPOINTS().get(0));
+        model.addAttribute("threadsize", WSOnlineMonitor.appProps.getProperty("thread.size"));
+        model.addAttribute("testsize", countXmlFiles(Path.of(WSOnlineMonitor.appProps.getProperty("test.dir"))));
 
         return "statistics";
     }
+    public static int countXmlFiles(Path directory)  {
+        long count = 0;
+        try {
+            count = Files.walk(directory)
+                    .filter(path -> path.toString().endsWith(".xml"))
+                    .filter(Files::isRegularFile)
+                    .count();
+        } catch (IOException e) {
+            log.error("cannot count files in " +  directory.toFile().getAbsolutePath());
+        }
+        return (int) count;
+    }
+
 }
