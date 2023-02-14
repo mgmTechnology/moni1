@@ -1,10 +1,7 @@
 package de.vb.monitor;
 
 import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.Socket;
-import java.net.SocketException;
-import java.net.URL;
+import java.net.*;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -31,6 +28,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
@@ -40,10 +38,17 @@ import org.slf4j.LoggerFactory;
 @SpringBootApplication
 @EnableScheduling
 public class WSOnlineMonitor {
-
-	private static final String[] ENDPOINTS = {
+	@ExceptionHandler(ConnectException.class)
+	public String handleNoInternet() {
+		return "err_io"; // the name of your error page
+	}
+	@ExceptionHandler(ParserConfigurationException.class)
+	public String handleNotParsableResponse() {
+		return "err_parsing"; // the name of your error page
+	}
+		private static final String[] ENDPOINTS = {
 			"https://vbtest3.volkswohl-bund.de/vbl/ws/taa/2022-10/bipro/VBLService_2.4.6.1.12",
-			"https://vbnet3.volkswohl-bund.de/vbl/ws/taa/2022-10/bipro/VBLService_2.4.6.1.12"
+			"https://vbtest3.volkswohl-bund.de/vbl/ws/taa/2022-10/bipro/VBLService_2.4.6.1.12"
 	};
 	public static Properties appProps = new Properties();
 	private static final Logger log = LoggerFactory.getLogger(WSOnlineMonitor.class);
@@ -58,10 +63,9 @@ public class WSOnlineMonitor {
 		try (FileInputStream fileInputStream = new FileInputStream("app.properties")) {
 			appProps.load(fileInputStream);
 			Thread.sleep(500);
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
-		} catch (InterruptedException e) {
-			throw new RuntimeException(e);
+			log.error(e.getMessage());
 		}
 		log.info("Properties read.");
 	}
@@ -101,6 +105,7 @@ public class WSOnlineMonitor {
 											log.info(String.valueOf(rdto.getrTime() + " - " + vbKennung + " : " + vbStatusID + " - " + endpoint.substring(0,20)));
 										} catch (IOException | ParserConfigurationException e) {
 											e.printStackTrace();
+											log.error("No connection to endpoint or not parsable response");
 										} catch (Exception e) {
 											//System.err.println(rdto.getrBody());
 											log.error(e.getMessage());
@@ -125,7 +130,12 @@ public class WSOnlineMonitor {
 		con.setDoOutput(true);
 		con.setRequestProperty("Content-Type", "text/xml;charset=UTF-8");
 
-		OutputStream os = con.getOutputStream();
+		OutputStream os = null;
+		try {
+			os = con.getOutputStream();
+		} catch (Exception e) {
+			log.error("no connection to endpoint");
+		}
 		os.write(requestBody.getBytes());
 		os.flush();
 		os.close();
@@ -185,19 +195,5 @@ public class WSOnlineMonitor {
 		bufferedWriter.close();
 	}
 
-	@GetMapping("/statistics")
-	public String statistics(Model model) {
-		long sum = 0;
-		int count = Math.min(responseTimes.size(), 50);
-
-		for (int i = responseTimes.size() - count; i < responseTimes.size(); i++) {
-			sum += responseTimes.get(i);
-		}
-
-		long average = count > 0 ? sum / count : 0;
-		model.addAttribute("averageResponseTime", average);
-
-		return "statistics";
-	}
 
 }

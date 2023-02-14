@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Statistics Page</title>
+    <head th:replace="~{fragments/header :: head}">
+    <title>XML Request endpoints</title>
+</head>
+<body>
+<div class="container">
+<form method="post" th:action="@{/send-requests}" th:object="${endpointForm}">
+    <div>
+        <input type="checkbox" th:field="*{endpoint1}" />
+        <label th:text="*{endpoint1}"></label>
+    </div>
+    <div>
+        <input type="checkbox" th:field="*{endpoint2}" />
+        <label th:text="*{endpoint2}"></label>
+    </div>
+    <div>
+        <input type="checkbox" th:field="*{endpoint3}" />
+        <label th:text="*{endpoint3}"></label>
+    </div>
+    <div>
+        <input type="checkbox" th:field="*{endpoint4}" />
+        <label th:text="*{endpoint4}"></label>
+    </div>
+    <button type="submit">Send Requests</button>
+</form>
+</div>
+<footer th:replace="~{fragments/footer :: footer}"></footer>
+</body>
+</html>

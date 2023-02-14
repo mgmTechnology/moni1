@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.io.BufferedReader;
@@ -26,6 +27,15 @@ public class UniversalController {
         System.out.println("hello");
         return "index";
     }
+
+/*    @GetMapping("/endpoints")
+    public String showForm(Model model) {
+        EndpointForm epf = new EndpointForm();
+        epf.setEndpoint1(true);
+        model.addAttribute("endpointForm", epf);
+        return "endpoints";
+    }*/
+
     @RequestMapping(value = "/statistics")
     public String statistics(Model model) {
         String fileName = "response_data.csv";
@@ -70,7 +80,10 @@ public class UniversalController {
         log.info("The minimum response time is: " + min);
         log.info("The maximum response time is: " + max);
         log.info("The average of the values in the fifth column is: " + average);
-        log.info("The last 20 averages are: " + averages);
+
+        log.info("The last 20 maximums are: " + maxs);
+        log.info("The last 20 averages are: " + mins);
+        log.info("The last 20 minimums are: " + averages);
         log.info("statistics");
         model.addAttribute("averageResponseTime", average);
         model.addAttribute("minResponseTime", min);
