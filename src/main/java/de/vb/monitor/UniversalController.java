@@ -4,23 +4,21 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 @Controller
 public class UniversalController {
 
     private static final Logger log = LoggerFactory.getLogger(UniversalController.class);
-    Queue<Long> averages = new LinkedList<>();
-    Queue<Long> mins = new LinkedList<>();
-    Queue<Long> maxs = new LinkedList<>();
+    Queue<Long> averagesQueue = new LinkedList<>();
+    Queue<Long> minsQueue = new LinkedList<>();
+    Queue<Long> maxsQueue = new LinkedList<>();
     @RequestMapping(value = "/hello")
     public String index(Model model) {
         // return "index";
@@ -41,16 +39,17 @@ public class UniversalController {
         String fileName = "response_data.csv";
         long sum = 0;
         int count = 0;
-        long min = Long.MAX_VALUE;
-        long max = Long.MIN_VALUE;
+        long minOfLastLogEntries = Long.MAX_VALUE;
+        long maxOfLastLogEntries = Long.MIN_VALUE;
         String line;
-        Queue<String> queue = new LinkedList<>();
+        Queue<String> queueOfLastLogEntries = new LinkedList<>();
 
+        int queueSize = Integer.parseInt(WSOnlineMonitor.appProps.getProperty("queue.size").trim());
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             while ((line = br.readLine()) != null) {
-                queue.add(line);
-                if (queue.size() > 20) {
-                    queue.poll();
+                queueOfLastLogEntries.add(line);
+                if (queueOfLastLogEntries.size() > queueSize) {
+                    queueOfLastLogEntries.poll();
                 }
             }
         } catch (IOException e) {
@@ -58,39 +57,47 @@ public class UniversalController {
             e.printStackTrace();
         }
 
-        for (String data : queue) {
+        for (String data : queueOfLastLogEntries) {
             String[] values = data.split(";");
             if (values.length >= 5) {
                 long value = Long.parseLong(values[4]);
                 sum += value;
                 count++;
-                min = Math.min(min, value);
-                max = Math.max(max, value);
+                minOfLastLogEntries = Math.min(minOfLastLogEntries, value);
+                maxOfLastLogEntries = Math.max(maxOfLastLogEntries, value);
             }
         }
 
         long average = sum / count;
-        averages.add(average);
-        mins.add(min);
-        maxs.add(max);
-        if (averages.size() > 20) {
-            averages.poll();
-        }
-        log.info("The average of the last 20 values in the fifth column is: " + average);
-        log.info("The minimum response time is: " + min);
-        log.info("The maximum response time is: " + max);
-        log.info("The average of the values in the fifth column is: " + average);
+        averagesQueue.add(average);
+        minsQueue.add(minOfLastLogEntries);
+        maxsQueue.add(maxOfLastLogEntries);
+        // upate queues to have it correct length
 
-        log.info("The last 20 maximums are: " + maxs);
-        log.info("The last 20 averages are: " + mins);
-        log.info("The last 20 minimums are: " + averages);
-        log.info("statistics");
+        if (averagesQueue.size() > queueSize) {
+            averagesQueue.poll();
+        }
+        if (minsQueue.size() > queueSize) {
+            minsQueue.poll();
+        }
+        if (maxsQueue.size() > queueSize) {
+            maxsQueue.poll();
+        }
+        log.info("statistics: The average of the last 20 values in the fifth column is: " + average);
+        log.info("statistics: The minimum response time is: " + minOfLastLogEntries);
+        log.info("statistics: The maximum response time is: " + maxOfLastLogEntries);
+        log.info("statistics: The average of the values in the fifth column is: " + average);
+
+        log.info("statistics: The last 20 maximums are: " + maxsQueue);
+        log.info("statistics: The last 20 averages are: " + minsQueue);
+        log.info("statistics: The last 20 minimums are: " + averagesQueue);
+        log.info(String.format("Min/Max/AVG: [%s .. %s] -> %s", minOfLastLogEntries, maxOfLastLogEntries, average));
         model.addAttribute("averageResponseTime", average);
-        model.addAttribute("minResponseTime", min);
-        model.addAttribute("maxResponseTime", max);
-        model.addAttribute("averages", averages);
-        model.addAttribute("mins", mins);
-        model.addAttribute("maxs", maxs);
+        model.addAttribute("minResponseTime", minOfLastLogEntries);
+        model.addAttribute("maxResponseTime", maxOfLastLogEntries);
+        model.addAttribute("averages", averagesQueue);
+        model.addAttribute("mins", minsQueue);
+        model.addAttribute("maxs", maxsQueue);
 
         return "statistics";
     }
