@@ -17,34 +17,13 @@
 <div class="container">
     <h2 th:text="#{app.title}" class="text-center text-primary">placeholder only</h2>
     <div class="jumbotron mt-3">
-
-
         <h3 class="lead" th:text="|#{app.welcome}|" title="Testing: FR, IR, SRO, NLRV">Placeholder only.</h3>
-
-
-        <div class="container">
-            <table class="table table-bordered" style="width:50%; margin:auto;">
-                <tbody>
-                <tr>
-                    <td><p th:text="'Letztes Maximum (ms): '"></p></td>
-                    <td><p th:text="${maxResponseTime}"></p></td>
-                </tr>
-                <tr>
-                    <td><p th:text="'Aktuelle Durchschnittszeit (ms): '"></p></td>
-                    <td><p th:text="${averageResponseTime}"></p></td>
-                </tr>
-                <tr>
-                    <td><p th:text="'Letztes Minimum (ms): '"></p></td>
-                    <td><p th:text="${minResponseTime} "></p></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <canvas id="myChart" width="800" height="200"></canvas>
+        <p></p>
+        <canvas id="myChart" width="800" height="400"></canvas>
+        <p th:text="'Aktuelle Durchschnittszeit (ms): ' + ${averageResponseTime} + 'ms'"></p>
+        <p th:text="'Letztes Minimum (ms): ' + ${minResponseTime} + 'ms' + ', letztes Maximum (ms): ' + ${maxResponseTime} + 'ms'"></p>
         <div id="countdown"></div>
         <!-- <p th:text="'Last averages: ' + ${averages} + 'ms'"></p> -->
-
     </div>
 </div>
 
@@ -68,7 +47,7 @@
             {
                 label: 'Response minimum (ms)',
                 data: mins,
-                backgroundColor: 'green',
+                backgroundColor: '#0000A0',
                 borderColor: 'rgba(98, 120, 63, 1)',
                 borderWidth: 1,
                 fill: false
@@ -76,7 +55,7 @@
             {
                 label: 'Response maximums(ms)',
                 data: maxs,
-                backgroundColor: 'red',
+                backgroundColor: '#D76B00',
                 borderColor: 'rgba(179, 0, 0, 1)',
                 borderWidth: 1,
                 fill: false
@@ -90,17 +69,23 @@
         ,
           plugins: {
             annotation: {
-              annotations: {
-
-                line1: {
+              annotations: [
+              {
                   type: 'line',
                   yMin: 10000,
                   yMax: 10000,
                   borderColor: 'red',
-                  borderWidth: 1,
+                  borderWidth: 3
                 } //line1
-
-              }// annotations
+                ,
+                    {
+                  type: 'line',
+                  yMin: 7000,
+                  yMax: 7000,
+                  borderColor: '#57AE00',
+                  borderWidth: 3
+                  }
+              ]// annotations
             } // annotation
           }// plugin
 
@@ -110,7 +95,7 @@
 </script>
 
 <script>
-    var refreshInterval = 10; // refresh interval in seconds
+    var refreshInterval = 15; // refresh interval in seconds
     var countdown = refreshInterval;
     setInterval(function() {
         document.getElementById('countdown').innerHTML = 'Refreshing in ' + countdown + ' seconds...';

@@ -71,14 +71,18 @@ public class WSOnlineMonitor {
 	}
 
 
-
-
+	/**
+	 * Alle 10 Sekuncen (fixedRate) wird für jeden gefundenen Test-Datensatz ein Request in jede konfigurierte Umgebung
+	 * abgesetzt.
+	 */
 	@Scheduled(fixedRate = 10000) // trigger new run all 20 seconds
 	private static void performTestRequests() {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 		LocalDateTime now = LocalDateTime.now();
 		log.info("\nStarting new run at " + dtf.format(now));
-		new Thread(() -> {
+		int threadSize = Integer.parseInt(WSOnlineMonitor.appProps.getProperty("thread.size").trim());
+		for(int i=1;i<=threadSize;i++){
+			new Thread(() -> {
 				try {
 					Path startPath = Paths.get("C:\\Projects\\moni1\\testdata");
 					Files.walkFileTree(startPath, new SimpleFileVisitor<Path>() {
@@ -102,7 +106,7 @@ public class WSOnlineMonitor {
 
 											appendToCSVFile(endpoint, rdto, timestamp, vbKennung, vbStatusID);
 
-											log.info(String.valueOf(rdto.getrTime() + " - " + vbKennung + " : " + vbStatusID + " - " + endpoint.substring(0,20)));
+											log.info(String.valueOf(rdto.getrTime() + " - " + vbKennung + " : " + vbStatusID + " - " + endpoint));
 										} catch (IOException | ParserConfigurationException e) {
 											e.printStackTrace();
 											log.error("No connection to endpoint or not parsable response");
@@ -117,13 +121,16 @@ public class WSOnlineMonitor {
 							return FileVisitResult.CONTINUE;
 						}
 					});
-					Thread.sleep(Long.parseLong(WSOnlineMonitor.appProps.getProperty("monitor.repeat.ms")));
-				} catch (IOException | InterruptedException e) {
+					//Thread.sleep(Long.parseLong(WSOnlineMonitor.appProps.getProperty("monitor.repeat.ms")));
+				} catch (IOException  e) {
 					e.printStackTrace();
 				}
-		}).start();
+			}).start();
+		}
+
 	}
 	private static ResponseDTO sendPostRequest(String urlString, String requestBody) throws IOException {
+//		System.out.println("Endpoint: " + urlString);
 		URL url = new URL(urlString);
 		HttpURLConnection con = (HttpURLConnection) url.openConnection();
 		con.setRequestMethod("POST");
@@ -158,7 +165,7 @@ public class WSOnlineMonitor {
 			respBody.append(inputLine);
 		}
 		in.close();
-		// System.out.println("Endpoint: " + urlString);
+
 		// System.out.println(responseCode + ", Response time: " + (endTime - startTime) + " milliseconds");
 		ResponseDTO rdto = new ResponseDTO(respBody.toString(), responseCode, (endTime-startTime));
 		if ((endTime - startTime) > Long.parseLong(WSOnlineMonitor.appProps.getProperty("monitor.response.max"))) {
