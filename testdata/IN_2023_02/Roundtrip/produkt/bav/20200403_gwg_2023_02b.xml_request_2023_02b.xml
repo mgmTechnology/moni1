@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <tarif:getOrder xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:kapanl-basis="http://www.bipro.net/namespace/kapitalanlage/basis" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:vb-leben="urn:de:vb:bipro:taa:leben:1.12" xmlns:vbl="urn:de:vb:bipro:taa:vbl:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         
+      <tarif:Request>
+              
+        <nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+        <nachr:ConsumerID>WS DEV TEAM</nachr:ConsumerID>
+              
+        <tarif:Antrag>
+                   
+          <gevo:Vermittler>
+                        
+            <allg:Vermittlernummer>111/222</allg:Vermittlernummer>
+                     
+          </gevo:Vermittler>
+                   
+          <tarif:Partner xsi:type="partner:CT_JuristischePerson">
+                        
+            <partner:Anrede>3</partner:Anrede>
+                        
+            <partner:Name>VN: NameFirma</partner:Name>
+                        
+            <partner:PartnerID>1</partner:PartnerID>
+                        
+            <partner:Anschrift>
+                             
+              <allg:Strasse>VN: Strasse</allg:Strasse>
+                             
+              <allg:Hausnummer>VN: Hausnummer</allg:Hausnummer>
+                             
+              <allg:Postleitzahl>VN: PLZ</allg:Postleitzahl>
+                             
+              <allg:Ort>VN: Ort</allg:Ort>
+                             
+              <allg:Landname>VN: Land</allg:Landname>
+                             
+              <partner:ArtID>1</partner:ArtID>
+                          
+            </partner:Anschrift>
+                        
+            <partner:Bankverbindung>
+                             
+              <partner:Einzugsermaechtigung>false</partner:Einzugsermaechtigung>
+                          
+            </partner:Bankverbindung>
+                        
+            <partner:Rechtsform>04</partner:Rechtsform>
+                     
+          </tarif:Partner>
+                   
+          <tarif:Partner xsi:type="partner:CT_Person">
+                        
+            <partner:Anrede>1</partner:Anrede>
+                        
+            <partner:Name>VN: Name</partner:Name>
+                        
+            <partner:PartnerID>2</partner:PartnerID>
+                        
+            <partner:Anschrift>
+                             
+              <allg:Strasse>VN: Strasse</allg:Strasse>
+                             
+              <allg:Hausnummer>VN: Hausnummer</allg:Hausnummer>
+                             
+              <allg:Postleitzahl>VN: PLZ</allg:Postleitzahl>
+                             
+              <allg:Ort>VN: Ort</allg:Ort>
+                             
+              <allg:Landname>VN: Land</allg:Landname>
+                             
+              <partner:ArtID>1</partner:ArtID>
+                          
+            </partner:Anschrift>
+                        
+            <partner:Vorname>VN: Vorname</partner:Vorname>
+                        
+            <partner:Geburtsdatum>1992-11-01</partner:Geburtsdatum>
+                        
+            <partner:Geschlecht>1</partner:Geschlecht>
+                        
+            <partner:Staatsangehoerigkeit>D</partner:Staatsangehoerigkeit>
+                     
+          </tarif:Partner>
+                     
+          <tarif:Partner xsi:type="partner:CT_Person">
+                       
+            <partner:PartnerID>4</partner:PartnerID>
+                       
+            <partner:Partnerbeziehung>
+                           
+              <partner:PartnerID>1</partner:PartnerID>
+                           
+              <partner:Art xsi:type="dt:STE_PartnerbeziehungBasis">13</partner:Art>
+                         
+            </partner:Partnerbeziehung>
+                     
+          </tarif:Partner>
+                   
+          <tarif:Partner xsi:type="partner:CT_Person">
+                        
+            <partner:Name>UnterzeichnerName</partner:Name>
+                        
+            <partner:PartnerID>3</partner:PartnerID>
+                        
+            <partner:ZusaetzlichePartnerdaten xsi:type="vb-leben:CT_Antragsunterzeichner">
+                            
+              <vb-leben:Funktion>UnterzeichnerFunktion</vb-leben:Funktion>
+                          
+            </partner:ZusaetzlichePartnerdaten>
+                        
+            <partner:Partnerbeziehung>
+                            
+              <partner:PartnerID>1</partner:PartnerID>
+                            
+              <partner:Art xsi:type="vb-leben:STE_PartnerbeziehungErweitert">Antragsunterzeichner</partner:Art>
+                          
+            </partner:Partnerbeziehung>
+                        
+            <partner:Vorname>UnterzeichnerVorname</partner:Vorname>
+                     
+          </tarif:Partner>
+                   
+          <tarif:Versicherungsnehmer>
+                        
+            <partner:PartnerID>1</partner:PartnerID>
+                     
+          </tarif:Versicherungsnehmer>
+                   
+          <tarif:Verkaufsprodukt>
+                        
+            <basis:Erweiterung xsi:type="vb-leben:CT_VerkaufsproduktErweiterung">
+                             
+              <vb-leben:Konsortium>Ohne</vb-leben:Konsortium>
+                          
+            </basis:Erweiterung>
+                        
+            <pm:Produkt xsi:type="pm-leben:CT_Produkt">
+                             
+              <basis:Erweiterung xsi:type="vb-leben:CT_ProduktErweiterung">
+                                  
+                <vb-leben:Tarifgruppe>Normal</vb-leben:Tarifgruppe>
+                               
+              </basis:Erweiterung>
+                             
+              <pm:GewuenschteZahlungsweise>8</pm:GewuenschteZahlungsweise>
+                             
+              <pm:Beitrag>
+                                  
+                <pm:ArtID xsi:type="dt:STE_BeitragBasis">01</pm:ArtID>
+                                  
+                <pm:Betrag>
+                                       
+                  <allg:Betrag>50</allg:Betrag>
+                                       
+                  <allg:Waehrung>EUR</allg:Waehrung>
+                                    
+                </pm:Betrag>
+                                  
+                <pm:Zahlungsweise>8</pm:Zahlungsweise>
+                               
+              </pm:Beitrag>
+                             
+              <pm:Versicherungsdauer>
+                                  
+                <allg:Beginn>2023-03-01T12:00</allg:Beginn>
+                               
+              </pm:Versicherungsdauer>
+                             
+              <pm:Kennung>FR</pm:Kennung>
+                             
+              <pm:Elementarprodukt xsi:type="pm-leben:CT_Rente">
+                                  
+                <basis:Erweiterung xsi:type="vb-leben:CT_RenteErweiterung">
+                                       
+                  <vb-leben:TodesfallleistungImBezug>Restkapital</vb-leben:TodesfallleistungImBezug>
+                                       
+                  <vb-leben:FondsrenteDaten>
+                                            
+                    <vb-leben:ErhoehterTodesfallschutz>false</vb-leben:ErhoehterTodesfallschutz>
+                                         
+                  </vb-leben:FondsrenteDaten>
+                                       
+                  <vb-leben:Gutscheincode>Standard_GCAACGMUEQEUMGCAAK</vb-leben:Gutscheincode>
+                                    
+                </basis:Erweiterung>
+                                  
+                <pm:Versicherungsdauer>
+                                       
+                  <allg:AnzahlJahre>42</allg:AnzahlJahre>
+                                       
+                  <allg:AnzahlMonate>3</allg:AnzahlMonate>
+                                    
+                </pm:Versicherungsdauer>
+                                  
+                <pm:Dynamik>
+                                       
+                  <basis:Erweiterung xsi:type="vb-leben:CT_DynamikErweiterung">
+                                            
+                    <vb-leben:Art>TodesUndErlebensfall</vb-leben:Art>
+                                         
+                  </basis:Erweiterung>
+                                       
+                  <pm:ArtID xsi:type="dt:STE_DynamikBasis">04</pm:ArtID>
+                                       
+                  <pm:Frequenz xsi:type="dt:STE_FrequenzBasis">jaehrlich</pm:Frequenz>
+                                       
+                  <pm:KategorieID>Beitrag</pm:KategorieID>
+                                    
+                </pm:Dynamik>
+                                  
+                <vs-pm:Bezugsrecht>
+                                       
+                  <vs-pm:Leistungsfall>Todesfall</vs-pm:Leistungsfall>
+                                       
+                  <vs-pm:IndexBerechtigter>3</vs-pm:IndexBerechtigter>
+                                    
+                </vs-pm:Bezugsrecht>
+                                  
+                <pm-leben:Hochrechnungszins>5</pm-leben:Hochrechnungszins>
+                                  
+                <pm-leben:IstHauptversicherung>true</pm-leben:IstHauptversicherung>
+                                  
+                <pm-leben:UeberschussverwendungVorLeistung xsi:type="dt:STE_UeberschussverwendungBasis">12</pm-leben:UeberschussverwendungVorLeistung>
+                                  
+                <pm-leben:VersichertePerson>
+                                       
+                  <partner:PartnerID>2</partner:PartnerID>
+                                    
+                </pm-leben:VersichertePerson>
+                                  
+                <pm-leben:BeitragsRueckgewaehrBeiTod>01</pm-leben:BeitragsRueckgewaehrBeiTod>
+                               
+              </pm:Elementarprodukt>
+                             
+              <pm:Elementarprodukt xsi:type="pm-leben:CT_PflegeAbsicherung">
+                                  
+                <pm:Kennung>Rente PLUS</pm:Kennung>
+                                  
+                <pm-leben:IstHauptversicherung>false</pm-leben:IstHauptversicherung>
+                                  
+                <pm-leben:VersichertePerson>
+                                       
+                  <partner:PartnerID>2</partner:PartnerID>
+                                    
+                </pm-leben:VersichertePerson>
+                               
+              </pm:Elementarprodukt>
+                             
+              <pm:Dynamik>
+                                  
+                <pm:KategorieID>Beitrag</pm:KategorieID>
+                                  
+                <pm:Hochrechnung>true</pm:Hochrechnung>
+                               
+              </pm:Dynamik>
+                             
+              <pm-leben:BAV>
+                                  
+                <basis:Erweiterung xsi:type="vb-leben:CT_BAVErweiterung">
+                                       
+                  <vb-leben:Antragsdaten>
+                                            
+                    <vb-leben:Gehaltsumwandlungsvereinbarung>
+                                                 
+                      <vb-leben:LaufendeBezuege>true</vb-leben:LaufendeBezuege>
+                                              
+                    </vb-leben:Gehaltsumwandlungsvereinbarung>
+                                         
+                  </vb-leben:Antragsdaten>
+                                    
+                </basis:Erweiterung>
+                                  
+                <pm-leben:Durchfuehrungsweg>Direktversicherung</pm-leben:Durchfuehrungsweg>
+                                  
+                <pm-leben:Finanzierungsform>Entgeltumwandlung</pm-leben:Finanzierungsform>
+                                  
+                <pm-leben:Zusageform>02</pm-leben:Zusageform>
+                               
+              </pm-leben:BAV>
+                             
+              <pm-leben:VorgabeBerechnung>
+                                  
+                <pm-leben:ArtID xsi:type="dt:STE_VorgabeBerechnungBasis">Bruttobeitrag</pm-leben:ArtID>
+                                  
+                <pm-leben:Kontext xsi:type="dt:STE_VorgabeBerechnungKontextBasis">Produkt</pm-leben:Kontext>
+                               
+              </pm-leben:VorgabeBerechnung>
+                          
+            </pm:Produkt>
+                     
+          </tarif:Verkaufsprodukt>
+                   
+          <tarif:BesondereVereinbarungen>keine</tarif:BesondereVereinbarungen>
+                   
+          <tarif:Unterschriftsverfahren>03</tarif:Unterschriftsverfahren>
+                   
+          <tarif:Antragsart>01</tarif:Antragsart>
+                   
+          <tarif:Beitragszahler>
+                        
+            <partner:PartnerID>1</partner:PartnerID>
+                     
+          </tarif:Beitragszahler>
+                
+        </tarif:Antrag>
+           
+      </tarif:Request>
+      
+    </tarif:getOrder>
+  </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <tarif:getOrderQualified xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:vbl="urn:de:vb:bipro:taa:leben:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        
+      <tarif:Request>
+            
+        <nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+        <nachr:ConsumerID>WS DEV TEAM</nachr:ConsumerID>
+            
+        <tarif:Antrag>
+                
+          <basis:Erweiterung xsi:type="vbl:CT_AntragErweiterung">
+                    
+            <vbl:Datenschutzeinwilligung>Einzelfalleinwilligung</vbl:Datenschutzeinwilligung>
+                    
+            <vbl:DatenschutzeinwilligungTodesfall>true</vbl:DatenschutzeinwilligungTodesfall>
+                    
+            <vbl:PolitischExponiertePerson>false</vbl:PolitischExponiertePerson>
+                    
+            <vbl:SteuerpflichtInDenUSA>false</vbl:SteuerpflichtInDenUSA>
+                    
+            <vbl:SteuerlicheAnsaessigkeitImAusland>
+                        
+              <vbl:SteuerlichAnsaessig>false</vbl:SteuerlichAnsaessig>
+                      
+            </vbl:SteuerlicheAnsaessigkeitImAusland>
+                       
+      
+          </basis:Erweiterung>
+                
+          <gevo:Vermittler>
+                    
+            <allg:Vermittlernummer>111/222</allg:Vermittlernummer>
+                    
+            <allg:IHKRegistrierungsnummer>D-GF4I-TCR1L-02</allg:IHKRegistrierungsnummer>
+                  
+          </gevo:Vermittler>
+                
+          <tarif:Partner xsi:type="partner:CT_Person">
+                    
+            <partner:Anrede>1</partner:Anrede>
+                    
+            <partner:Name>Name</partner:Name>
+                    
+            <partner:PartnerID>3</partner:PartnerID>
+                    
+            <partner:Anschrift>
+                        
+              <allg:Strasse>Straße</allg:Strasse>
+                        
+              <allg:Hausnummer>1</allg:Hausnummer>
+                        
+              <allg:Postleitzahl>12345</allg:Postleitzahl>
+                        
+              <allg:Ort>Ort</allg:Ort>
+                        
+              <allg:Landname>Deutschland</allg:Landname>
+                        
+              <partner:ArtID>1</partner:ArtID>
+                      
+            </partner:Anschrift>
+                    
+            <partner:ZusaetzlichePartnerdaten xsi:type="pm-leben:CT_Risikopruefung">
+                        
+              <pm-leben:Fragenkomplex>
+                            
+                <fragen:ArtID xsi:type="dt:STE_FragenkomplexArtBasis">Gesundheit</fragen:ArtID>
+                            
+                <fragen:Bezeichnung>Gesundheitsfragen zur versicherten Person</fragen:Bezeichnung>
+                            
+                <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                                
+                  <fragen:FachlicheID>A01</fragen:FachlicheID>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageZahl">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A01.A01_A</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortZahl>
+                                        
+                      <fragen:Zahl>200</fragen:Zahl>
+                                      
+                    </fragen:AntwortZahl>
+                                  
+                  </fragen:EinfacheFrage>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageZahl">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A01.A01_B</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortZahl>
+                                        
+                      <fragen:Zahl>100.0</fragen:Zahl>
+                                      
+                    </fragen:AntwortZahl>
+                                  
+                  </fragen:EinfacheFrage>
+                              
+                </fragen:Element>
+                            
+                <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                                
+                  <fragen:FachlicheID>A23</fragen:FachlicheID>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A23.A23_A</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A23.A23_B</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A23.A23_C</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                              
+                </fragen:Element>
+                 
+            
+                <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                                
+                  <fragen:TechnischeID>VP.SG_TF2.A09</fragen:TechnischeID>
+                                
+                  <fragen:AntwortJaNein>
+                                    
+                    <fragen:Entscheidung>false</fragen:Entscheidung>
+                                  
+                  </fragen:AntwortJaNein>
+                              
+                </fragen:Element>
+                            
+            
+                <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                                
+                  <fragen:FachlicheID>A20</fragen:FachlicheID>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A20.A20_A</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A20.A20_B</fragen:TechnischeID>
+                                  
+                  </fragen:EinfacheFrage>
+                              
+                </fragen:Element>
+                 
+           
+                <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                                
+                  <fragen:FachlicheID>A21</fragen:FachlicheID>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A21.A21_A</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A21.A21_B</fragen:TechnischeID>
+                                  
+                  </fragen:EinfacheFrage>
+                              
+                </fragen:Element>
+                 
+            
+                <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                                
+                  <fragen:FachlicheID>A22</fragen:FachlicheID>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A22.FLAGBU20_VERDAUUNGSTRAKT</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A22.FLAGBU20_GEHIRN</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A22.FLAGBU20_WIRBELSAEULE</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A22.FLAGBU20_SCHWINDEL</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A22.FLAGBU20_KREBS</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A22.FLAGBU20_AUTOIMMUNKRANKHEITEN</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A22.FLAGBU20_VERLETZUNGEN</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A22.FLAGBU20_ALKOHOL_DROGEN</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A22.FLAGBU20_HERZ</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A22.FLAGBU20_STOFFWECHSEL</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A22.FLAGBU20_ALLERGIEN</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                                
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                    
+                    <fragen:TechnischeID>VP.SG_TF2.A22.FLAGBU20_AUGEN</fragen:TechnischeID>
+                                    
+                    <fragen:AntwortJaNein>
+                                        
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                      
+                    </fragen:AntwortJaNein>
+                                  
+                  </fragen:EinfacheFrage>
+                              
+                </fragen:Element>
+                     
+            
+                <fragen:Element xsi:type="fragen:CT_FrageText">
+                                
+                  <fragen:TechnischeID>VP.SG_TF2.A24</fragen:TechnischeID>
+                                
+                  <fragen:AntwortText>
+                                    
+                    <fragen:Freitext>Hausarzt</fragen:Freitext>
+                                  
+                  </fragen:AntwortText>
+                              
+                </fragen:Element>
+                            
+                <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                                
+                  <fragen:TechnischeID>VP.SG_TF2</fragen:TechnischeID>
+                                
+                  <fragen:AntwortJaNein>
+                                    
+                    <fragen:Entscheidung>true</fragen:Entscheidung>
+                                  
+                  </fragen:AntwortJaNein>
+                              
+                </fragen:Element>
+                          
+              </pm-leben:Fragenkomplex>
+                      
+            </partner:ZusaetzlichePartnerdaten>
+                    
+            <partner:Bankverbindung>
+                        
+              <partner:Einzugsermaechtigung>false</partner:Einzugsermaechtigung>
+                      
+            </partner:Bankverbindung>
+                    
+            <partner:Vorname>Vorname</partner:Vorname>
+                    
+            <partner:Geburtsdatum>1992-11-01</partner:Geburtsdatum>
+                    
+            <partner:Geschlecht>1</partner:Geschlecht>
+                    
+            <partner:Geburtsort>VP: Geburtsort</partner:Geburtsort>
+                    
+            <partner:Staatsangehoerigkeit>D</partner:Staatsangehoerigkeit>
+                    
+            <partner:Ausweis>
+                         
+              <partner:Ausweistyp>1</partner:Ausweistyp>
+                         
+              <partner:AusstellendeBehoerde>VP Ausweisaussteller</partner:AusstellendeBehoerde>
+                         
+              <partner:Ausweisnummer>VP Ausweisnummer</partner:Ausweisnummer>
+                      
+            </partner:Ausweis>
+                  
+          </tarif:Partner>
+                
+          <tarif:Partner xsi:type="partner:CT_Person">
+                    
+            <partner:Anrede>1</partner:Anrede>
+                    
+            <partner:Name>KindName</partner:Name>
+                    
+            <partner:PartnerID>2</partner:PartnerID>
+                    
+            <partner:Anschrift>
+                        
+              <allg:Strasse>KindStraße</allg:Strasse>
+                        
+              <allg:Postleitzahl>23456</allg:Postleitzahl>
+                        
+              <allg:Ort>KindOrt</allg:Ort>
+                        
+              <allg:Landname>Deutschland</allg:Landname>
+                        
+              <partner:ArtID>1</partner:ArtID>
+                      
+            </partner:Anschrift>
+                    
+            <partner:Partnerbeziehung>
+                        
+              <partner:PartnerID>3</partner:PartnerID>
+                        
+              <partner:Art xsi:type="dt:STE_PartnerbeziehungBasis">03</partner:Art>
+                      
+            </partner:Partnerbeziehung>
+                    
+            <partner:Vorname>KindVorname</partner:Vorname>
+                    
+            <partner:Geburtsdatum>2010-01-01</partner:Geburtsdatum>
+                    
+            <partner:Geschlecht>1</partner:Geschlecht>
+                    
+            <partner:Staatsangehoerigkeit>D</partner:Staatsangehoerigkeit>
+                  
+          </tarif:Partner>
+                
+          <tarif:Versicherungsnehmer>
+                    
+            <partner:PartnerID>3</partner:PartnerID>
+                  
+          </tarif:Versicherungsnehmer>
+                
+          <tarif:Verkaufsprodukt>
+                    
+            <pm:Produkt xsi:type="pm-leben:CT_Produkt">
+                        
+              <basis:Erweiterung xsi:type="vbl:CT_ProduktErweiterung">
+                            
+                <vbl:Tarifgruppe>Normal</vbl:Tarifgruppe>
+                          
+              </basis:Erweiterung>
+                        
+              <pm:GewuenschteZahlungsweise>8</pm:GewuenschteZahlungsweise>
+                        
+              <pm:Beitrag>
+                            
+                <pm:ArtID xsi:type="dt:STE_BeitragBasis">01</pm:ArtID>
+                            
+                <pm:Zahlungsweise>8</pm:Zahlungsweise>
+                          
+              </pm:Beitrag>
+                        
+              <pm:Versicherungsdauer>
+                            
+                <allg:Beginn>2023-03-01T12:00</allg:Beginn>
+                          
+              </pm:Versicherungsdauer>
+                        
+              <pm:Kennung>TF2</pm:Kennung>
+                        
+              <pm:Elementarprodukt xsi:type="pm-leben:CT_KapitalbildendeVersicherung">
+                            
+                <basis:Erweiterung xsi:type="vbl:CT_KapitalbildendeVersicherungErweiterung"/>
+                            
+                <pm:Versicherungsdauer>
+                                
+                  <allg:AnzahlJahre>20</allg:AnzahlJahre>
+                              
+                </pm:Versicherungsdauer>
+                            
+                <vs-pm:VersicherungssummeOderLeistung>
+                                
+                  <vs-pm:ArtID xsi:type="dt:STE_VersicherungssummeOderLeistungBasis">Versicherungssumme</vs-pm:ArtID>
+                                
+                  <vs-pm:Wert>10000</vs-pm:Wert>
+                                
+                  <vs-pm:Werteinheit>20</vs-pm:Werteinheit>
+                                
+                  <vs-pm:Waehrung>EUR</vs-pm:Waehrung>
+                                
+                  <vs-pm:Auszahlungsweise>6</vs-pm:Auszahlungsweise>
+                              
+                </vs-pm:VersicherungssummeOderLeistung>
+                            
+                <vs-pm:Bezugsrecht>
+                                
+                  <vs-pm:Leistungsfall>Erlebensfall</vs-pm:Leistungsfall>
+                                
+                  <vs-pm:IndexBerechtigter>11</vs-pm:IndexBerechtigter>
+                                
+                  <vs-pm:Bezugsberechtigter>
+                                    
+                    <partner:PartnerID>2</partner:PartnerID>
+                                  
+                  </vs-pm:Bezugsberechtigter>
+                              
+                </vs-pm:Bezugsrecht>
+                            
+                <vs-pm:Bezugsrecht>
+                                
+                  <vs-pm:Leistungsfall>Todesfall</vs-pm:Leistungsfall>
+                                
+                  <vs-pm:IndexBerechtigter>11</vs-pm:IndexBerechtigter>
+                                
+                  <vs-pm:Bezugsberechtigter>
+                                    
+                    <partner:PartnerID>2</partner:PartnerID>
+                                  
+                  </vs-pm:Bezugsberechtigter>
+                              
+                </vs-pm:Bezugsrecht>
+                            
+                <pm-leben:IstHauptversicherung>true</pm-leben:IstHauptversicherung>
+                            
+                <pm-leben:UeberschussverwendungVorLeistung xsi:type="dt:STE_UeberschussverwendungBasis">00</pm-leben:UeberschussverwendungVorLeistung>
+                            
+                <pm-leben:VersichertePerson>
+                                
+                  <partner:PartnerID>3</partner:PartnerID>
+                              
+                </pm-leben:VersichertePerson>
+                          
+              </pm:Elementarprodukt>
+                        
+              <pm-leben:VorgabeBerechnung>
+                            
+                <pm-leben:ArtID xsi:type="dt:STE_VorgabeBerechnungBasis">Versicherungssumme</pm-leben:ArtID>
+                            
+                <pm-leben:Kontext xsi:type="dt:STE_VorgabeBerechnungKontextBasis">KapitalbildendeVersicherung</pm-leben:Kontext>
+                          
+              </pm-leben:VorgabeBerechnung>
+                      
+            </pm:Produkt>
+                  
+          </tarif:Verkaufsprodukt>
+                
+          <tarif:Unterschriftsverfahren>03</tarif:Unterschriftsverfahren>
+                
+          <tarif:Antragsart>01</tarif:Antragsart>
+                
+          <tarif:Beitragszahler>
+                    
+            <partner:PartnerID>3</partner:PartnerID>
+                  
+          </tarif:Beitragszahler>
+              
+        </tarif:Antrag>
+          
+      </tarif:Request>
+      
+    </tarif:getOrderQualified>
+  </soapenv:Body>
+</soapenv:Envelope>

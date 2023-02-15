@@ -1,0 +1,4903 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <tarif:getOrderResponse xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:kapanl-basis="http://www.bipro.net/namespace/kapitalanlage/basis" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:vb-leben="urn:de:vb:bipro:taa:leben:1.12" xmlns:vbl="urn:de:vb:bipro:taa:vbl:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      
+      <tarif:Response>
+        
+        <nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+        <nachr:ConsumerID>WS DEV TEAM</nachr:ConsumerID>
+        
+        <nachr:Status>
+          
+          <nachr:ProzessID>2022-09-19T11:18:02.4882936561423564#R=20220400,S=2,O=1,V=0,H=VDE016,T=2022-09-19T11:18:02.163</nachr:ProzessID>
+          
+          <nachr:Zeitstempel>2022-09-19T11:18:02</nachr:Zeitstempel>
+          
+          <nachr:StatusID>OK</nachr:StatusID>
+          
+          <nachr:Schwebe>false</nachr:Schwebe>
+          
+          <nachr:Meldung>
+            
+            <nachr:ArtID>Hinweis</nachr:ArtID>
+            
+            <nachr:MeldungID>99999</nachr:MeldungID>
+            
+            <nachr:Text>Verarbeitung beendet</nachr:Text>
+            
+          </nachr:Meldung>
+          
+        </nachr:Status>
+        
+        <tarif:Antrag>
+          
+          <basis:Erweiterung xsi:type="vb-leben:CT_AntragErweiterung">
+            
+            <vb-leben:PolitischExponiertePerson>false</vb-leben:PolitischExponiertePerson>
+            
+            <vb-leben:BasisinformationsblattMedium>Papier</vb-leben:BasisinformationsblattMedium>
+            
+            <vb-leben:AbweichenderZielmarkt>false</vb-leben:AbweichenderZielmarkt>
+            
+            <vb-leben:AngabeZielmarkt>true</vb-leben:AngabeZielmarkt>
+            
+            <vb-leben:UnterschriftenKonfiguration>false</vb-leben:UnterschriftenKonfiguration>
+            
+            <vb-leben:AngabeNettoDarlehenssummeAndererVertrag>false</vb-leben:AngabeNettoDarlehenssummeAndererVertrag>
+            
+          </basis:Erweiterung>
+          
+          <gevo:Vermittler>
+            
+            <allg:Vermittlernummer>123/456</allg:Vermittlernummer>
+            
+            <allg:PartnerID>211593849</allg:PartnerID>
+            
+            <allg:Vermittlerrolle>
+              
+              <allg:ArtID>10</allg:ArtID>
+              
+              <allg:Vermittlertyp>02</allg:Vermittlertyp>
+              
+            </allg:Vermittlerrolle>
+            
+          </gevo:Vermittler>
+          
+          <gevo:Vermittler>
+            
+            <basis:Erweiterung xsi:type="vb-leben:CT_VermittlerErweiterung"/>
+            
+            <allg:Vermittlernummer>123/456</allg:Vermittlernummer>
+            
+            <allg:PartnerID>211593849</allg:PartnerID>
+            
+            <allg:Vermittlerrolle>
+              
+              <allg:ArtID>01</allg:ArtID>
+              
+              <allg:Vermittlertyp>01</allg:Vermittlertyp>
+              
+            </allg:Vermittlerrolle>
+            
+          </gevo:Vermittler>
+          
+          <tarif:Partner xsi:type="partner:CT_JuristischePerson">
+            
+            <basis:Erweiterung xsi:type="vb-leben:CT_PersonErweiterung"/>
+            
+            <partner:PartnerID>211593849</partner:PartnerID>
+            
+            <partner:Anschrift>
+              
+              <allg:Landname>Deutschland</allg:Landname>
+              
+              <partner:ArtID>1</partner:ArtID>
+              
+            </partner:Anschrift>
+            
+          </tarif:Partner>
+          
+          <tarif:Partner xsi:type="partner:CT_Person">
+            
+            <basis:Erweiterung xsi:type="vb-leben:CT_PersonErweiterung"/>
+            
+            <partner:Anrede>1</partner:Anrede>
+            
+            <partner:Name>Feuerstein</partner:Name>
+            
+            <partner:PartnerID>464652137</partner:PartnerID>
+            
+            <partner:Anschrift>
+              
+              <allg:Landname>Deutschland</allg:Landname>
+              
+              <partner:ArtID>1</partner:ArtID>
+              
+            </partner:Anschrift>
+            
+            <partner:Bankverbindung>
+              
+              <partner:Einzugsermaechtigung>true</partner:Einzugsermaechtigung>
+              
+            </partner:Bankverbindung>
+            
+            <partner:Geburtsdatum>1992-11-01</partner:Geburtsdatum>
+            
+            <partner:Geschlecht>1</partner:Geschlecht>
+            
+            <partner:Geburtsort>Hannover</partner:Geburtsort>
+            
+            <partner:Staatsangehoerigkeit>D</partner:Staatsangehoerigkeit>
+            
+            <partner:Berufstaetigkeit>
+              
+              <partner:Beruf>Bankkaufmann</partner:Beruf>
+              
+            </partner:Berufstaetigkeit>
+            
+          </tarif:Partner>
+          
+          <tarif:Partner xsi:type="partner:CT_Person">
+            
+            <basis:Erweiterung xsi:type="vb-leben:CT_PersonErweiterung">
+              
+              <vb-leben:Namenszusatz1>Tester</vb-leben:Namenszusatz1>
+              
+              <vb-leben:Name>Timo</vb-leben:Name>
+              
+            </basis:Erweiterung>
+            
+            <partner:Anrede>1</partner:Anrede>
+            
+            <partner:Name>Timo</partner:Name>
+            
+            <partner:PartnerID>478892252</partner:PartnerID>
+            
+            <partner:Anschrift>
+              
+              <allg:Landname>Deutschland</allg:Landname>
+              
+              <partner:ArtID>1</partner:ArtID>
+              
+            </partner:Anschrift>
+            
+            <partner:Vorname>Tester</partner:Vorname>
+            
+            <partner:Geburtsdatum>1980-01-01</partner:Geburtsdatum>
+            
+            <partner:Geschlecht>1</partner:Geschlecht>
+            
+            <partner:Staatsangehoerigkeit>D</partner:Staatsangehoerigkeit>
+            
+          </tarif:Partner>
+          
+          <tarif:Partner xsi:type="partner:CT_Person">
+            
+            <basis:Erweiterung xsi:type="vb-leben:CT_PersonErweiterung">
+              
+              <vb-leben:Namenszusatz1>Test</vb-leben:Namenszusatz1>
+              
+              <vb-leben:Name>Tina</vb-leben:Name>
+              
+            </basis:Erweiterung>
+            
+            <partner:Anrede>2</partner:Anrede>
+            
+            <partner:Name>Tina</partner:Name>
+            
+            <partner:PartnerID>1157545716</partner:PartnerID>
+            
+            <partner:Anschrift>
+              
+              <allg:Landname>Deutschland</allg:Landname>
+              
+              <partner:ArtID>1</partner:ArtID>
+              
+            </partner:Anschrift>
+            
+            <partner:Vorname>Test</partner:Vorname>
+            
+            <partner:Geburtsdatum>2000-01-01</partner:Geburtsdatum>
+            
+            <partner:Geschlecht>2</partner:Geschlecht>
+            
+            <partner:Staatsangehoerigkeit>D</partner:Staatsangehoerigkeit>
+            
+          </tarif:Partner>
+          
+          <tarif:Versicherungsnehmer>
+            
+            <partner:PartnerID>464652137</partner:PartnerID>
+            
+          </tarif:Versicherungsnehmer>
+          
+          <tarif:Verkaufsprodukt>
+            
+            <basis:Erweiterung xsi:type="vb-leben:CT_VerkaufsproduktErweiterung">
+              
+              <vb-leben:OekoRenta>false</vb-leben:OekoRenta>
+              
+              <vb-leben:Konsortium>Ohne</vb-leben:Konsortium>
+              
+              <vb-leben:Next>false</vb-leben:Next>
+              
+            </basis:Erweiterung>
+            
+            <pm:Produkt xsi:type="pm-leben:CT_Produkt">
+              
+              <basis:Erweiterung xsi:type="vb-leben:CT_ProduktErweiterung">
+                
+                <vb-leben:Tarifgruppe>Normal</vb-leben:Tarifgruppe>
+                
+                <vb-leben:BewertungssummeDaten>
+                  
+                  <vb-leben:Bewertungssumme>
+                    
+                    <allg:Betrag>39600</allg:Betrag>
+                    
+                    <allg:Waehrung>EUR</allg:Waehrung>
+                    
+                  </vb-leben:Bewertungssumme>
+                  
+                </vb-leben:BewertungssummeDaten>
+                
+                <vb-leben:Beitragsrendite>
+                  
+                  <vb-leben:Fondskostenberuecksichtigungsart>PAUSCHAL</vb-leben:Fondskostenberuecksichtigungsart>
+                  
+                  <vb-leben:Fondskostenberuecksichtigung>false</vb-leben:Fondskostenberuecksichtigung>
+                  
+                  <vb-leben:BeitragsrenditeKosten>0.0261</vb-leben:BeitragsrenditeKosten>
+                  
+                </vb-leben:Beitragsrendite>
+                
+                <vb-leben:Risikoindikator>
+                  
+                  <vb-leben:Minimum>1</vb-leben:Minimum>
+                  
+                  <vb-leben:Maximum>1</vb-leben:Maximum>
+                  
+                </vb-leben:Risikoindikator>
+                
+              </basis:Erweiterung>
+              
+              <pm:GewuenschteZahlungsweise>8</pm:GewuenschteZahlungsweise>
+              
+              <pm:Beitrag>
+                
+                <pm:ArtID xsi:type="dt:STE_BeitragBasis">01</pm:ArtID>
+                
+                <pm:Betrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Waehrung>EUR</allg:Waehrung>
+                  
+                </pm:Betrag>
+                
+                <pm:Zahlungsweise>8</pm:Zahlungsweise>
+                
+                <pm:Erhebung>
+                  
+                  <allg:AnzahlJahre>33</allg:AnzahlJahre>
+                  
+                  <allg:AnzahlMonate>0</allg:AnzahlMonate>
+                  
+                </pm:Erhebung>
+                
+              </pm:Beitrag>
+              
+              <pm:Beitrag>
+                
+                <pm:ArtID xsi:type="dt:STE_BeitragBasis">02</pm:ArtID>
+                
+                <pm:Betrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Waehrung>EUR</allg:Waehrung>
+                  
+                </pm:Betrag>
+                
+                <pm:Zahlungsweise>8</pm:Zahlungsweise>
+                
+                <pm:Erhebung>
+                  
+                  <allg:AnzahlJahre>33</allg:AnzahlJahre>
+                  
+                  <allg:AnzahlMonate>0</allg:AnzahlMonate>
+                  
+                </pm:Erhebung>
+                
+              </pm:Beitrag>
+              
+              <pm:Versicherungsdauer>
+                
+                <allg:Beginn>2023-03-01T12:00</allg:Beginn>
+                
+              </pm:Versicherungsdauer>
+              
+              <pm:Kennung>FR</pm:Kennung>
+              
+              <pm:Elementarprodukt xsi:type="pm-leben:CT_Rente">
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_RenteErweiterung">
+                  
+                  <vb-leben:Sicherheitskonzept>false</vb-leben:Sicherheitskonzept>
+                  
+                  <vb-leben:Ablaufmanagement>
+                    
+                    <allg:AnzahlJahre>5</allg:AnzahlJahre>
+                    
+                    <allg:AnzahlMonate>0</allg:AnzahlMonate>
+                    
+                  </vb-leben:Ablaufmanagement>
+                  
+                  <vb-leben:BewertungssummeDaten>
+                    
+                    <vb-leben:Bewertungssumme>
+                      
+                      <allg:Betrag>39600</allg:Betrag>
+                      
+                      <allg:Waehrung>EUR</allg:Waehrung>
+                      
+                    </vb-leben:Bewertungssumme>
+                    
+                    <vb-leben:Beitrag>
+                      
+                      <allg:Betrag>100</allg:Betrag>
+                      
+                      <allg:Waehrung>EUR</allg:Waehrung>
+                      
+                    </vb-leben:Beitrag>
+                    
+                  </vb-leben:BewertungssummeDaten>
+                  
+                  <vb-leben:TodesfallleistungImBezug>IndividuelleGarantiezeit</vb-leben:TodesfallleistungImBezug>
+                  
+                  <vb-leben:FondsrenteDaten>
+                    
+                    <vb-leben:ErhoehterTodesfallschutz>true</vb-leben:ErhoehterTodesfallschutz>
+                    
+                  </vb-leben:FondsrenteDaten>
+                  
+                </basis:Erweiterung>
+                
+                <pm:Beitrag>
+                  
+                  <pm:ArtID xsi:type="dt:STE_BeitragBasis">01</pm:ArtID>
+                  
+                  <pm:Betrag>
+                    
+                    <allg:Betrag>100</allg:Betrag>
+                    
+                    <allg:Waehrung>EUR</allg:Waehrung>
+                    
+                  </pm:Betrag>
+                  
+                  <pm:Zahlungsweise>8</pm:Zahlungsweise>
+                  
+                </pm:Beitrag>
+                
+                <pm:Versicherungsdauer>
+                  
+                  <allg:Ende>2055-11-01T12:00</allg:Ende>
+                  
+                  <allg:AnzahlJahre>33</allg:AnzahlJahre>
+                  
+                  <allg:AnzahlMonate>0</allg:AnzahlMonate>
+                  
+                </pm:Versicherungsdauer>
+                
+                <pm:Dynamik>
+                  
+                  <pm:Wert>0</pm:Wert>
+                  
+                  <pm:KategorieID>Beitrag</pm:KategorieID>
+                  
+                </pm:Dynamik>
+                
+                <vs-pm:VersicherungssummeOderLeistung>
+                  
+                  <vs-pm:ArtID xsi:type="vb-leben:STE_VersicherungssummeOderLeistungErweitert">TodesfallsummeImErstenJahr</vs-pm:ArtID>
+                  
+                  <vs-pm:Wert>1200</vs-pm:Wert>
+                  
+                  <vs-pm:Werteinheit>20</vs-pm:Werteinheit>
+                  
+                  <vs-pm:Waehrung>EUR</vs-pm:Waehrung>
+                  
+                  <vs-pm:Auszahlungsweise>6</vs-pm:Auszahlungsweise>
+                  
+                </vs-pm:VersicherungssummeOderLeistung>
+                
+                <vs-pm:VersicherungssummeOderLeistung>
+                  
+                  <vs-pm:ArtID xsi:type="dt:STE_VersicherungssummeOderLeistungBasis">GarantierteRente</vs-pm:ArtID>
+                  
+                  <vs-pm:Wertschluessel xsi:type="vb-leben:STE_LeistungSchluesselErweitert">Klassisch</vs-pm:Wertschluessel>
+                  
+                  <vs-pm:Werteinheit>20</vs-pm:Werteinheit>
+                  
+                  <vs-pm:Waehrung>EUR</vs-pm:Waehrung>
+                  
+                  <vs-pm:Auszahlungsweise>8</vs-pm:Auszahlungsweise>
+                  
+                </vs-pm:VersicherungssummeOderLeistung>
+                
+                <vs-pm:VersicherungssummeOderLeistung>
+                  
+                  <vs-pm:ArtID xsi:type="vb-leben:STE_VersicherungssummeOderLeistungErweitert">GarantierterRentenfaktor</vs-pm:ArtID>
+                  
+                  <vs-pm:Wert>21.42</vs-pm:Wert>
+                  
+                  <vs-pm:Werteinheit>20</vs-pm:Werteinheit>
+                  
+                  <vs-pm:Waehrung>EUR</vs-pm:Waehrung>
+                  
+                </vs-pm:VersicherungssummeOderLeistung>
+                
+                <vs-pm:VersicherungssummeOderLeistung>
+                  
+                  <vs-pm:ArtID xsi:type="dt:STE_VersicherungssummeOderLeistungBasis">GesamteRente</vs-pm:ArtID>
+                  
+                  <vs-pm:Wert>474</vs-pm:Wert>
+                  
+                  <vs-pm:Werteinheit>20</vs-pm:Werteinheit>
+                  
+                  <vs-pm:Waehrung>EUR</vs-pm:Waehrung>
+                  
+                  <vs-pm:Auszahlungsweise>8</vs-pm:Auszahlungsweise>
+                  
+                </vs-pm:VersicherungssummeOderLeistung>
+                
+                <vs-pm:VersicherungssummeOderLeistung>
+                  
+                  <vs-pm:ArtID xsi:type="vb-leben:STE_VersicherungssummeOderLeistungErweitert">GesamterRentenfaktor</vs-pm:ArtID>
+                  
+                  <vs-pm:Wert>23.42</vs-pm:Wert>
+                  
+                  <vs-pm:Werteinheit>20</vs-pm:Werteinheit>
+                  
+                  <vs-pm:Waehrung>EUR</vs-pm:Waehrung>
+                  
+                </vs-pm:VersicherungssummeOderLeistung>
+                
+                <vs-pm:VersicherungssummeOderLeistung>
+                  
+                  <vs-pm:ArtID xsi:type="dt:STE_VersicherungssummeOderLeistungBasis">GesamteAblaufleistung</vs-pm:ArtID>
+                  
+                  <vs-pm:Wert>202691</vs-pm:Wert>
+                  
+                  <vs-pm:Werteinheit>20</vs-pm:Werteinheit>
+                  
+                  <vs-pm:Waehrung>EUR</vs-pm:Waehrung>
+                  
+                  <vs-pm:Auszahlungsweise>6</vs-pm:Auszahlungsweise>
+                  
+                </vs-pm:VersicherungssummeOderLeistung>
+                
+                <vs-pm:FondsPortfolio>
+                  
+                  <vs-pm:Phase>Aufschubphase</vs-pm:Phase>
+                  
+                  <vs-pm:FondsAnteil>
+                    
+                    <kapanl-basis:ISIN>LU0048578792</kapanl-basis:ISIN>
+                    
+                    <vs-pm:Garantiefonds>false</vs-pm:Garantiefonds>
+                    
+                    <vs-pm:Prozentsatz>100.0</vs-pm:Prozentsatz>
+                    
+                  </vs-pm:FondsAnteil>
+                  
+                </vs-pm:FondsPortfolio>
+                
+                <vs-pm:FondsPortfolio>
+                  
+                  <vs-pm:Phase>Ablaufphase</vs-pm:Phase>
+                  
+                  <vs-pm:FondsAnteil>
+                    
+                    <kapanl-basis:ISIN>LU0006344922</kapanl-basis:ISIN>
+                    
+                    <vs-pm:Garantiefonds>false</vs-pm:Garantiefonds>
+                    
+                    <vs-pm:Prozentsatz>100.0</vs-pm:Prozentsatz>
+                    
+                  </vs-pm:FondsAnteil>
+                  
+                </vs-pm:FondsPortfolio>
+                
+                <vs-pm:Bezugsrecht>
+                  
+                  <vs-pm:Leistungsfall>Erlebensfall</vs-pm:Leistungsfall>
+                  
+                  <vs-pm:IndexBerechtigter>9</vs-pm:IndexBerechtigter>
+                  
+                  <vs-pm:Bezugsberechtigter>
+                    
+                    <partner:PartnerID>478892252</partner:PartnerID>
+                    
+                  </vs-pm:Bezugsberechtigter>
+                  
+                </vs-pm:Bezugsrecht>
+                
+                <vs-pm:Bezugsrecht>
+                  
+                  <vs-pm:Leistungsfall>Todesfall</vs-pm:Leistungsfall>
+                  
+                  <vs-pm:IndexBerechtigter>9</vs-pm:IndexBerechtigter>
+                  
+                  <vs-pm:Bezugsberechtigter>
+                    
+                    <partner:PartnerID>1157545716</partner:PartnerID>
+                    
+                  </vs-pm:Bezugsberechtigter>
+                  
+                </vs-pm:Bezugsrecht>
+                
+                <pm-leben:Hochrechnungszins>6</pm-leben:Hochrechnungszins>
+                
+                <pm-leben:IstHauptversicherung>true</pm-leben:IstHauptversicherung>
+                
+                <pm-leben:UeberschussverwendungNachLeistung xsi:type="dt:STE_UeberschussverwendungBasis">14</pm-leben:UeberschussverwendungNachLeistung>
+                
+                <pm-leben:UeberschussverwendungVorLeistung xsi:type="dt:STE_UeberschussverwendungBasis">12</pm-leben:UeberschussverwendungVorLeistung>
+                
+                <pm-leben:VersichertePerson>
+                  
+                  <partner:PartnerID>464652137</partner:PartnerID>
+                  
+                </pm-leben:VersichertePerson>
+                
+                <pm-leben:BeitragsRueckgewaehrBeiTod>01</pm-leben:BeitragsRueckgewaehrBeiTod>
+                
+                <pm-leben:BeitragsRueckgewaehrBeiAblauf>false</pm-leben:BeitragsRueckgewaehrBeiAblauf>
+                
+                <pm-leben:Ablaufmanagement>true</pm-leben:Ablaufmanagement>
+                
+                <pm-leben:Garantiezeit>
+                  
+                  <allg:AnzahlJahre>10</allg:AnzahlJahre>
+                  
+                  <allg:AnzahlMonate>0</allg:AnzahlMonate>
+                  
+                </pm-leben:Garantiezeit>
+                
+                <pm-leben:FlexibleAuszahlphase>
+                  
+                  <allg:Ende>2062-11-01T12:00</allg:Ende>
+                  
+                  <allg:AnzahlJahre>7</allg:AnzahlJahre>
+                  
+                  <allg:AnzahlMonate>0</allg:AnzahlMonate>
+                  
+                </pm-leben:FlexibleAuszahlphase>
+                
+              </pm:Elementarprodukt>
+              
+              <pm-leben:Verlauf>
+                
+                <pm-leben:ArtID xsi:type="dt:STE_LeistungsArtVerlaufEintragBasis">1</pm-leben:ArtID>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2025-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2026-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2027-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2028-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2029-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2030-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2031-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2032-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2033-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2034-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2035-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2036-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2037-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2038-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2039-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2040-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2041-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2042-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2043-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2044-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2045-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2046-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2047-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2048-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2049-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2050-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2051-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2052-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2053-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2054-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <pm-leben:ArtID xsi:type="dt:STE_LeistungsArtVerlaufEintragBasis">2</pm-leben:ArtID>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2025-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2026-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2027-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2028-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2029-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2030-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2031-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2032-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2033-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2034-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2035-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2036-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2037-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2038-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2039-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2040-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2041-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2042-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2043-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2044-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2045-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2046-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2047-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2048-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2049-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2050-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2051-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2052-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2053-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2054-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>100</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">Beitragssumme</pm-leben:ArtID>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>1200</allg:Betrag>
+                  
+                  <allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>2400</allg:Betrag>
+                  
+                  <allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>3600</allg:Betrag>
+                  
+                  <allg:Stichtag>2025-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>4800</allg:Betrag>
+                  
+                  <allg:Stichtag>2026-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>6000</allg:Betrag>
+                  
+                  <allg:Stichtag>2027-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>7200</allg:Betrag>
+                  
+                  <allg:Stichtag>2028-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>8400</allg:Betrag>
+                  
+                  <allg:Stichtag>2029-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>9600</allg:Betrag>
+                  
+                  <allg:Stichtag>2030-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>10800</allg:Betrag>
+                  
+                  <allg:Stichtag>2031-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>12000</allg:Betrag>
+                  
+                  <allg:Stichtag>2032-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>13200</allg:Betrag>
+                  
+                  <allg:Stichtag>2033-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>14400</allg:Betrag>
+                  
+                  <allg:Stichtag>2034-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>15600</allg:Betrag>
+                  
+                  <allg:Stichtag>2035-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>16800</allg:Betrag>
+                  
+                  <allg:Stichtag>2036-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>18000</allg:Betrag>
+                  
+                  <allg:Stichtag>2037-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>19200</allg:Betrag>
+                  
+                  <allg:Stichtag>2038-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>20400</allg:Betrag>
+                  
+                  <allg:Stichtag>2039-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>21600</allg:Betrag>
+                  
+                  <allg:Stichtag>2040-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>22800</allg:Betrag>
+                  
+                  <allg:Stichtag>2041-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>24000</allg:Betrag>
+                  
+                  <allg:Stichtag>2042-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>25200</allg:Betrag>
+                  
+                  <allg:Stichtag>2043-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>26400</allg:Betrag>
+                  
+                  <allg:Stichtag>2044-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>27600</allg:Betrag>
+                  
+                  <allg:Stichtag>2045-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>28800</allg:Betrag>
+                  
+                  <allg:Stichtag>2046-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>30000</allg:Betrag>
+                  
+                  <allg:Stichtag>2047-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>31200</allg:Betrag>
+                  
+                  <allg:Stichtag>2048-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>32400</allg:Betrag>
+                  
+                  <allg:Stichtag>2049-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>33600</allg:Betrag>
+                  
+                  <allg:Stichtag>2050-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>34800</allg:Betrag>
+                  
+                  <allg:Stichtag>2051-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>36000</allg:Betrag>
+                  
+                  <allg:Stichtag>2052-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>37200</allg:Betrag>
+                  
+                  <allg:Stichtag>2053-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>38400</allg:Betrag>
+                  
+                  <allg:Stichtag>2054-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>39600</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">BeitragssummeOhneBeitragserhoehung</pm-leben:ArtID>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>1200</allg:Betrag>
+                  
+                  <allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>2400</allg:Betrag>
+                  
+                  <allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>3600</allg:Betrag>
+                  
+                  <allg:Stichtag>2025-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>4800</allg:Betrag>
+                  
+                  <allg:Stichtag>2026-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>6000</allg:Betrag>
+                  
+                  <allg:Stichtag>2027-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>7200</allg:Betrag>
+                  
+                  <allg:Stichtag>2028-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>8400</allg:Betrag>
+                  
+                  <allg:Stichtag>2029-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>9600</allg:Betrag>
+                  
+                  <allg:Stichtag>2030-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>10800</allg:Betrag>
+                  
+                  <allg:Stichtag>2031-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>12000</allg:Betrag>
+                  
+                  <allg:Stichtag>2032-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>13200</allg:Betrag>
+                  
+                  <allg:Stichtag>2033-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>14400</allg:Betrag>
+                  
+                  <allg:Stichtag>2034-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>15600</allg:Betrag>
+                  
+                  <allg:Stichtag>2035-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>16800</allg:Betrag>
+                  
+                  <allg:Stichtag>2036-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>18000</allg:Betrag>
+                  
+                  <allg:Stichtag>2037-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>19200</allg:Betrag>
+                  
+                  <allg:Stichtag>2038-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>20400</allg:Betrag>
+                  
+                  <allg:Stichtag>2039-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>21600</allg:Betrag>
+                  
+                  <allg:Stichtag>2040-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>22800</allg:Betrag>
+                  
+                  <allg:Stichtag>2041-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>24000</allg:Betrag>
+                  
+                  <allg:Stichtag>2042-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>25200</allg:Betrag>
+                  
+                  <allg:Stichtag>2043-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>26400</allg:Betrag>
+                  
+                  <allg:Stichtag>2044-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>27600</allg:Betrag>
+                  
+                  <allg:Stichtag>2045-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>28800</allg:Betrag>
+                  
+                  <allg:Stichtag>2046-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>30000</allg:Betrag>
+                  
+                  <allg:Stichtag>2047-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>31200</allg:Betrag>
+                  
+                  <allg:Stichtag>2048-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>32400</allg:Betrag>
+                  
+                  <allg:Stichtag>2049-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>33600</allg:Betrag>
+                  
+                  <allg:Stichtag>2050-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>34800</allg:Betrag>
+                  
+                  <allg:Stichtag>2051-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>36000</allg:Betrag>
+                  
+                  <allg:Stichtag>2052-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>37200</allg:Betrag>
+                  
+                  <allg:Stichtag>2053-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>38400</allg:Betrag>
+                  
+                  <allg:Stichtag>2054-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>39600</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <pm-leben:ArtID xsi:type="dt:STE_LeistungsArtVerlaufEintragBasis">11</pm-leben:ArtID>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>1200</allg:Betrag>
+                  
+                  <allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>2400</allg:Betrag>
+                  
+                  <allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>3600</allg:Betrag>
+                  
+                  <allg:Stichtag>2025-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>4800</allg:Betrag>
+                  
+                  <allg:Stichtag>2026-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>6000</allg:Betrag>
+                  
+                  <allg:Stichtag>2027-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>7200</allg:Betrag>
+                  
+                  <allg:Stichtag>2028-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>8400</allg:Betrag>
+                  
+                  <allg:Stichtag>2029-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>9600</allg:Betrag>
+                  
+                  <allg:Stichtag>2030-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>10800</allg:Betrag>
+                  
+                  <allg:Stichtag>2031-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>12000</allg:Betrag>
+                  
+                  <allg:Stichtag>2032-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>13200</allg:Betrag>
+                  
+                  <allg:Stichtag>2033-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>14400</allg:Betrag>
+                  
+                  <allg:Stichtag>2034-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>15600</allg:Betrag>
+                  
+                  <allg:Stichtag>2035-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>16800</allg:Betrag>
+                  
+                  <allg:Stichtag>2036-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>18000</allg:Betrag>
+                  
+                  <allg:Stichtag>2037-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>19200</allg:Betrag>
+                  
+                  <allg:Stichtag>2038-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>20400</allg:Betrag>
+                  
+                  <allg:Stichtag>2039-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>21600</allg:Betrag>
+                  
+                  <allg:Stichtag>2040-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>22800</allg:Betrag>
+                  
+                  <allg:Stichtag>2041-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>24000</allg:Betrag>
+                  
+                  <allg:Stichtag>2042-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>25200</allg:Betrag>
+                  
+                  <allg:Stichtag>2043-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>26400</allg:Betrag>
+                  
+                  <allg:Stichtag>2044-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>27600</allg:Betrag>
+                  
+                  <allg:Stichtag>2045-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>28800</allg:Betrag>
+                  
+                  <allg:Stichtag>2046-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>30000</allg:Betrag>
+                  
+                  <allg:Stichtag>2047-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>31200</allg:Betrag>
+                  
+                  <allg:Stichtag>2048-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>32400</allg:Betrag>
+                  
+                  <allg:Stichtag>2049-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>33600</allg:Betrag>
+                  
+                  <allg:Stichtag>2050-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>34800</allg:Betrag>
+                  
+                  <allg:Stichtag>2051-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>36000</allg:Betrag>
+                  
+                  <allg:Stichtag>2052-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>37200</allg:Betrag>
+                  
+                  <allg:Stichtag>2053-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>38400</allg:Betrag>
+                  
+                  <allg:Stichtag>2054-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>39600</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">TodesfallleistungGarantiertOhneBeitragserhoehung</pm-leben:ArtID>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>1200</allg:Betrag>
+                  
+                  <allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>2400</allg:Betrag>
+                  
+                  <allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>3600</allg:Betrag>
+                  
+                  <allg:Stichtag>2025-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>4800</allg:Betrag>
+                  
+                  <allg:Stichtag>2026-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>6000</allg:Betrag>
+                  
+                  <allg:Stichtag>2027-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>7200</allg:Betrag>
+                  
+                  <allg:Stichtag>2028-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>8400</allg:Betrag>
+                  
+                  <allg:Stichtag>2029-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>9600</allg:Betrag>
+                  
+                  <allg:Stichtag>2030-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>10800</allg:Betrag>
+                  
+                  <allg:Stichtag>2031-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>12000</allg:Betrag>
+                  
+                  <allg:Stichtag>2032-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>13200</allg:Betrag>
+                  
+                  <allg:Stichtag>2033-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>14400</allg:Betrag>
+                  
+                  <allg:Stichtag>2034-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>15600</allg:Betrag>
+                  
+                  <allg:Stichtag>2035-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>16800</allg:Betrag>
+                  
+                  <allg:Stichtag>2036-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>18000</allg:Betrag>
+                  
+                  <allg:Stichtag>2037-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>19200</allg:Betrag>
+                  
+                  <allg:Stichtag>2038-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>20400</allg:Betrag>
+                  
+                  <allg:Stichtag>2039-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>21600</allg:Betrag>
+                  
+                  <allg:Stichtag>2040-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>22800</allg:Betrag>
+                  
+                  <allg:Stichtag>2041-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>24000</allg:Betrag>
+                  
+                  <allg:Stichtag>2042-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>25200</allg:Betrag>
+                  
+                  <allg:Stichtag>2043-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>26400</allg:Betrag>
+                  
+                  <allg:Stichtag>2044-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>27600</allg:Betrag>
+                  
+                  <allg:Stichtag>2045-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>28800</allg:Betrag>
+                  
+                  <allg:Stichtag>2046-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>30000</allg:Betrag>
+                  
+                  <allg:Stichtag>2047-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>31200</allg:Betrag>
+                  
+                  <allg:Stichtag>2048-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>32400</allg:Betrag>
+                  
+                  <allg:Stichtag>2049-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>33600</allg:Betrag>
+                  
+                  <allg:Stichtag>2050-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>34800</allg:Betrag>
+                  
+                  <allg:Stichtag>2051-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>36000</allg:Betrag>
+                  
+                  <allg:Stichtag>2052-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>37200</allg:Betrag>
+                  
+                  <allg:Stichtag>2053-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>38400</allg:Betrag>
+                  
+                  <allg:Stichtag>2054-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>39600</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>0.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>1.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">TodesfallleistungFonds</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>1</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>0.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>1200</allg:Betrag>
+                  
+                  <allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>2400</allg:Betrag>
+                  
+                  <allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>3600</allg:Betrag>
+                  
+                  <allg:Stichtag>2025-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>4800</allg:Betrag>
+                  
+                  <allg:Stichtag>2026-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>6000</allg:Betrag>
+                  
+                  <allg:Stichtag>2027-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>7200</allg:Betrag>
+                  
+                  <allg:Stichtag>2028-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>8400</allg:Betrag>
+                  
+                  <allg:Stichtag>2029-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>9600</allg:Betrag>
+                  
+                  <allg:Stichtag>2030-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>10800</allg:Betrag>
+                  
+                  <allg:Stichtag>2031-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>12000</allg:Betrag>
+                  
+                  <allg:Stichtag>2032-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>13200</allg:Betrag>
+                  
+                  <allg:Stichtag>2033-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>14400</allg:Betrag>
+                  
+                  <allg:Stichtag>2034-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>15600</allg:Betrag>
+                  
+                  <allg:Stichtag>2035-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>16800</allg:Betrag>
+                  
+                  <allg:Stichtag>2036-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>18000</allg:Betrag>
+                  
+                  <allg:Stichtag>2037-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>19200</allg:Betrag>
+                  
+                  <allg:Stichtag>2038-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>20400</allg:Betrag>
+                  
+                  <allg:Stichtag>2039-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>21600</allg:Betrag>
+                  
+                  <allg:Stichtag>2040-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>22800</allg:Betrag>
+                  
+                  <allg:Stichtag>2041-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>24000</allg:Betrag>
+                  
+                  <allg:Stichtag>2042-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>25200</allg:Betrag>
+                  
+                  <allg:Stichtag>2043-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>26400</allg:Betrag>
+                  
+                  <allg:Stichtag>2044-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>27600</allg:Betrag>
+                  
+                  <allg:Stichtag>2045-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>28800</allg:Betrag>
+                  
+                  <allg:Stichtag>2046-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>30000</allg:Betrag>
+                  
+                  <allg:Stichtag>2047-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>31200</allg:Betrag>
+                  
+                  <allg:Stichtag>2048-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>32400</allg:Betrag>
+                  
+                  <allg:Stichtag>2049-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>33600</allg:Betrag>
+                  
+                  <allg:Stichtag>2050-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>34800</allg:Betrag>
+                  
+                  <allg:Stichtag>2051-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>36000</allg:Betrag>
+                  
+                  <allg:Stichtag>2052-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>37200</allg:Betrag>
+                  
+                  <allg:Stichtag>2053-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>38400</allg:Betrag>
+                  
+                  <allg:Stichtag>2054-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>36483</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>3.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>4.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">TodesfallleistungFonds</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>2</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>3.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>1200</allg:Betrag>
+                  
+                  <allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>2400</allg:Betrag>
+                  
+                  <allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>3600</allg:Betrag>
+                  
+                  <allg:Stichtag>2025-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>4800</allg:Betrag>
+                  
+                  <allg:Stichtag>2026-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>6000</allg:Betrag>
+                  
+                  <allg:Stichtag>2027-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>7200</allg:Betrag>
+                  
+                  <allg:Stichtag>2028-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>8400</allg:Betrag>
+                  
+                  <allg:Stichtag>2029-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>9600</allg:Betrag>
+                  
+                  <allg:Stichtag>2030-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>10800</allg:Betrag>
+                  
+                  <allg:Stichtag>2031-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>12000</allg:Betrag>
+                  
+                  <allg:Stichtag>2032-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>13200</allg:Betrag>
+                  
+                  <allg:Stichtag>2033-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>14400</allg:Betrag>
+                  
+                  <allg:Stichtag>2034-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>15828</allg:Betrag>
+                  
+                  <allg:Stichtag>2035-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>17481</allg:Betrag>
+                  
+                  <allg:Stichtag>2036-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>19189</allg:Betrag>
+                  
+                  <allg:Stichtag>2037-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>20955</allg:Betrag>
+                  
+                  <allg:Stichtag>2038-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>22777</allg:Betrag>
+                  
+                  <allg:Stichtag>2039-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>24661</allg:Betrag>
+                  
+                  <allg:Stichtag>2040-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>26607</allg:Betrag>
+                  
+                  <allg:Stichtag>2041-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>28617</allg:Betrag>
+                  
+                  <allg:Stichtag>2042-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>30692</allg:Betrag>
+                  
+                  <allg:Stichtag>2043-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>32839</allg:Betrag>
+                  
+                  <allg:Stichtag>2044-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>35054</allg:Betrag>
+                  
+                  <allg:Stichtag>2045-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>37343</allg:Betrag>
+                  
+                  <allg:Stichtag>2046-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>39709</allg:Betrag>
+                  
+                  <allg:Stichtag>2047-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>42152</allg:Betrag>
+                  
+                  <allg:Stichtag>2048-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>44677</allg:Betrag>
+                  
+                  <allg:Stichtag>2049-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>47286</allg:Betrag>
+                  
+                  <allg:Stichtag>2050-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>49980</allg:Betrag>
+                  
+                  <allg:Stichtag>2051-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>52764</allg:Betrag>
+                  
+                  <allg:Stichtag>2052-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>55639</allg:Betrag>
+                  
+                  <allg:Stichtag>2053-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>58610</allg:Betrag>
+                  
+                  <allg:Stichtag>2054-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>61680</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>6.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>7.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">TodesfallleistungFonds</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>3</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>6.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>1200</allg:Betrag>
+                  
+                  <allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>2400</allg:Betrag>
+                  
+                  <allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>3600</allg:Betrag>
+                  
+                  <allg:Stichtag>2025-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>4800</allg:Betrag>
+                  
+                  <allg:Stichtag>2026-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>6000</allg:Betrag>
+                  
+                  <allg:Stichtag>2027-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>7200</allg:Betrag>
+                  
+                  <allg:Stichtag>2028-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>8400</allg:Betrag>
+                  
+                  <allg:Stichtag>2029-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>9600</allg:Betrag>
+                  
+                  <allg:Stichtag>2030-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>11160</allg:Betrag>
+                  
+                  <allg:Stichtag>2031-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>13013</allg:Betrag>
+                  
+                  <allg:Stichtag>2032-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>14982</allg:Betrag>
+                  
+                  <allg:Stichtag>2033-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>17076</allg:Betrag>
+                  
+                  <allg:Stichtag>2034-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>19303</allg:Betrag>
+                  
+                  <allg:Stichtag>2035-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>21670</allg:Betrag>
+                  
+                  <allg:Stichtag>2036-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>24186</allg:Betrag>
+                  
+                  <allg:Stichtag>2037-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>26861</allg:Betrag>
+                  
+                  <allg:Stichtag>2038-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>29706</allg:Betrag>
+                  
+                  <allg:Stichtag>2039-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>32731</allg:Betrag>
+                  
+                  <allg:Stichtag>2040-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>35945</allg:Betrag>
+                  
+                  <allg:Stichtag>2041-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>39365</allg:Betrag>
+                  
+                  <allg:Stichtag>2042-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>42999</allg:Betrag>
+                  
+                  <allg:Stichtag>2043-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>46864</allg:Betrag>
+                  
+                  <allg:Stichtag>2044-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>50972</allg:Betrag>
+                  
+                  <allg:Stichtag>2045-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>55340</allg:Betrag>
+                  
+                  <allg:Stichtag>2046-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>59983</allg:Betrag>
+                  
+                  <allg:Stichtag>2047-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>64921</allg:Betrag>
+                  
+                  <allg:Stichtag>2048-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>70171</allg:Betrag>
+                  
+                  <allg:Stichtag>2049-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>75751</allg:Betrag>
+                  
+                  <allg:Stichtag>2050-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>81685</allg:Betrag>
+                  
+                  <allg:Stichtag>2051-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>87993</allg:Betrag>
+                  
+                  <allg:Stichtag>2052-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>94702</allg:Betrag>
+                  
+                  <allg:Stichtag>2053-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>101832</allg:Betrag>
+                  
+                  <allg:Stichtag>2054-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>109413</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>9.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>10.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">TodesfallleistungFonds</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>4</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>9.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>1200</allg:Betrag>
+                  
+                  <allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>2400</allg:Betrag>
+                  
+                  <allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>3600</allg:Betrag>
+                  
+                  <allg:Stichtag>2025-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>4800</allg:Betrag>
+                  
+                  <allg:Stichtag>2026-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>6000</allg:Betrag>
+                  
+                  <allg:Stichtag>2027-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>7243</allg:Betrag>
+                  
+                  <allg:Stichtag>2028-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>8875</allg:Betrag>
+                  
+                  <allg:Stichtag>2029-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>10660</allg:Betrag>
+                  
+                  <allg:Stichtag>2030-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>12820</allg:Betrag>
+                  
+                  <allg:Stichtag>2031-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>15181</allg:Betrag>
+                  
+                  <allg:Stichtag>2032-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>17762</allg:Betrag>
+                  
+                  <allg:Stichtag>2033-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>20583</allg:Betrag>
+                  
+                  <allg:Stichtag>2034-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>23669</allg:Betrag>
+                  
+                  <allg:Stichtag>2035-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>27042</allg:Betrag>
+                  
+                  <allg:Stichtag>2036-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>30728</allg:Betrag>
+                  
+                  <allg:Stichtag>2037-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>34760</allg:Betrag>
+                  
+                  <allg:Stichtag>2038-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>39167</allg:Betrag>
+                  
+                  <allg:Stichtag>2039-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>43986</allg:Betrag>
+                  
+                  <allg:Stichtag>2040-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>49253</allg:Betrag>
+                  
+                  <allg:Stichtag>2041-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>55013</allg:Betrag>
+                  
+                  <allg:Stichtag>2042-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>61309</allg:Betrag>
+                  
+                  <allg:Stichtag>2043-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>68193</allg:Betrag>
+                  
+                  <allg:Stichtag>2044-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>75718</allg:Betrag>
+                  
+                  <allg:Stichtag>2045-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>83946</allg:Betrag>
+                  
+                  <allg:Stichtag>2046-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>92941</allg:Betrag>
+                  
+                  <allg:Stichtag>2047-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>102775</allg:Betrag>
+                  
+                  <allg:Stichtag>2048-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>113526</allg:Betrag>
+                  
+                  <allg:Stichtag>2049-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>125281</allg:Betrag>
+                  
+                  <allg:Stichtag>2050-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>138131</allg:Betrag>
+                  
+                  <allg:Stichtag>2051-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>152180</allg:Betrag>
+                  
+                  <allg:Stichtag>2052-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>167540</allg:Betrag>
+                  
+                  <allg:Stichtag>2053-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>184333</allg:Betrag>
+                  
+                  <allg:Stichtag>2054-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>202691</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>0.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>1.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">RueckkaufleistungFonds</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>1</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>0.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>857</allg:Betrag>
+                  
+                  <allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>1768</allg:Betrag>
+                  
+                  <allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>2686</allg:Betrag>
+                  
+                  <allg:Stichtag>2025-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>3607</allg:Betrag>
+                  
+                  <allg:Stichtag>2026-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>4530</allg:Betrag>
+                  
+                  <allg:Stichtag>2027-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>5456</allg:Betrag>
+                  
+                  <allg:Stichtag>2028-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>6385</allg:Betrag>
+                  
+                  <allg:Stichtag>2029-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>7316</allg:Betrag>
+                  
+                  <allg:Stichtag>2030-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>8448</allg:Betrag>
+                  
+                  <allg:Stichtag>2031-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>9583</allg:Betrag>
+                  
+                  <allg:Stichtag>2032-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>10721</allg:Betrag>
+                  
+                  <allg:Stichtag>2033-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>11862</allg:Betrag>
+                  
+                  <allg:Stichtag>2034-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>13006</allg:Betrag>
+                  
+                  <allg:Stichtag>2035-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>14153</allg:Betrag>
+                  
+                  <allg:Stichtag>2036-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>15304</allg:Betrag>
+                  
+                  <allg:Stichtag>2037-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>16457</allg:Betrag>
+                  
+                  <allg:Stichtag>2038-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>17612</allg:Betrag>
+                  
+                  <allg:Stichtag>2039-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>18771</allg:Betrag>
+                  
+                  <allg:Stichtag>2040-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>19932</allg:Betrag>
+                  
+                  <allg:Stichtag>2041-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>21096</allg:Betrag>
+                  
+                  <allg:Stichtag>2042-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>22263</allg:Betrag>
+                  
+                  <allg:Stichtag>2043-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>23432</allg:Betrag>
+                  
+                  <allg:Stichtag>2044-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>24603</allg:Betrag>
+                  
+                  <allg:Stichtag>2045-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>25778</allg:Betrag>
+                  
+                  <allg:Stichtag>2046-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>26954</allg:Betrag>
+                  
+                  <allg:Stichtag>2047-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>28133</allg:Betrag>
+                  
+                  <allg:Stichtag>2048-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>29313</allg:Betrag>
+                  
+                  <allg:Stichtag>2049-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>30496</allg:Betrag>
+                  
+                  <allg:Stichtag>2050-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>31680</allg:Betrag>
+                  
+                  <allg:Stichtag>2051-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>32916</allg:Betrag>
+                  
+                  <allg:Stichtag>2052-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>34104</allg:Betrag>
+                  
+                  <allg:Stichtag>2053-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>35293</allg:Betrag>
+                  
+                  <allg:Stichtag>2054-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>36482</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>3.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>4.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">RueckkaufleistungFonds</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>2</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>3.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>872</allg:Betrag>
+                  
+                  <allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>1825</allg:Betrag>
+                  
+                  <allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>2815</allg:Betrag>
+                  
+                  <allg:Stichtag>2025-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>3837</allg:Betrag>
+                  
+                  <allg:Stichtag>2026-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>4893</allg:Betrag>
+                  
+                  <allg:Stichtag>2027-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>5984</allg:Betrag>
+                  
+                  <allg:Stichtag>2028-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>7111</allg:Betrag>
+                  
+                  <allg:Stichtag>2029-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>8275</allg:Betrag>
+                  
+                  <allg:Stichtag>2030-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>9679</allg:Betrag>
+                  
+                  <allg:Stichtag>2031-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>11130</allg:Betrag>
+                  
+                  <allg:Stichtag>2032-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>12629</allg:Betrag>
+                  
+                  <allg:Stichtag>2033-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>14177</allg:Betrag>
+                  
+                  <allg:Stichtag>2034-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>15778</allg:Betrag>
+                  
+                  <allg:Stichtag>2035-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>17430</allg:Betrag>
+                  
+                  <allg:Stichtag>2036-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>19139</allg:Betrag>
+                  
+                  <allg:Stichtag>2037-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>20904</allg:Betrag>
+                  
+                  <allg:Stichtag>2038-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>22727</allg:Betrag>
+                  
+                  <allg:Stichtag>2039-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>24610</allg:Betrag>
+                  
+                  <allg:Stichtag>2040-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>26556</allg:Betrag>
+                  
+                  <allg:Stichtag>2041-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>28566</allg:Betrag>
+                  
+                  <allg:Stichtag>2042-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>30641</allg:Betrag>
+                  
+                  <allg:Stichtag>2043-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>32788</allg:Betrag>
+                  
+                  <allg:Stichtag>2044-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>35003</allg:Betrag>
+                  
+                  <allg:Stichtag>2045-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>37293</allg:Betrag>
+                  
+                  <allg:Stichtag>2046-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>39658</allg:Betrag>
+                  
+                  <allg:Stichtag>2047-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>42102</allg:Betrag>
+                  
+                  <allg:Stichtag>2048-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>44626</allg:Betrag>
+                  
+                  <allg:Stichtag>2049-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>47236</allg:Betrag>
+                  
+                  <allg:Stichtag>2050-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>49929</allg:Betrag>
+                  
+                  <allg:Stichtag>2051-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>52763</allg:Betrag>
+                  
+                  <allg:Stichtag>2052-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>55638</allg:Betrag>
+                  
+                  <allg:Stichtag>2053-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>58609</allg:Betrag>
+                  
+                  <allg:Stichtag>2054-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>61680</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>6.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>7.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">RueckkaufleistungFonds</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>3</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>6.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>887</allg:Betrag>
+                  
+                  <allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>1883</allg:Betrag>
+                  
+                  <allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>2947</allg:Betrag>
+                  
+                  <allg:Stichtag>2025-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>4079</allg:Betrag>
+                  
+                  <allg:Stichtag>2026-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>5282</allg:Betrag>
+                  
+                  <allg:Stichtag>2027-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>6561</allg:Betrag>
+                  
+                  <allg:Stichtag>2028-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>7921</allg:Betrag>
+                  
+                  <allg:Stichtag>2029-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>9367</allg:Betrag>
+                  
+                  <allg:Stichtag>2030-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>11109</allg:Betrag>
+                  
+                  <allg:Stichtag>2031-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>12962</allg:Betrag>
+                  
+                  <allg:Stichtag>2032-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>14931</allg:Betrag>
+                  
+                  <allg:Stichtag>2033-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>17025</allg:Betrag>
+                  
+                  <allg:Stichtag>2034-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>19252</allg:Betrag>
+                  
+                  <allg:Stichtag>2035-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>21619</allg:Betrag>
+                  
+                  <allg:Stichtag>2036-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>24135</allg:Betrag>
+                  
+                  <allg:Stichtag>2037-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>26811</allg:Betrag>
+                  
+                  <allg:Stichtag>2038-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>29655</allg:Betrag>
+                  
+                  <allg:Stichtag>2039-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>32680</allg:Betrag>
+                  
+                  <allg:Stichtag>2040-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>35895</allg:Betrag>
+                  
+                  <allg:Stichtag>2041-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>39314</allg:Betrag>
+                  
+                  <allg:Stichtag>2042-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>42948</allg:Betrag>
+                  
+                  <allg:Stichtag>2043-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>46813</allg:Betrag>
+                  
+                  <allg:Stichtag>2044-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>50921</allg:Betrag>
+                  
+                  <allg:Stichtag>2045-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>55289</allg:Betrag>
+                  
+                  <allg:Stichtag>2046-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>59933</allg:Betrag>
+                  
+                  <allg:Stichtag>2047-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>64870</allg:Betrag>
+                  
+                  <allg:Stichtag>2048-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>70120</allg:Betrag>
+                  
+                  <allg:Stichtag>2049-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>75701</allg:Betrag>
+                  
+                  <allg:Stichtag>2050-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>81634</allg:Betrag>
+                  
+                  <allg:Stichtag>2051-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>87993</allg:Betrag>
+                  
+                  <allg:Stichtag>2052-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>94702</allg:Betrag>
+                  
+                  <allg:Stichtag>2053-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>101831</allg:Betrag>
+                  
+                  <allg:Stichtag>2054-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>109413</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>9.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>10.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">RueckkaufleistungFonds</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>4</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>9.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>901</allg:Betrag>
+                  
+                  <allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>1941</allg:Betrag>
+                  
+                  <allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>3084</allg:Betrag>
+                  
+                  <allg:Stichtag>2025-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>4333</allg:Betrag>
+                  
+                  <allg:Stichtag>2026-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>5699</allg:Betrag>
+                  
+                  <allg:Stichtag>2027-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>7192</allg:Betrag>
+                  
+                  <allg:Stichtag>2028-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>8825</allg:Betrag>
+                  
+                  <allg:Stichtag>2029-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>10610</allg:Betrag>
+                  
+                  <allg:Stichtag>2030-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>12769</allg:Betrag>
+                  
+                  <allg:Stichtag>2031-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>15130</allg:Betrag>
+                  
+                  <allg:Stichtag>2032-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>17711</allg:Betrag>
+                  
+                  <allg:Stichtag>2033-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>20533</allg:Betrag>
+                  
+                  <allg:Stichtag>2034-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>23618</allg:Betrag>
+                  
+                  <allg:Stichtag>2035-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>26991</allg:Betrag>
+                  
+                  <allg:Stichtag>2036-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>30678</allg:Betrag>
+                  
+                  <allg:Stichtag>2037-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>34710</allg:Betrag>
+                  
+                  <allg:Stichtag>2038-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>39117</allg:Betrag>
+                  
+                  <allg:Stichtag>2039-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>43935</allg:Betrag>
+                  
+                  <allg:Stichtag>2040-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>49203</allg:Betrag>
+                  
+                  <allg:Stichtag>2041-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>54962</allg:Betrag>
+                  
+                  <allg:Stichtag>2042-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>61259</allg:Betrag>
+                  
+                  <allg:Stichtag>2043-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>68143</allg:Betrag>
+                  
+                  <allg:Stichtag>2044-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>75667</allg:Betrag>
+                  
+                  <allg:Stichtag>2045-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>83895</allg:Betrag>
+                  
+                  <allg:Stichtag>2046-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>92890</allg:Betrag>
+                  
+                  <allg:Stichtag>2047-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>102724</allg:Betrag>
+                  
+                  <allg:Stichtag>2048-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>113476</allg:Betrag>
+                  
+                  <allg:Stichtag>2049-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>125230</allg:Betrag>
+                  
+                  <allg:Stichtag>2050-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>138080</allg:Betrag>
+                  
+                  <allg:Stichtag>2051-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>152180</allg:Betrag>
+                  
+                  <allg:Stichtag>2052-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>167539</allg:Betrag>
+                  
+                  <allg:Stichtag>2053-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>184332</allg:Betrag>
+                  
+                  <allg:Stichtag>2054-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>202691</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>0.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>1.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="dt:STE_LeistungsArtVerlaufEintragBasis">6</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>1</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>0.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>36482</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>3.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>4.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="dt:STE_LeistungsArtVerlaufEintragBasis">6</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>2</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>3.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>61680</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>6.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>7.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="dt:STE_LeistungsArtVerlaufEintragBasis">6</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>3</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>6.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>109413</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>9.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>10.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="dt:STE_LeistungsArtVerlaufEintragBasis">6</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>4</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>9.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>202691</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>0.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>1.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="dt:STE_LeistungsArtVerlaufEintragBasis">4</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>1</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>0.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>125</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>3.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>4.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="dt:STE_LeistungsArtVerlaufEintragBasis">4</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>2</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>3.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>211</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>6.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>7.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="dt:STE_LeistungsArtVerlaufEintragBasis">4</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>3</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>6.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>375</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>9.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>10.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="dt:STE_LeistungsArtVerlaufEintragBasis">4</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>4</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>9.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>694</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>0.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>1.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">RenteGesamtTeildynamisch</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>1</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>0.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>115</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>3.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>4.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">RenteGesamtTeildynamisch</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>2</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>3.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>194</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>6.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>7.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">RenteGesamtTeildynamisch</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>3</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>6.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>345</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>9.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>10.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">RenteGesamtTeildynamisch</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>4</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>9.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>639</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>0.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>1.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">RenteGesamtDynamisch</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>1</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>0.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>85</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>3.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>4.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">RenteGesamtDynamisch</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>2</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>3.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>144</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>6.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>7.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">RenteGesamtDynamisch</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>3</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>6.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>256</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:Verlauf>
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_VerlaufErweiterung">
+                  
+                  <vb-leben:FondssteigerungssatzNetto>9.0%</vb-leben:FondssteigerungssatzNetto>
+                  
+                  <vb-leben:FondssteigerungssatzBrutto>10.7%</vb-leben:FondssteigerungssatzBrutto>
+                  
+                </basis:Erweiterung>
+                
+                <pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">RenteGesamtDynamisch</pm-leben:ArtID>
+                
+                <pm-leben:UeberschussSatzTyp>4</pm-leben:UeberschussSatzTyp>
+                
+                <pm-leben:SzenarioBeschreibung>9.0%</pm-leben:SzenarioBeschreibung>
+                
+                <pm-leben:Verlaufseintrag>
+                  
+                  <allg:Betrag>474</allg:Betrag>
+                  
+                  <allg:Stichtag>2055-11-01T12:00</allg:Stichtag>
+                  
+                </pm-leben:Verlaufseintrag>
+                
+              </pm-leben:Verlauf>
+              
+              <pm-leben:VorgabeBerechnung>
+                
+                <pm-leben:ArtID xsi:type="dt:STE_VorgabeBerechnungBasis">Bruttobeitrag</pm-leben:ArtID>
+                
+                <pm-leben:Kontext xsi:type="dt:STE_VorgabeBerechnungKontextBasis">Rente</pm-leben:Kontext>
+                
+              </pm-leben:VorgabeBerechnung>
+              
+            </pm:Produkt>
+            
+          </tarif:Verkaufsprodukt>
+          
+          <tarif:BesondereVereinbarungen>keine</tarif:BesondereVereinbarungen>
+          
+          <tarif:Unterschriftsverfahren>03</tarif:Unterschriftsverfahren>
+          
+          <tarif:Antragsart>01</tarif:Antragsart>
+          
+          <tarif:Beitragszahler>
+            
+            <partner:PartnerID>464652137</partner:PartnerID>
+            
+          </tarif:Beitragszahler>
+          
+        </tarif:Antrag>
+        
+      </tarif:Response>
+      
+    </tarif:getOrderResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

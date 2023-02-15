@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <tarif:getOrder xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:vb-leben="urn:de:vb:bipro:taa:leben:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          
+      <tarif:Request>
+                
+        <nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+        <nachr:ConsumerID>WS DEV TEAM</nachr:ConsumerID>
+                
+        <tarif:Antrag>
+                      
+          <basis:Erweiterung xsi:type="vb-leben:CT_AntragErweiterung">
+                            
+            <vb-leben:Datenschutzeinwilligung>Gesamteinwilligung</vb-leben:Datenschutzeinwilligung>
+                            
+            <vb-leben:DatenschutzeinwilligungTodesfall>true</vb-leben:DatenschutzeinwilligungTodesfall>
+                            
+            <vb-leben:PolitischExponiertePerson>false</vb-leben:PolitischExponiertePerson>
+                            
+            <vb-leben:AngabeZielmarkt>true</vb-leben:AngabeZielmarkt>
+                            
+            <vb-leben:UnterschriftenKonfiguration>true</vb-leben:UnterschriftenKonfiguration>
+                        
+          </basis:Erweiterung>
+                      
+          <gevo:Vermittler>
+                            
+            <allg:Vermittlernummer>111/222</allg:Vermittlernummer>
+                            
+            <allg:PartnerID>30053010</allg:PartnerID>
+                            
+            <allg:Vermittlerrolle>
+                                  
+              <allg:ArtID>10</allg:ArtID>
+                                  
+              <allg:Vermittlertyp>02</allg:Vermittlertyp>
+                              
+            </allg:Vermittlerrolle>
+                        
+          </gevo:Vermittler>
+                      
+          <gevo:Vermittler>
+                            
+            <allg:Vermittlernummer>111/222</allg:Vermittlernummer>
+                            
+            <allg:PartnerID>30053010</allg:PartnerID>
+                            
+            <allg:Vermittlerrolle>
+                                  
+              <allg:ArtID>01</allg:ArtID>
+                                  
+              <allg:Vermittlertyp>01</allg:Vermittlertyp>
+                              
+            </allg:Vermittlerrolle>
+                        
+          </gevo:Vermittler>
+                      
+          <tarif:Partner xsi:type="partner:CT_JuristischePerson">
+                            
+            <partner:Name>test</partner:Name>
+                            
+            <partner:PartnerID>30053010</partner:PartnerID>
+                            
+            <partner:Anschrift>
+                                  
+              <allg:Landname>Deutschland</allg:Landname>
+                                  
+              <partner:ArtID>1</partner:ArtID>
+                              
+            </partner:Anschrift>
+                        
+          </tarif:Partner>
+                      
+          <tarif:Partner xsi:type="partner:CT_Person">
+                            
+            <partner:Anrede>1</partner:Anrede>
+                            
+            <partner:Name>Test</partner:Name>
+                            
+            <partner:PartnerID>25442021</partner:PartnerID>
+                            
+            <partner:Anschrift>
+                                  
+              <allg:Strasse>d</allg:Strasse>
+                                  
+              <allg:Hausnummer>d</allg:Hausnummer>
+                                  
+              <allg:Postleitzahl>d</allg:Postleitzahl>
+                                  
+              <allg:Ort>d</allg:Ort>
+                                  
+              <allg:Landname>Deutschland</allg:Landname>
+                                  
+              <partner:ArtID>1</partner:ArtID>
+                              
+            </partner:Anschrift>
+                            
+            <partner:ZusaetzlichePartnerdaten xsi:type="pm-leben:CT_Risiko">
+                                  
+              <pm-leben:Nichtraucher>true</pm-leben:Nichtraucher>
+                                  
+              <pm-leben:Koerper>
+                                        
+                <partner:Groesse>173</partner:Groesse>
+                                        
+                <partner:Gewicht>99</partner:Gewicht>
+                                    
+              </pm-leben:Koerper>
+                              
+            </partner:ZusaetzlichePartnerdaten>
+                            
+            <partner:HandeltAufRechnungVon>
+                                  
+              <partner:PartnerID>-1684923503</partner:PartnerID>
+                              
+            </partner:HandeltAufRechnungVon>
+                            
+            <partner:Vorname>Hans</partner:Vorname>
+                            
+            <partner:Geburtsdatum>1992-11-01</partner:Geburtsdatum>
+                            
+            <partner:Geschlecht>1</partner:Geschlecht>
+                            
+            <partner:Berufstaetigkeit>
+                                  
+              <partner:Beruf>Fachwirt</partner:Beruf>
+                              
+            </partner:Berufstaetigkeit>
+                            
+            <partner:Haushalt>
+                                  
+              <partner:Haushaltsart xsi:type="dt:STE_HaushaltsartBasis">04</partner:Haushaltsart>
+                              
+            </partner:Haushalt>
+                            
+            <partner:Ausbildung>
+                                  
+              <partner:ArtID xsi:type="dt:STE_AusbildungsartBasis">Studium</partner:ArtID>
+                                  
+              <partner:HoechsterAbschluss xsi:type="vb-leben:STE_BildungsabschlussErweitert">Hochschulabschluss</partner:HoechsterAbschluss>
+                              
+            </partner:Ausbildung>
+                        
+          </tarif:Partner>
+                      
+          <tarif:Partner xsi:type="partner:CT_Person">
+                            
+            <partner:PartnerID>25829570</partner:PartnerID>
+                            
+            <partner:Bankverbindung>
+                                  
+              <partner:Einzugsermaechtigung>false</partner:Einzugsermaechtigung>
+                              
+            </partner:Bankverbindung>
+                        
+          </tarif:Partner>
+                      
+          <tarif:Partner xsi:type="partner:CT_Person">
+                            
+            <partner:Name>Kurzer Name</partner:Name>
+                            
+            <partner:Namenszusatz1>Kurzer Namenszusatz1</partner:Namenszusatz1>
+                            
+            <partner:PartnerID>-1684923503</partner:PartnerID>
+                        
+          </tarif:Partner>
+                      
+          <tarif:Versicherungsnehmer>
+                            
+            <partner:PartnerID>25442021</partner:PartnerID>
+                        
+          </tarif:Versicherungsnehmer>
+                      
+          <tarif:Verkaufsprodukt>
+                            
+            <basis:Erweiterung xsi:type="vb-leben:CT_VerkaufsproduktErweiterung">
+                                  
+              <vb-leben:Konsortium>Ohne</vb-leben:Konsortium>
+                              
+            </basis:Erweiterung>
+                            
+            <pm:Produkt xsi:type="pm-leben:CT_Produkt">
+                                  
+              <basis:Erweiterung xsi:type="vb-leben:CT_ProduktErweiterung">
+                                        
+                <vb-leben:Tarifgruppe>Normal</vb-leben:Tarifgruppe>
+                                    
+              </basis:Erweiterung>
+                                  
+              <pm:GewuenschteZahlungsweise>8</pm:GewuenschteZahlungsweise>
+                                  
+              <pm:Beitrag>
+                                        
+                <pm:ArtID xsi:type="dt:STE_BeitragBasis">01</pm:ArtID>
+                                        
+                <pm:Betrag>
+                                              
+                  <allg:Betrag>800</allg:Betrag>
+                                              
+                  <allg:Waehrung>EUR</allg:Waehrung>
+                                          
+                </pm:Betrag>
+                                        
+                <pm:Zahlungsweise>8</pm:Zahlungsweise>
+                                    
+              </pm:Beitrag>
+                                  
+              <pm:Versicherungsdauer>
+                                        
+                <allg:Beginn>2023-03-01T12:00</allg:Beginn>
+                                    
+              </pm:Versicherungsdauer>
+                                  
+              <pm:Kennung>FR</pm:Kennung>
+                                  
+              <pm:Elementarprodukt xsi:type="pm-leben:CT_TodesfallAbsicherung">
+                                        
+                <basis:Erweiterung xsi:type="vb-leben:CT_TodesfallAbsicherungErweiterung"/>
+                                        
+                <pm:Versicherungsdauer>
+                                              
+                  <allg:AnzahlJahre>31</allg:AnzahlJahre>
+                                              
+                  <allg:AnzahlMonate>6</allg:AnzahlMonate>
+                                          
+                </pm:Versicherungsdauer>
+                                        
+                <pm:Dynamik>
+                                              
+                  <pm:Wert>0</pm:Wert>
+                                              
+                  <pm:KategorieID>Beitrag</pm:KategorieID>
+                                          
+                </pm:Dynamik>
+                                        
+                <vs-pm:Bezugsrecht>
+                                              
+                  <vs-pm:Leistungsfall>Erlebensfall</vs-pm:Leistungsfall>
+                                              
+                  <vs-pm:IndexBerechtigter>1</vs-pm:IndexBerechtigter>
+                                          
+                </vs-pm:Bezugsrecht>
+                                        
+                <vs-pm:Bezugsrecht>
+                                              
+                  <vs-pm:Leistungsfall>Todesfall</vs-pm:Leistungsfall>
+                                              
+                  <vs-pm:IndexBerechtigter>3</vs-pm:IndexBerechtigter>
+                                          
+                </vs-pm:Bezugsrecht>
+                                        
+                <pm-leben:IstHauptversicherung>true</pm-leben:IstHauptversicherung>
+                                        
+                <pm-leben:UeberschussverwendungVorLeistung xsi:type="dt:STE_UeberschussverwendungBasis">12</pm-leben:UeberschussverwendungVorLeistung>
+                                        
+                <pm-leben:VersichertePerson>
+                                              
+                  <partner:PartnerID>25442021</partner:PartnerID>
+                                          
+                </pm-leben:VersichertePerson>
+                                    
+              </pm:Elementarprodukt>
+                                  
+              <pm-leben:VorgabeBerechnung>
+                                        
+                <pm-leben:ArtID xsi:type="dt:STE_VorgabeBerechnungBasis">Bruttobeitrag</pm-leben:ArtID>
+                                        
+                <pm-leben:Kontext xsi:type="dt:STE_VorgabeBerechnungKontextBasis">Produkt</pm-leben:Kontext>
+                                    
+              </pm-leben:VorgabeBerechnung>
+                              
+            </pm:Produkt>
+                        
+          </tarif:Verkaufsprodukt>
+                      
+          <tarif:BesondereVereinbarungen>keine</tarif:BesondereVereinbarungen>
+                      
+          <tarif:Unterschriftsverfahren>03</tarif:Unterschriftsverfahren>
+                      
+          <tarif:Antragsart>01</tarif:Antragsart>
+                      
+          <tarif:Beitragszahler>
+                            
+            <partner:PartnerID>25829570</partner:PartnerID>
+                        
+          </tarif:Beitragszahler>
+                  
+        </tarif:Antrag>
+            
+      </tarif:Request>
+      
+    </tarif:getOrder>
+  </soapenv:Body>
+</soapenv:Envelope>

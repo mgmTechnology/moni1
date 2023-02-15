@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <tarif:getQuote xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:kapanl-basis="http://www.bipro.net/namespace/kapitalanlage/basis" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:vb-leben="urn:de:vb:bipro:taa:leben:1.12" xmlns:vbl="urn:de:vb:bipro:taa:leben:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         
+      <tarif:Request>
+              
+        <nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+        <nachr:ConsumerID>WS DEV TEAM</nachr:ConsumerID>
+              
+        <tarif:Tarifierung>
+                   
+          <gevo:Vermittler>
+                        
+            <allg:Vermittlernummer>111/222</allg:Vermittlernummer>
+                     
+          </gevo:Vermittler>
+                   
+          <gevo:Dokumentanforderung>
+                       
+            <gevo:ArtID>Antrag</gevo:ArtID>
+                     
+          </gevo:Dokumentanforderung>
+                   
+          <tarif:Partner xsi:type="partner:CT_Person">
+                        
+            <partner:Anrede>1</partner:Anrede>
+                        
+            <partner:PartnerID>1</partner:PartnerID>
+                        
+            <partner:Anschrift>
+                             
+              <allg:Landname>Deutschland</allg:Landname>
+                             
+              <partner:ArtID>1</partner:ArtID>
+                          
+            </partner:Anschrift>
+                        
+            <partner:ZusaetzlichePartnerdaten xsi:type="pm-leben:CT_Risikopruefung">
+                             
+              <pm-leben:Fragenkomplex>
+                                  
+                <fragen:ArtID xsi:type="dt:STE_FragenkomplexArtBasis">Gesundheit</fragen:ArtID>
+                                  
+                <fragen:Bezeichnung>Gesundheitsfragen zur versicherten Person</fragen:Bezeichnung>
+                                  
+                <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                                       
+                  <fragen:FachlicheID>A01</fragen:FachlicheID>
+                                       
+                  <fragen:Text>Nennen Sie uns bitte Ihre Körpergröße und Ihr Gewicht (cm/kg).</fragen:Text>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageZahl">
+                                            
+                    <fragen:FachlicheID>A01_A</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.A01.A01_A</fragen:TechnischeID>
+                                            
+                    <fragen:Text/>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:AntwortZahl>
+                                                 
+                      <fragen:Zahl>187</fragen:Zahl>
+                                              
+                    </fragen:AntwortZahl>
+                                         
+                  </fragen:EinfacheFrage>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageZahl">
+                                            
+                    <fragen:FachlicheID>A01_B</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.A01.A01_B</fragen:TechnischeID>
+                                            
+                    <fragen:Text/>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:AntwortZahl>
+                                                 
+                      <fragen:Zahl>85.0</fragen:Zahl>
+                                              
+                    </fragen:AntwortZahl>
+                                         
+                  </fragen:EinfacheFrage>
+                                    
+                </fragen:Element>
+                                  
+                <fragen:Element xsi:type="fragen:CT_FrageText">
+                                       
+                  <fragen:FachlicheID>A07</fragen:FachlicheID>
+                                       
+                  <fragen:TechnischeID>VP.A07</fragen:TechnischeID>
+                                       
+                  <fragen:Text>Nennen Sie uns bitte Namen und Anschrift Ihres Hausarztes oder des Arztes, der über Ihren Gesundheitszustand am besten unterrichtet ist (sofern vorhanden)</fragen:Text>
+                                       
+                  <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                       
+                  <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                                       
+                  <fragen:AntwortText>
+                                            
+                    <fragen:Freitext>arztanschrift</fragen:Freitext>
+                                         
+                  </fragen:AntwortText>
+                                    
+                </fragen:Element>
+                                  
+                <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                                       
+                  <fragen:FachlicheID>FLAGEXISTENZ01</fragen:FachlicheID>
+                                       
+                  <fragen:TechnischeID>VP.FLAGEXISTENZ01</fragen:TechnischeID>
+                                       
+                  <fragen:Text>Wurden Sie in den vergangenen 5 Jahren von Ärzten oder Therapeuten beraten, untersucht oder behandelt? Und handelte es sich dabei um Krankheiten, Beeinträchtigungen oder Beschwerden, die länger als 30 Tage ununterbrochen gedauert haben oder mindestens 2 Mal innerhalb eines Jahres vorkamen oder noch andauern?</fragen:Text>
+                                       
+                  <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                       
+                  <fragen:AntwortJaNein>
+                                            
+                    <fragen:Entscheidung>true</fragen:Entscheidung>
+                                         
+                  </fragen:AntwortJaNein>
+                                    
+                </fragen:Element>
+                                  
+                <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                                       
+                  <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                                            
+                    <fragen:LinkerOperand>VP.FLAGEXISTENZ01</fragen:LinkerOperand>
+                                            
+                    <fragen:Operator>gleich</fragen:Operator>
+                                            
+                    <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                                                 
+                      <fragen:Entscheidung>true</fragen:Entscheidung>
+                                              
+                    </fragen:RechterOperand>
+                                         
+                  </fragen:Bedingung>
+                                       
+                  <fragen:FachlicheID>EXISTENZ01</fragen:FachlicheID>
+                                       
+                  <fragen:Text>Falls „ja“, sind für uns diese Angaben wichtig. Ging es dabei um</fragen:Text>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                            
+                    <fragen:FachlicheID>FLAGEXISTENZ_01A</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01A</fragen:TechnischeID>
+                                            
+                    <fragen:Text>Sehstörungen, die Sie nicht durch eine Sehhilfe ausgleichen können?</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:AntwortJaNein>
+                                                 
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                              
+                    </fragen:AntwortJaNein>
+                                         
+                  </fragen:EinfacheFrage>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                            
+                    <fragen:FachlicheID>FLAGEXISTENZ_01B</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01B</fragen:TechnischeID>
+                                            
+                    <fragen:Text>Hörstörungen, die Sie nicht mit einem Hörgerät ausgleichen können?</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:AntwortJaNein>
+                                                 
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                              
+                    </fragen:AntwortJaNein>
+                                         
+                  </fragen:EinfacheFrage>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                            
+                    <fragen:FachlicheID>FLAGEXISTENZ_01C</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01C</fragen:TechnischeID>
+                                            
+                    <fragen:Text>Ihre Psyche, Ihre Konzentration, Ihr Gedächtnis oder Ihr Sprachvermögen?</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:AntwortJaNein>
+                                                 
+                      <fragen:Entscheidung>true</fragen:Entscheidung>
+                                              
+                    </fragen:AntwortJaNein>
+                                         
+                  </fragen:EinfacheFrage>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                            
+                    <fragen:FachlicheID>FLAGEXISTENZ_01D</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01D</fragen:TechnischeID>
+                                            
+                    <fragen:Text>Ihren Bewegungsapparat, zum Beispiel die Wirbelsäule, die Beine einschließlich der Füße, die Schultern, Arme einschließlich Hände und Finger?</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:AntwortJaNein>
+                                                 
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                              
+                    </fragen:AntwortJaNein>
+                                         
+                  </fragen:EinfacheFrage>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                            
+                    <fragen:FachlicheID>FLAGEXISTENZ_01E</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01E</fragen:TechnischeID>
+                                            
+                    <fragen:Text>Gleichgewichtsstörungen oder Schwindel?</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:AntwortJaNein>
+                                                 
+                      <fragen:Entscheidung>true</fragen:Entscheidung>
+                                              
+                    </fragen:AntwortJaNein>
+                                         
+                  </fragen:EinfacheFrage>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                            
+                    <fragen:FachlicheID>FLAGEXISTENZ_01F</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01F</fragen:TechnischeID>
+                                            
+                    <fragen:Text>eine chronische Krankheit, zum Beispiel Diabetes, Epilepsie, Erkrankungen des rheumatoiden Formenkreises, Multiple Sklerose, Asthma?</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:AntwortJaNein>
+                                                 
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                              
+                    </fragen:AntwortJaNein>
+                                         
+                  </fragen:EinfacheFrage>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                            
+                    <fragen:FachlicheID>FLAGEXISTENZ_01G</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01G</fragen:TechnischeID>
+                                            
+                    <fragen:Text>eine festgestellte Infektion, zum Beispiel HIV, Hepatitis, Tuberkulose?</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:AntwortJaNein>
+                                                 
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                              
+                    </fragen:AntwortJaNein>
+                                         
+                  </fragen:EinfacheFrage>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                                            
+                    <fragen:FachlicheID>FLAGEXISTENZ_01H</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01H</fragen:TechnischeID>
+                                            
+                    <fragen:Text>eine Alkohol- oder Drogenabhängigkeit?</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:AntwortJaNein>
+                                                 
+                      <fragen:Entscheidung>false</fragen:Entscheidung>
+                                              
+                    </fragen:AntwortJaNein>
+                                         
+                  </fragen:EinfacheFrage>
+                                    
+                </fragen:Element>
+                                  
+                <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                                       
+                  <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                                            
+                    <fragen:LinkerOperand>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01C</fragen:LinkerOperand>
+                                            
+                    <fragen:Operator>gleich</fragen:Operator>
+                                            
+                    <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                                                 
+                      <fragen:Entscheidung>true</fragen:Entscheidung>
+                                              
+                    </fragen:RechterOperand>
+                                         
+                  </fragen:Bedingung>
+                                       
+                  <fragen:FachlicheID>A06</fragen:FachlicheID>
+                                       
+                  <fragen:Text>Welcher Arzt, Heilbehandler oder Therapeut kann zu den von Ihnen mit "ja" beantworteten Gesundheitsfragen nähere Angaben machen?</fragen:Text>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                                            
+                    <fragen:FachlicheID>A06_A</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01C.A06[1].A06_A</fragen:TechnischeID>
+                                            
+                    <fragen:Text>Art der Erkrankung, Beschwerden, Untersuchung, Beratung, Behandlung oder Operation</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                                            
+                    <fragen:AntwortText>
+                                                 
+                      <fragen:Freitext>1C Art</fragen:Freitext>
+                                              
+                    </fragen:AntwortText>
+                                         
+                  </fragen:EinfacheFrage>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                                            
+                    <fragen:FachlicheID>A06_B</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01C.A06[1].A06_B</fragen:TechnischeID>
+                                            
+                    <fragen:Text>Wann?</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                                            
+                    <fragen:AntwortText>
+                                                 
+                      <fragen:Freitext>1C Wann</fragen:Freitext>
+                                              
+                    </fragen:AntwortText>
+                                         
+                  </fragen:EinfacheFrage>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                                            
+                    <fragen:FachlicheID>A06_C</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01C.A06[1].A06_C</fragen:TechnischeID>
+                                            
+                    <fragen:Text>Wie lange?</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                                            
+                    <fragen:AntwortText>
+                                                 
+                      <fragen:Freitext>1C Dauer</fragen:Freitext>
+                                              
+                    </fragen:AntwortText>
+                                         
+                  </fragen:EinfacheFrage>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                                            
+                    <fragen:FachlicheID>A06_D</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01C.A06[1].A06_D</fragen:TechnischeID>
+                                            
+                    <fragen:Text>Heutige Folgen</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                                            
+                    <fragen:AntwortText>
+                                                 
+                      <fragen:Freitext>1C Folgen</fragen:Freitext>
+                                              
+                    </fragen:AntwortText>
+                                         
+                  </fragen:EinfacheFrage>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                                            
+                    <fragen:FachlicheID>A06_E</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01C.A06[1].A06_E</fragen:TechnischeID>
+                                            
+                    <fragen:Text>Name und Anschrift der behandelnden Ärzte, Heilbehandler, Therapeuten, Krankenhäuser, Heilstätten</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                                            
+                    <fragen:AntwortText>
+                                                 
+                      <fragen:Freitext>1C Behandler</fragen:Freitext>
+                                              
+                    </fragen:AntwortText>
+                                         
+                  </fragen:EinfacheFrage>
+                                    
+                </fragen:Element>
+                                  
+                <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                                       
+                  <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                                            
+                    <fragen:LinkerOperand>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01E</fragen:LinkerOperand>
+                                            
+                    <fragen:Operator>gleich</fragen:Operator>
+                                            
+                    <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                                                 
+                      <fragen:Entscheidung>true</fragen:Entscheidung>
+                                              
+                    </fragen:RechterOperand>
+                                         
+                  </fragen:Bedingung>
+                                       
+                  <fragen:FachlicheID>A06</fragen:FachlicheID>
+                                       
+                  <fragen:Text>Welcher Arzt, Heilbehandler oder Therapeut kann zu den von Ihnen mit "ja" beantworteten Gesundheitsfragen nähere Angaben machen?</fragen:Text>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                                            
+                    <fragen:FachlicheID>A06_A</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01E.A06[1].A06_A</fragen:TechnischeID>
+                                            
+                    <fragen:Text>Art der Erkrankung, Beschwerden, Untersuchung, Beratung, Behandlung oder Operation</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                                            
+                    <fragen:AntwortText>
+                                                 
+                      <fragen:Freitext>1E Art</fragen:Freitext>
+                                              
+                    </fragen:AntwortText>
+                                         
+                  </fragen:EinfacheFrage>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                                            
+                    <fragen:FachlicheID>A06_B</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01E.A06[1].A06_B</fragen:TechnischeID>
+                                            
+                    <fragen:Text>Wann?</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                                            
+                    <fragen:AntwortText>
+                                                 
+                      <fragen:Freitext>1E Wann</fragen:Freitext>
+                                              
+                    </fragen:AntwortText>
+                                         
+                  </fragen:EinfacheFrage>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                                            
+                    <fragen:FachlicheID>A06_C</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01E.A06[1].A06_C</fragen:TechnischeID>
+                                            
+                    <fragen:Text>Wie lange?</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                                            
+                    <fragen:AntwortText>
+                                                 
+                      <fragen:Freitext>1E Dauer</fragen:Freitext>
+                                              
+                    </fragen:AntwortText>
+                                         
+                  </fragen:EinfacheFrage>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                                            
+                    <fragen:FachlicheID>A06_D</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01E.A06[1].A06_D</fragen:TechnischeID>
+                                            
+                    <fragen:Text>Heutige Folgen</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                                            
+                    <fragen:AntwortText>
+                                                 
+                      <fragen:Freitext>1E Folgen</fragen:Freitext>
+                                              
+                    </fragen:AntwortText>
+                                         
+                  </fragen:EinfacheFrage>
+                                       
+                  <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                                            
+                    <fragen:FachlicheID>A06_E</fragen:FachlicheID>
+                                            
+                    <fragen:TechnischeID>VP.FLAGEXISTENZ01.EXISTENZ01.FLAGEXISTENZ_01E.A06[1].A06_E</fragen:TechnischeID>
+                                            
+                    <fragen:Text>Name und Anschrift der behandelnden Ärzte, Heilbehandler, Therapeuten, Krankenhäuser, Heilstätten</fragen:Text>
+                                            
+                    <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                            
+                    <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                                            
+                    <fragen:AntwortText>
+                                                 
+                      <fragen:Freitext>1E Behandler</fragen:Freitext>
+                                              
+                    </fragen:AntwortText>
+                                         
+                  </fragen:EinfacheFrage>
+                                    
+                </fragen:Element>
+                                  
+                <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                                       
+                  <fragen:FachlicheID>FLAGEXISTENZ02</fragen:FachlicheID>
+                                       
+                  <fragen:TechnischeID>VP.FLAGEXISTENZ02</fragen:TechnischeID>
+                                       
+                  <fragen:Text>Befanden Sie sich in den vergangenen 5 Jahren in einer stationären Behandlung oder ist eine solche geplant?</fragen:Text>
+                                       
+                  <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                       
+                  <fragen:AntwortJaNein>
+                                            
+                    <fragen:Entscheidung>true</fragen:Entscheidung>
+                                         
+                  </fragen:AntwortJaNein>
+                                    
+                </fragen:Element>
+                                  
+                <fragen:Element xsi:type="fragen:CT_FrageText">
+                                       
+                  <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                                            
+                    <fragen:LinkerOperand>VP.FLAGEXISTENZ02</fragen:LinkerOperand>
+                                            
+                    <fragen:Operator>gleich</fragen:Operator>
+                                            
+                    <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                                                 
+                      <fragen:Entscheidung>true</fragen:Entscheidung>
+                                              
+                    </fragen:RechterOperand>
+                                         
+                  </fragen:Bedingung>
+                                       
+                  <fragen:FachlicheID>EXISTENZ02_STATIONAER</fragen:FachlicheID>
+                                       
+                  <fragen:TechnischeID>VP.FLAGEXISTENZ02.EXISTENZ02_STATIONAER</fragen:TechnischeID>
+                                       
+                  <fragen:Text>Falls „ja“, machen Sie bitte nähere Angaben:</fragen:Text>
+                                       
+                  <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                       
+                  <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                                       
+                  <fragen:AntwortText>
+                                            
+                    <fragen:Freitext>stationaereBehandlungExistenz</fragen:Freitext>
+                                         
+                  </fragen:AntwortText>
+                                    
+                </fragen:Element>
+                                  
+                <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                                       
+                  <fragen:FachlicheID>FLAGEXISTENZ03</fragen:FachlicheID>
+                                       
+                  <fragen:TechnischeID>VP.FLAGEXISTENZ03</fragen:TechnischeID>
+                                       
+                  <fragen:Text>Wurde Ihnen in den vergangenen 5 Jahren für mehr als 30 Tage lang ununterbrochen ein Medikament verschrieben bzw. haben Sie an mehr als 30 Tagen ununterbrochen ein Medikament eingenommen oder nehmen Sie aktuell ein Medikament?</fragen:Text>
+                                       
+                  <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                       
+                  <fragen:AntwortJaNein>
+                                            
+                    <fragen:Entscheidung>true</fragen:Entscheidung>
+                                         
+                  </fragen:AntwortJaNein>
+                                    
+                </fragen:Element>
+                                  
+                <fragen:Element xsi:type="fragen:CT_FrageText">
+                                       
+                  <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                                            
+                    <fragen:LinkerOperand>VP.FLAGEXISTENZ03</fragen:LinkerOperand>
+                                            
+                    <fragen:Operator>gleich</fragen:Operator>
+                                            
+                    <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                                                 
+                      <fragen:Entscheidung>true</fragen:Entscheidung>
+                                              
+                    </fragen:RechterOperand>
+                                         
+                  </fragen:Bedingung>
+                                       
+                  <fragen:FachlicheID>EXISTENZ03_MEDIKAMENTE</fragen:FachlicheID>
+                                       
+                  <fragen:TechnischeID>VP.FLAGEXISTENZ03.EXISTENZ03_MEDIKAMENTE</fragen:TechnischeID>
+                                       
+                  <fragen:Text>Falls „ja“, “, nennen Sie uns bitte die Medikamente, die Dosierung, den Einnahmezeitraum und den Grund der Einnahme:</fragen:Text>
+                                       
+                  <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                       
+                  <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                                       
+                  <fragen:AntwortText>
+                                            
+                    <fragen:Freitext>medikamenteExistenz</fragen:Freitext>
+                                         
+                  </fragen:AntwortText>
+                                    
+                </fragen:Element>
+                                  
+                <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                                       
+                  <fragen:FachlicheID>FLAGEXISTENZ04A</fragen:FachlicheID>
+                                       
+                  <fragen:TechnischeID>VP.FLAGEXISTENZ04A</fragen:TechnischeID>
+                                       
+                  <fragen:Text>einen Grad der Behinderung (GdB), eine Minderung der Erwerbsfähigkeit (MdE) oder einen Grad der Schädigungsfolgen (GdS),</fragen:Text>
+                                       
+                  <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                       
+                  <fragen:AntwortJaNein>
+                                            
+                    <fragen:Entscheidung>true</fragen:Entscheidung>
+                                         
+                  </fragen:AntwortJaNein>
+                                    
+                </fragen:Element>
+                                  
+                <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                                       
+                  <fragen:FachlicheID>FLAGEXISTENZ04B</fragen:FachlicheID>
+                                       
+                  <fragen:TechnischeID>VP.FLAGEXISTENZ04B</fragen:TechnischeID>
+                                       
+                  <fragen:Text>eine Pflegestufe oder einen Pflegegrad,</fragen:Text>
+                                       
+                  <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                       
+                  <fragen:AntwortJaNein>
+                                            
+                    <fragen:Entscheidung>false</fragen:Entscheidung>
+                                         
+                  </fragen:AntwortJaNein>
+                                    
+                </fragen:Element>
+                                  
+                <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                                       
+                  <fragen:FachlicheID>FLAGEXISTENZ04C</fragen:FachlicheID>
+                                       
+                  <fragen:TechnischeID>VP.FLAGEXISTENZ04C</fragen:TechnischeID>
+                                       
+                  <fragen:Text>einen gerichtlich bestellten Betreuer,</fragen:Text>
+                                       
+                  <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                       
+                  <fragen:AntwortJaNein>
+                                            
+                    <fragen:Entscheidung>true</fragen:Entscheidung>
+                                         
+                  </fragen:AntwortJaNein>
+                                    
+                </fragen:Element>
+                                  
+                <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                                       
+                  <fragen:FachlicheID>FLAGEXISTENZ04D</fragen:FachlicheID>
+                                       
+                  <fragen:TechnischeID>VP.FLAGEXISTENZ04D</fragen:TechnischeID>
+                                       
+                  <fragen:Text>oder wurde in den vergangenen zwölf Monaten ein Antrag für einen der oben genannten Punkte gestellt? Falls „ja“, reichen Sie bitte eine Kopie des Antrags oder des Feststellungsbescheids mit ein.</fragen:Text>
+                                       
+                  <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                       
+                  <fragen:AntwortJaNein>
+                                            
+                    <fragen:Entscheidung>false</fragen:Entscheidung>
+                                         
+                  </fragen:AntwortJaNein>
+                                    
+                </fragen:Element>
+                                  
+                <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                                       
+                  <fragen:FachlicheID>EXISTENZ05</fragen:FachlicheID>
+                                       
+                  <fragen:TechnischeID>VP.EXISTENZ05</fragen:TechnischeID>
+                                       
+                  <fragen:Text>Hat Sie in den vergangenen fünf Jahren eine der genannten Personen beraten, untersucht oder behandelt oder wurden Sie dorthin überwiesen: Neurologe, Psychotherapeut, Psychiater, Psychoanalytiker, Psychologe Heilpraktiker für Psychotherapie? Falls „ja“, füllen Sie bitte mit Ihrem Vermittler den Fragebogen „Psychische Erkrankungen“ aus und reichen ihn mit ein.</fragen:Text>
+                                       
+                  <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                       
+                  <fragen:AntwortJaNein>
+                                            
+                    <fragen:Entscheidung>true</fragen:Entscheidung>
+                                         
+                  </fragen:AntwortJaNein>
+                                    
+                </fragen:Element>
+                                  
+                <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                                       
+                  <fragen:FachlicheID>FLAGEXISTENZHOBBY</fragen:FachlicheID>
+                                       
+                  <fragen:TechnischeID>VP.FLAGEXISTENZHOBBY</fragen:TechnischeID>
+                                       
+                  <fragen:Text>Haben Sie Hobbys, bei denen die Gefahr von Unfällen oder Verletzungen erhöht ist? Hierzu gehören zum Beispiel Kampfsport, Flugsport, Fallschirmspringen, Motorsport oder Extremsport.</fragen:Text>
+                                       
+                  <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                       
+                  <fragen:AntwortJaNein>
+                                            
+                    <fragen:Entscheidung>true</fragen:Entscheidung>
+                                         
+                  </fragen:AntwortJaNein>
+                                    
+                </fragen:Element>
+                                  
+                <fragen:Element xsi:type="fragen:CT_FrageText">
+                                       
+                  <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                                            
+                    <fragen:LinkerOperand>VP.FLAGEXISTENZHOBBY</fragen:LinkerOperand>
+                                            
+                    <fragen:Operator>gleich</fragen:Operator>
+                                            
+                    <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                                                 
+                      <fragen:Entscheidung>true</fragen:Entscheidung>
+                                              
+                    </fragen:RechterOperand>
+                                         
+                  </fragen:Bedingung>
+                                       
+                  <fragen:FachlicheID>EXISTENZ_HOBBYS</fragen:FachlicheID>
+                                       
+                  <fragen:TechnischeID>VP.FLAGEXISTENZHOBBY.EXISTENZ_HOBBYS</fragen:TechnischeID>
+                                       
+                  <fragen:Text>Falls „ja“, nennen Sie uns bitte Ihre Hobbys:</fragen:Text>
+                                       
+                  <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                                       
+                  <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                                       
+                  <fragen:AntwortText>
+                                            
+                    <fragen:Freitext>hobbyExistenz</fragen:Freitext>
+                                         
+                  </fragen:AntwortText>
+                                    
+                </fragen:Element>
+                               
+              </pm-leben:Fragenkomplex>
+                          
+            </partner:ZusaetzlichePartnerdaten>
+                        
+            <partner:Geburtsdatum>1992-11-01</partner:Geburtsdatum>
+                        
+            <partner:Geschlecht>1</partner:Geschlecht>
+                        
+            <partner:Berufstaetigkeit>
+                             
+              <partner:Beruf>Koch</partner:Beruf>
+                          
+            </partner:Berufstaetigkeit>
+                     
+          </tarif:Partner>
+                   
+          <tarif:Versicherungsnehmer>
+                        
+            <partner:PartnerID>1</partner:PartnerID>
+                     
+          </tarif:Versicherungsnehmer>
+                   
+          <tarif:Verkaufsprodukt>
+                        
+            <basis:Erweiterung xsi:type="vb-leben:CT_VerkaufsproduktErweiterung">
+                             
+              <vb-leben:Konsortium>Ohne</vb-leben:Konsortium>
+                          
+            </basis:Erweiterung>
+                        
+            <pm:Produkt xsi:type="pm-leben:CT_Produkt">
+                             
+              <basis:Erweiterung xsi:type="vb-leben:CT_ProduktErweiterung">
+                                  
+                <vb-leben:Tarifgruppe>Normal</vb-leben:Tarifgruppe>
+                               
+              </basis:Erweiterung>
+                             
+              <pm:GewuenschteZahlungsweise>8</pm:GewuenschteZahlungsweise>
+                             
+              <pm:Beitrag>
+                                  
+                <pm:ArtID xsi:type="dt:STE_BeitragBasis">01</pm:ArtID>
+                                  
+                <pm:Zahlungsweise>8</pm:Zahlungsweise>
+                               
+              </pm:Beitrag>
+                             
+              <pm:Versicherungsdauer>
+                                  
+                <allg:Beginn>2023-03-01T12:00</allg:Beginn>
+                               
+              </pm:Versicherungsdauer>
+                             
+              <pm:Kennung>SKV</pm:Kennung>
+                             
+              <pm:Elementarprodukt xsi:type="pm-leben:CT_ArbeitskraftAbsicherung">
+                                  
+                <basis:Erweiterung xsi:type="vb-leben:CT_ArbeitskraftAbsicherungErweiterung">
+                                       
+                  <vb-leben:NachversicherungsgarantieBU>2500</vb-leben:NachversicherungsgarantieBU>
+                                    
+                </basis:Erweiterung>
+                                  
+                <pm:Versicherungsdauer>
+                                       
+                  <allg:AnzahlJahre>35</allg:AnzahlJahre>
+                                       
+                  <allg:AnzahlMonate>1</allg:AnzahlMonate>
+                                    
+                </pm:Versicherungsdauer>
+                                  
+                <pm:Dynamik>
+                                       
+                  <pm:ArtID xsi:type="dt:STE_DynamikBasis">06</pm:ArtID>
+                                       
+                  <pm:Frequenz xsi:type="dt:STE_FrequenzBasis">jaehrlich</pm:Frequenz>
+                                       
+                  <pm:KategorieID>Leistung</pm:KategorieID>
+                                    
+                </pm:Dynamik>
+                                  
+                <vs-pm:VersicherungssummeOderLeistung>
+                                       
+                  <vs-pm:ArtID xsi:type="dt:STE_VersicherungssummeOderLeistungBasis">GarantierteRente</vs-pm:ArtID>
+                                       
+                  <vs-pm:Wert>1400</vs-pm:Wert>
+                                       
+                  <vs-pm:Werteinheit>20</vs-pm:Werteinheit>
+                                       
+                  <vs-pm:Waehrung>EUR</vs-pm:Waehrung>
+                                       
+                  <vs-pm:Auszahlungsweise>8</vs-pm:Auszahlungsweise>
+                                    
+                </vs-pm:VersicherungssummeOderLeistung>
+                                  
+                <vs-pm:Bezugsrecht>
+                                       
+                  <vs-pm:Leistungsfall>Erlebensfall</vs-pm:Leistungsfall>
+                                       
+                  <vs-pm:IndexBerechtigter>1</vs-pm:IndexBerechtigter>
+                                    
+                </vs-pm:Bezugsrecht>
+                                  
+                <vs-pm:Bezugsrecht>
+                                       
+                  <vs-pm:Leistungsfall>Todesfall</vs-pm:Leistungsfall>
+                                       
+                  <vs-pm:IndexBerechtigter>3</vs-pm:IndexBerechtigter>
+                                    
+                </vs-pm:Bezugsrecht>
+                                  
+                <pm-leben:IstHauptversicherung>true</pm-leben:IstHauptversicherung>
+                                  
+                <pm-leben:UeberschussverwendungVorLeistung xsi:type="dt:STE_UeberschussverwendungBasis">08</pm-leben:UeberschussverwendungVorLeistung>
+                                  
+                <pm-leben:VersichertePerson>
+                                       
+                  <partner:PartnerID>1</partner:PartnerID>
+                                    
+                </pm-leben:VersichertePerson>
+                                  
+                <pm-leben:Art xsi:type="dt:STE_UnfaehigkeitsZusatzArtBasis">Rente</pm-leben:Art>
+                                  
+                <pm-leben:Auspraegung xsi:type="vb-leben:STE_UnfaehigkeitsZusatzAuspraegungErweitert">KV</pm-leben:Auspraegung>
+                               
+              </pm:Elementarprodukt>
+                             
+              <pm:Elementarprodukt xsi:type="pm-leben:CT_ArbeitskraftAbsicherung">
+                                  
+                <pm-leben:IstHauptversicherung>false</pm-leben:IstHauptversicherung>
+                                  
+                <pm-leben:VersichertePerson>
+                                       
+                  <partner:PartnerID>1</partner:PartnerID>
+                                    
+                </pm-leben:VersichertePerson>
+                                  
+                <pm-leben:Art xsi:type="dt:STE_UnfaehigkeitsZusatzArtBasis">Rente</pm-leben:Art>
+                                  
+                <pm-leben:Auspraegung xsi:type="vb-leben:STE_UnfaehigkeitsZusatzAuspraegungErweitert">Psyche</pm-leben:Auspraegung>
+                               
+              </pm:Elementarprodukt>
+                             
+              <pm-leben:VorgabeBerechnung>
+                                  
+                <pm-leben:ArtID xsi:type="dt:STE_VorgabeBerechnungBasis">GarantierteRente</pm-leben:ArtID>
+                                  
+                <pm-leben:Kontext xsi:type="dt:STE_VorgabeBerechnungKontextBasis">ArbeitskraftAbsicherung</pm-leben:Kontext>
+                               
+              </pm-leben:VorgabeBerechnung>
+                          
+            </pm:Produkt>
+                     
+          </tarif:Verkaufsprodukt>
+                
+        </tarif:Tarifierung>
+           
+      </tarif:Request>
+      
+    </tarif:getQuote>
+  </soapenv:Body>
+</soapenv:Envelope>

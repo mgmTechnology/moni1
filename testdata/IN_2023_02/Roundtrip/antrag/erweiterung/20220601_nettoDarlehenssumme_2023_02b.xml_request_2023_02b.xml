@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <tarif:getOrder xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:vbl="urn:de:vb:bipro:taa:leben:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        
+      <tarif:Request>
+            
+        <nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+        <nachr:ConsumerID>WS DEV TEAM</nachr:ConsumerID>
+            
+        <tarif:Antrag>
+                
+          <basis:Erweiterung xsi:type="vbl:CT_AntragErweiterung">
+                    
+            <vbl:AngabeNettoDarlehenssummeAndererVertrag>true</vbl:AngabeNettoDarlehenssummeAndererVertrag>
+                    
+            <vbl:NettoDarlehenssummeAndererVertrag>200.0</vbl:NettoDarlehenssummeAndererVertrag>
+                  
+          </basis:Erweiterung>
+                
+          <gevo:Vermittler>
+                    
+            <allg:Vermittlernummer>111/222</allg:Vermittlernummer>
+                  
+          </gevo:Vermittler>
+                
+          <tarif:Partner xsi:type="partner:CT_Person">
+                    
+            <partner:PartnerID>1</partner:PartnerID>
+                    
+            <partner:ZusaetzlichePartnerdaten xsi:type="pm-leben:CT_Risiko">
+                        
+              <pm-leben:Nichtraucher>false</pm-leben:Nichtraucher>
+                      
+            </partner:ZusaetzlichePartnerdaten>
+                    
+            <partner:Geburtsdatum>1992-11-01</partner:Geburtsdatum>
+                    
+            <partner:Geschlecht>1</partner:Geschlecht>
+                  
+          </tarif:Partner>
+                
+          <tarif:Partner xsi:type="partner:CT_Person">
+                    
+            <partner:PartnerID>2</partner:PartnerID>
+                    
+            <partner:ZusaetzlichePartnerdaten xsi:type="pm-leben:CT_Risiko">
+                        
+              <pm-leben:Nichtraucher>false</pm-leben:Nichtraucher>
+                      
+            </partner:ZusaetzlichePartnerdaten>
+                    
+            <partner:Geburtsdatum>1980-02-02</partner:Geburtsdatum>
+                    
+            <partner:Geschlecht>1</partner:Geschlecht>
+                  
+          </tarif:Partner>
+                
+          <tarif:Versicherungsnehmer>
+                    
+            <partner:PartnerID>1</partner:PartnerID>
+                  
+          </tarif:Versicherungsnehmer>
+                
+          <tarif:Verkaufsprodukt>
+                    
+            <pm:Produkt xsi:type="pm-leben:CT_Produkt">
+                        
+              <pm:GewuenschteZahlungsweise>8</pm:GewuenschteZahlungsweise>
+                        
+              <pm:Beitrag>
+                            
+                <pm:ArtID xsi:type="dt:STE_BeitragBasis">01</pm:ArtID>
+                            
+                <pm:Betrag>
+                                
+                  <allg:Betrag>800</allg:Betrag>
+                                
+                  <allg:Waehrung>EUR</allg:Waehrung>
+                              
+                </pm:Betrag>
+                            
+                <pm:Zahlungsweise>8</pm:Zahlungsweise>
+                          
+              </pm:Beitrag>
+                        
+              <pm:Versicherungsdauer>
+                            
+                <allg:Beginn>2023-03-01T12:00</allg:Beginn>
+                          
+              </pm:Versicherungsdauer>
+                        
+              <pm:Kennung>NLR</pm:Kennung>
+                        
+              <pm:Elementarprodukt xsi:type="pm-leben:CT_TodesfallAbsicherung">
+                            
+                <pm:Versicherungsdauer>
+                                
+                  <allg:AnzahlJahre>30</allg:AnzahlJahre>
+                              
+                </pm:Versicherungsdauer>
+                            
+                <vs-pm:VersicherungssummeOderLeistung>
+                                
+                  <vs-pm:ArtID xsi:type="vbl:STE_VersicherungssummeOderLeistungErweitert">RisikorenteVP2</vs-pm:ArtID>
+                                
+                  <vs-pm:Wert>500</vs-pm:Wert>
+                                
+                  <vs-pm:Werteinheit>20</vs-pm:Werteinheit>
+                                
+                  <vs-pm:Waehrung>EUR</vs-pm:Waehrung>
+                                
+                  <vs-pm:Zeitraum>
+                                    
+                    <allg:AnzahlJahre>30</allg:AnzahlJahre>
+                                    
+                    <allg:AnzahlMonate>0</allg:AnzahlMonate>
+                                  
+                  </vs-pm:Zeitraum>
+                              
+                </vs-pm:VersicherungssummeOderLeistung>
+                            
+                <pm-leben:IstHauptversicherung>true</pm-leben:IstHauptversicherung>
+                            
+                <pm-leben:UeberschussverwendungVorLeistung xsi:type="dt:STE_UeberschussverwendungBasis">08</pm-leben:UeberschussverwendungVorLeistung>
+                            
+                <pm-leben:MitversichertePerson>
+                                
+                  <partner:PartnerID>2</partner:PartnerID>
+                              
+                </pm-leben:MitversichertePerson>
+                            
+                <pm-leben:VersichertePerson>
+                                
+                  <partner:PartnerID>1</partner:PartnerID>
+                              
+                </pm-leben:VersichertePerson>
+                          
+              </pm:Elementarprodukt>
+                        
+              <pm-leben:VorgabeBerechnung>
+                            
+                <pm-leben:ArtID xsi:type="dt:STE_VorgabeBerechnungBasis">Bruttobeitrag</pm-leben:ArtID>
+                            
+                <pm-leben:Kontext xsi:type="dt:STE_VorgabeBerechnungKontextBasis">Produkt</pm-leben:Kontext>
+                          
+              </pm-leben:VorgabeBerechnung>
+                      
+            </pm:Produkt>
+                  
+          </tarif:Verkaufsprodukt>
+              
+        </tarif:Antrag>
+          
+      </tarif:Request>
+      
+    </tarif:getOrder>
+  </soapenv:Body>
+</soapenv:Envelope>

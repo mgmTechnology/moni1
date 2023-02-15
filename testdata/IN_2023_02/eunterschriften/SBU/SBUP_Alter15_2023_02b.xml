@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <tarif:getOffer xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:kapanl-basis="http://www.bipro.net/namespace/kapitalanlage/basis" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:vb-leben="urn:de:vb:bipro:taa:leben:1.12" xmlns:vbl="urn:de:vb:bipro:taa:vbl:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      
+      <tarif:Request>
+        
+        <nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+        <nachr:ConsumerID>WS DEV TEAM</nachr:ConsumerID>
+        
+        <tarif:Angebot>
+          
+          <gevo:Vermittler>
+            
+            <allg:PartnerID>5156567</allg:PartnerID>
+            
+            <allg:Vermittlerrolle>
+              
+              <allg:ArtID>01</allg:ArtID>
+              
+              <allg:Vermittlertyp>01</allg:Vermittlertyp>
+              
+            </allg:Vermittlerrolle>
+            
+          </gevo:Vermittler>
+          
+          <tarif:Partner xsi:type="partner:CT_JuristischePerson">
+            
+            <partner:PartnerID>5156567</partner:PartnerID>
+            
+          </tarif:Partner>
+          
+          <tarif:Partner xsi:type="partner:CT_Person">
+            
+            <partner:PartnerID>22800990</partner:PartnerID>
+            
+            <partner:Anschrift>
+              
+              <allg:Landname>Deutschland</allg:Landname>
+              
+              <partner:ArtID>1</partner:ArtID>
+              
+            </partner:Anschrift>
+            
+            <partner:Bankverbindung>
+              
+              <partner:Einzugsermaechtigung>true</partner:Einzugsermaechtigung>
+              
+            </partner:Bankverbindung>
+            
+          </tarif:Partner>
+          
+          <tarif:Partner xsi:type="partner:CT_Person">
+            
+            <basis:Erweiterung xsi:type="vb-leben:CT_PersonErweiterung"/>
+            
+            <partner:Anrede>1</partner:Anrede>
+            
+            <partner:PartnerID>21184500</partner:PartnerID>
+            
+            <partner:Anschrift>
+              
+              <allg:Landname>Deutschland</allg:Landname>
+              
+              <partner:ArtID>1</partner:ArtID>
+              
+            </partner:Anschrift>
+            
+            <partner:ZusaetzlichePartnerdaten xsi:type="pm-leben:CT_Risiko">
+              
+              <pm-leben:Nichtraucher>true</pm-leben:Nichtraucher>
+              
+            </partner:ZusaetzlichePartnerdaten>
+            
+            <partner:ZusaetzlichePartnerdaten xsi:type="pm-leben:CT_Risikopruefung">
+              
+              <pm-leben:Fragenkomplex>
+                
+                <fragen:ArtID xsi:type="dt:STE_FragenkomplexArtBasis">Gesundheit</fragen:ArtID>
+                
+                <fragen:Bezeichnung>Gesundheitsfragen zur versicherten Person</fragen:Bezeichnung>
+                
+                <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                  
+                  <fragen:Ordnungsnummer>2349</fragen:Ordnungsnummer>
+                  
+                  <fragen:FachlicheID>A25</fragen:FachlicheID>
+                  
+                  <fragen:TechnischeID>VP.A25</fragen:TechnischeID>
+                  
+                  <fragen:Text>Haben Sie in den letzten 12 Monaten aktiv Nikotin durch Rauchen oder Inhalieren zu sich genommen (z. B. über Zigaretten, Zigarren, Pfeifen, Shishas, E-Zigaretten, E-Zigarren, E-Pfeifen, E-Shishas)?</fragen:Text>
+                  
+                  <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                  
+                  <fragen:AntwortJaNein>
+                    
+                    <fragen:Entscheidung>false</fragen:Entscheidung>
+                    
+                  </fragen:AntwortJaNein>
+                  
+                </fragen:Element>
+                
+              </pm-leben:Fragenkomplex>
+              
+            </partner:ZusaetzlichePartnerdaten>
+            
+            <partner:Geburtsdatum>2008-01-01</partner:Geburtsdatum>
+            
+            <partner:Geschlecht>1</partner:Geschlecht>
+            
+            <partner:Berufstaetigkeit>
+              
+              <basis:Erweiterung xsi:type="vb-leben:CT_BerufstaetigkeitErweiterung">
+                
+                <vb-leben:BuBerufsklasse>B3</vb-leben:BuBerufsklasse>
+                
+              </basis:Erweiterung>
+              
+              <partner:Beruf>Maler</partner:Beruf>
+              
+              <partner:StellungImBeruf xsi:type="dt:STE_StellungImBerufBasis">01</partner:StellungImBeruf>
+              
+            </partner:Berufstaetigkeit>
+            
+            <partner:Einkommen>
+              
+              <partner:AnzahlGehaelterProJahr>12.0</partner:AnzahlGehaelterProJahr>
+              
+              <partner:Einkommen/>
+              
+            </partner:Einkommen>
+            
+          </tarif:Partner>
+          
+          <tarif:Versicherungsnehmer>
+            
+            <partner:PartnerID>22800990</partner:PartnerID>
+            
+          </tarif:Versicherungsnehmer>
+          
+          <tarif:Verkaufsprodukt>
+            
+            <basis:Erweiterung xsi:type="vb-leben:CT_VerkaufsproduktErweiterung">
+              
+              <vb-leben:Transparente>false</vb-leben:Transparente>
+              
+              <vb-leben:Konsortium>Ohne</vb-leben:Konsortium>
+              
+            </basis:Erweiterung>
+            
+            <pm:Produkt xsi:type="pm-leben:CT_Produkt">
+              
+              <basis:Erweiterung xsi:type="vb-leben:CT_ProduktErweiterung">
+                
+                <vb-leben:Tarifgruppe>Normal</vb-leben:Tarifgruppe>
+                
+              </basis:Erweiterung>
+              
+              <pm:GewuenschteZahlungsweise>8</pm:GewuenschteZahlungsweise>
+              
+              <pm:Beitrag>
+                
+                <pm:ArtID xsi:type="dt:STE_BeitragBasis">01</pm:ArtID>
+                
+                <pm:Betrag>
+                  
+                  <allg:Betrag>300</allg:Betrag>
+                  
+                  <allg:Waehrung>EUR</allg:Waehrung>
+                  
+                </pm:Betrag>
+                
+                <pm:Zahlungsweise>8</pm:Zahlungsweise>
+                
+              </pm:Beitrag>
+              
+              <pm:Versicherungsdauer>
+                
+                <allg:Beginn>2023-03-01T12:00</allg:Beginn>
+                
+              </pm:Versicherungsdauer>
+              
+              <pm:Kennung>SBUP</pm:Kennung>
+              
+              <pm:Elementarprodukt xsi:type="pm-leben:CT_ArbeitskraftAbsicherung">
+                
+                <basis:Erweiterung xsi:type="vb-leben:CT_ArbeitskraftAbsicherungErweiterung">
+                  
+                  <vb-leben:NachversicherungsgarantieBU>0.0</vb-leben:NachversicherungsgarantieBU>
+                  
+                  <vb-leben:Antragsdaten>
+                    
+                    <vb-leben:NichtEUStaatsangehoeriger>false</vb-leben:NichtEUStaatsangehoeriger>
+                    
+                  </vb-leben:Antragsdaten>
+                  
+                </basis:Erweiterung>
+                
+                <pm:Versicherungsdauer>
+                  
+                  <allg:AnzahlJahre>52</allg:AnzahlJahre>
+                  
+                  <allg:AnzahlMonate>0</allg:AnzahlMonate>
+                  
+                </pm:Versicherungsdauer>
+                
+                <vs-pm:VersicherungssummeOderLeistung>
+                  
+                  <vs-pm:ArtID xsi:type="dt:STE_VersicherungssummeOderLeistungBasis">GarantierteRente</vs-pm:ArtID>
+                  
+                  <vs-pm:Werteinheit>20</vs-pm:Werteinheit>
+                  
+                  <vs-pm:Waehrung>EUR</vs-pm:Waehrung>
+                  
+                  <vs-pm:Auszahlungsweise>8</vs-pm:Auszahlungsweise>
+                  
+                </vs-pm:VersicherungssummeOderLeistung>
+                
+                <vs-pm:Bezugsrecht>
+                  
+                  <vs-pm:Leistungsfall>Erlebensfall</vs-pm:Leistungsfall>
+                  
+                  <vs-pm:IndexBerechtigter>1</vs-pm:IndexBerechtigter>
+                  
+                </vs-pm:Bezugsrecht>
+                
+                <vs-pm:Bezugsrecht>
+                  
+                  <vs-pm:Leistungsfall>Todesfall</vs-pm:Leistungsfall>
+                  
+                  <vs-pm:IndexBerechtigter>1</vs-pm:IndexBerechtigter>
+                  
+                </vs-pm:Bezugsrecht>
+                
+                <pm-leben:IstHauptversicherung>true</pm-leben:IstHauptversicherung>
+                
+                <pm-leben:UeberschussverwendungVorLeistung xsi:type="dt:STE_UeberschussverwendungBasis">08</pm-leben:UeberschussverwendungVorLeistung>
+                
+                <pm-leben:VersichertePerson>
+                  
+                  <partner:PartnerID>21184500</partner:PartnerID>
+                  
+                </pm-leben:VersichertePerson>
+                
+                <pm-leben:Art xsi:type="vb-leben:STE_UnfaehigkeitsZusatzArtErweitert">RentePlus</pm-leben:Art>
+                
+                <pm-leben:Auspraegung xsi:type="dt:STE_UnfaehigkeitsZusatzAuspraegungBasis">BU</pm-leben:Auspraegung>
+                
+              </pm:Elementarprodukt>
+              
+              <pm-leben:VorgabeBerechnung>
+                
+                <pm-leben:ArtID xsi:type="dt:STE_VorgabeBerechnungBasis">Bruttobeitrag</pm-leben:ArtID>
+                
+                <pm-leben:Kontext xsi:type="dt:STE_VorgabeBerechnungKontextBasis">Produkt</pm-leben:Kontext>
+                
+              </pm-leben:VorgabeBerechnung>
+              
+            </pm:Produkt>
+            
+          </tarif:Verkaufsprodukt>
+          
+          <tarif:Beitragszahler>
+            
+            <partner:PartnerID>22800990</partner:PartnerID>
+            
+          </tarif:Beitragszahler>
+          
+        </tarif:Angebot>
+        
+      </tarif:Request>
+      
+    </tarif:getOffer>
+  </soapenv:Body>
+</soapenv:Envelope>
