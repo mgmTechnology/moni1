@@ -4,16 +4,38 @@
 
 <body>
 <div class="container">
-    <h>Cannot access endpoint</h>
-<table border="1">
+     <p></p>
+<table border="1" width="100%">
     <tr><td>Error Message</td><td th:text="${message}"></td></tr>
     <tr><td>Status Code</td><td th:text="${status}"></td></tr>
     <tr><td>Exception</td><td th:text="${exception}"></td></tr>
     <tr><td>Stacktrace</td><td><pre th:text="${trace}"></pre></td></tr>
     <tr><td>Binding Errors</td><td th:text="${errors}"></td></tr>
+
 </table>
 </div>
 <footer th:replace="~{fragments/footer :: footer}"></footer>
+
+<script>
+    fetch("https://vbtest3.volkswohl-bund.de/vbl/ws/taa/2023-01/bipro/VBLService_2.4.6.1.12?wsdl", {
+  method: "POST",
+  headers: {
+    "Content-Type": "text/xml;charset=UTF-8"
+  }
+})
+  .then((response) => {
+    if (response.ok) {
+      console.log("Request succeeded with status " + response.status);
+    } else {
+      console.log("Request failed with status " + response.status);
+    }
+  })
+  .catch((error) => {
+    console.log("Error: " + error);
+    // Put error message onto the GUI here
+  });
+
+</script>
 </div>
 </body>
 </html>

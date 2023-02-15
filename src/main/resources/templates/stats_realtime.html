@@ -26,7 +26,7 @@
         <p th:text="'Aktuelle Durchschnittszeit (ms): ' + ${averageResponseTime} + 'ms'" class="text text-primary"></p>
         <p th:text="'Letztes Minimum (ms): ' + ${minResponseTime} + 'ms' + ', letztes Maximum (ms): ' + ${maxResponseTime} + 'ms'" class="text text-primary"></p>
         <h6 th:text="'Endpoint: ' + ${endpoint}" class="text text-primary">placeholder only</h6>
-        <h6 th:text="'Thread size: ' + ${threadsize} +', Testset size: ' + ${testsize}" class="text text-primary">placeholder only</h6>
+        <h6 th:text="'Thread size: ' + ${threadsize} +', Testset size: ' + ${testsize} +', Testset: ' + ${testdir}+', Queue size: ' + ${queuesize}" class="text text-primary">placeholder only</h6>
         <div id="countdown"></div>
         <!-- <p th:text="'Last averages: ' + ${averages} + 'ms'"></p> -->
 

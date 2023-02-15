@@ -11,12 +11,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.LinkedList;
 import java.util.Queue;
 
 @Controller
 public class UniversalController {
 
+    public static final String RESPONSE_DATA_CSV = "response_data.csv";
     private static final Logger log = LoggerFactory.getLogger(UniversalController.class);
     Queue<Long> averagesQueue = new LinkedList<>();
     Queue<Long> minsQueue = new LinkedList<>();
@@ -36,9 +38,12 @@ public class UniversalController {
         return "endpoints";
     }*/
 
-    @RequestMapping(value = "/statistics")
+    @RequestMapping(value = "/statsrealtime")
     public String statistics(Model model) {
-        String fileName = "response_data.csv";
+        if (!Files.exists(Paths.get(RESPONSE_DATA_CSV))) {
+            model.addAttribute("message", "No data found: " +RESPONSE_DATA_CSV);
+            return "err_io";
+        }
         long sum = 0;
         int count = 0;
         long minOfLastLogEntries = Long.MAX_VALUE;
@@ -47,7 +52,7 @@ public class UniversalController {
         Queue<String> queueOfLastLogEntries = new LinkedList<>();
 
         int queueSize = Integer.parseInt(WSOnlineMonitor.appProps.getProperty("queue.size").trim());
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(RESPONSE_DATA_CSV))) {
             while ((line = br.readLine()) != null) {
                 queueOfLastLogEntries.add(line);
                 if (queueOfLastLogEntries.size() > queueSize) {
@@ -55,7 +60,7 @@ public class UniversalController {
                 }
             }
         } catch (IOException e) {
-            System.err.println("Error reading file: " + fileName);
+            System.err.println("Error reading file: " + RESPONSE_DATA_CSV);
             e.printStackTrace();
         }
 
@@ -103,8 +108,10 @@ public class UniversalController {
         model.addAttribute("endpoint", WSOnlineMonitor.getENDPOINTS().get(0));
         model.addAttribute("threadsize", WSOnlineMonitor.appProps.getProperty("thread.size"));
         model.addAttribute("testsize", countXmlFiles(Path.of(WSOnlineMonitor.appProps.getProperty("test.dir"))));
+        model.addAttribute("testdir", Path.of(WSOnlineMonitor.appProps.getProperty("test.dir")).getFileName().toString());
+        model.addAttribute("queuesize",WSOnlineMonitor.appProps.getProperty("queue.size"));
 
-        return "statistics";
+        return "stats_realtime";
     }
     public static int countXmlFiles(Path directory)  {
         long count = 0;

@@ -113,8 +113,9 @@ public class WSOnlineMonitor {
     private static void performTestRequests() {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
-        log.info("\nPosting new Test requests at " + dtf.format(now));
-        int threadSize = Integer.parseInt(WSOnlineMonitor.appProps.getProperty("thread.size").trim());
+        int threadSize = 0;
+        log.info("\nPosting " + threadSize + " new Test requests at " + dtf.format(now));
+        threadSize = Integer.parseInt(WSOnlineMonitor.appProps.getProperty("thread.size").trim());
         for (int i = 1; i <= threadSize; i++) {
             new Thread(() -> {
                 try {
