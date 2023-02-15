@@ -48,7 +48,11 @@
                 backgroundColor: 'rgba(33, 152, 197, 0.2)',
                 borderColor: 'rgba(2, 115, 158, 1)',
                 borderWidth: 1,
-                fill: false
+                fill: false,
+                label: {
+                  enabled: true,
+                  content: JSON.stringify(averages)
+                }
             },
             {
                 label: 'Response minimum (ms)',
@@ -56,7 +60,11 @@
                 backgroundColor: '#0000A0',
                 borderColor: 'rgba(98, 120, 63, 1)',
                 borderWidth: 1,
-                fill: false
+                fill: false,
+                false,label: {
+                  enabled: true,
+                  content: JSON.stringify(mins)
+                }
             },
             {
                 label: 'Response maximums(ms)',
@@ -64,7 +72,11 @@
                 backgroundColor: '#D76B00',
                 borderColor: 'rgba(179, 0, 0, 1)',
                 borderWidth: 1,
-                fill: false
+                fill: false,
+                label: {
+                  enabled: true,
+                  content: JSON.stringify(maxs)
+                }
             }
             ]
         },
