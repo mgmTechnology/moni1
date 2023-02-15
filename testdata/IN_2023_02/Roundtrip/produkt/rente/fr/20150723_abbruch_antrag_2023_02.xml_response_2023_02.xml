@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><tarif:getOrderResponse xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:kapanl-basis="http://www.bipro.net/namespace/kapitalanlage/basis" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:vb-leben="urn:de:vb:bipro:taa:leben:1.12" xmlns:vbl="urn:de:vb:bipro:taa:vbl:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<tarif:Response>
+<nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+<nachr:Status>
+<nachr:ProzessID>2022-09-19T11:13:15.6990010966569122#R=20220400,S=2,O=1,V=0,H=VDE016,T=2022-09-19T11:13:15.140</nachr:ProzessID>
+<nachr:Zeitstempel>2022-09-19T11:13:15</nachr:Zeitstempel>
+<nachr:StatusID>NOK</nachr:StatusID>
+<nachr:Schwebe>false</nachr:Schwebe>
+<nachr:Meldung>
+<nachr:ArtID>Fehler</nachr:ArtID>
+<nachr:MeldungID>00001</nachr:MeldungID>
+<nachr:Text>Der Wert 'PENSIONSKASSE' wird nicht unterstützt. Alternativen: [Direktversicherung, Unterstuetzungskasse]</nachr:Text>
+<nachr:Quelle>/tarif:getOrder[1]/tarif:Request[1]/tarif:Antrag[1]/tarif:Verkaufsprodukt[1]/pm:Produkt[1]/pm-leben:BAV[1]/pm-leben:Durchfuehrungsweg[1]</nachr:Quelle>
+<nachr:Identifikationsnummer>VORGABE</nachr:Identifikationsnummer>
+</nachr:Meldung>
+</nachr:Status>
+</tarif:Response>
+</tarif:getOrderResponse>

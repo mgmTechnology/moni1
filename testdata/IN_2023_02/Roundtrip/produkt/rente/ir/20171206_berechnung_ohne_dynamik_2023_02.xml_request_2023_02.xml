@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><tarif:getQuote xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:vbl="urn:de:vb:bipro:taa:leben:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tarif:Request>
+    <nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+    <tarif:Tarifierung>
+      <gevo:Vermittler>
+        <allg:Vermittlernummer>111/222</allg:Vermittlernummer>
+      </gevo:Vermittler>
+      <tarif:Partner xsi:type="partner:CT_Person">
+        <partner:PartnerID>1</partner:PartnerID>
+        <partner:Geburtsdatum>1992-11-01</partner:Geburtsdatum>
+        <partner:Geschlecht>1</partner:Geschlecht>
+      </tarif:Partner>
+      <tarif:Verkaufsprodukt>
+        <pm:Produkt xsi:type="pm-leben:CT_Produkt">
+          <pm:Beitrag>
+            <pm:ArtID xsi:type="dt:STE_BeitragBasis">01</pm:ArtID>
+            <pm:Betrag>
+              <allg:Betrag>100.0</allg:Betrag>
+              <allg:Waehrung>EUR</allg:Waehrung>
+            </pm:Betrag>
+            <pm:Zahlungsweise>8</pm:Zahlungsweise>
+          </pm:Beitrag>
+          <pm:Versicherungsdauer>
+            <allg:Beginn>2023-03-01T12:00</allg:Beginn> 
+          </pm:Versicherungsdauer>
+          <pm:Kennung>IR</pm:Kennung>
+          <pm:Elementarprodukt xsi:type="pm-leben:CT_Rente">
+            <basis:Erweiterung xsi:type="vbl:CT_RenteErweiterung">
+              <vbl:IndexDaten>
+                <vbl:VorgabeartIndexbeteiligung>Sicher</vbl:VorgabeartIndexbeteiligung>
+              </vbl:IndexDaten>
+            </basis:Erweiterung>               
+            <pm:Dynamik>
+                <pm:KategorieID>Beitrag</pm:KategorieID>
+            </pm:Dynamik>
+            <pm-leben:IstHauptversicherung>true</pm-leben:IstHauptversicherung>
+            <pm-leben:Endalter>67</pm-leben:Endalter>
+            <pm-leben:VersichertePerson>
+              <partner:PartnerID>1</partner:PartnerID>
+            </pm-leben:VersichertePerson>
+            <pm-leben:BeitragsRueckgewaehrBeiTod>01</pm-leben:BeitragsRueckgewaehrBeiTod>
+          </pm:Elementarprodukt>
+          <pm:Dynamik>
+            <pm:KategorieID>Beitrag</pm:KategorieID>
+            <pm:Hochrechnung>false</pm:Hochrechnung>
+          </pm:Dynamik>
+          <pm-leben:VorgabeBerechnung>
+            <pm-leben:ArtID xsi:type="dt:STE_VorgabeBerechnungBasis">Bruttobeitrag</pm-leben:ArtID>
+            <pm-leben:Kontext xsi:type="dt:STE_VorgabeBerechnungKontextBasis">Produkt</pm-leben:Kontext>
+          </pm-leben:VorgabeBerechnung>
+        </pm:Produkt>
+      </tarif:Verkaufsprodukt>
+    </tarif:Tarifierung>
+  </tarif:Request>
+</tarif:getQuote>

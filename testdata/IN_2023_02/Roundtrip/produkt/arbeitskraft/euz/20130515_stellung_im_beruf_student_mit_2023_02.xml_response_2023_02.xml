@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><SOAP-ENV:Fault xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+<faultcode>SOAP-ENV:Server</faultcode>
+<faultstring>ERROR - ExtendedSAXParseException at /tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/tarif:Partner[1]/partner:Berufstaetigkeit[1]: de.vb.commons.xml.sax.ExtendedSAXParseException; systemId: file:/C:/Daten/git/mono-elsa/bipro-taa/taa-leben-v246112-service/target/test-classes/eingabe/produkt/arbeitskraft/euz/20130515_stellung_im_beruf_student_mit.xml; lineNumber: 14; columnNumber: 151; cvc-complex-type.2.2: Element 'partner:StellungImBeruf' darf kein Element [untergeordnete Elemente] haben, und der Wert muss gültig sein.</faultstring>
+<detail>
+<nachr:BiproException xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:kapanl-basis="http://www.bipro.net/namespace/kapitalanlage/basis" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:vb-leben="urn:de:vb:bipro:taa:leben:1.12" xmlns:vbl="urn:de:vb:bipro:taa:vbl:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+<nachr:Status>
+<nachr:ProzessID>2022-09-19T11:10:19.6328969487715226#R=20220400,S=2,O=1,V=0,H=VDE016,T=2022-09-19T11:10:19.064</nachr:ProzessID>
+<nachr:Zeitstempel>2022-09-19T11:10:19</nachr:Zeitstempel>
+<nachr:StatusID>NOK</nachr:StatusID>
+<nachr:Schwebe>false</nachr:Schwebe>
+<nachr:Meldung>
+<nachr:ArtID>Fehler</nachr:ArtID>
+<nachr:MeldungID>00007</nachr:MeldungID>
+<nachr:Text>ERROR - ExtendedSAXParseException at /tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/tarif:Partner[1]/partner:Berufstaetigkeit[1]: de.vb.commons.xml.sax.ExtendedSAXParseException; systemId: file:/C:/Daten/git/mono-elsa/bipro-taa/taa-leben-v246112-service/target/test-classes/eingabe/produkt/arbeitskraft/euz/20130515_stellung_im_beruf_student_mit.xml; lineNumber: 14; columnNumber: 151; cvc-complex-type.2.2: Element 'partner:StellungImBeruf' darf kein Element [untergeordnete Elemente] haben, und der Wert muss gültig sein.</nachr:Text>
+<nachr:Identifikationsnummer>VORGABE: line 14, col 151</nachr:Identifikationsnummer>
+</nachr:Meldung>
+<nachr:Meldung>
+<nachr:ArtID>Fehler</nachr:ArtID>
+<nachr:MeldungID>00007</nachr:MeldungID>
+<nachr:Text>ERROR - ExtendedSAXParseException at /tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/tarif:Partner[1]/partner:Berufstaetigkeit[1]: de.vb.commons.xml.sax.ExtendedSAXParseException; systemId: file:/C:/Daten/git/mono-elsa/bipro-taa/taa-leben-v246112-service/target/test-classes/eingabe/produkt/arbeitskraft/euz/20130515_stellung_im_beruf_student_mit.xml; lineNumber: 14; columnNumber: 151; cvc-enumeration-valid: Wert 'StudentMitVordiplomOderBachelorAbschluss' ist nicht Facet-gültig in Bezug auf Enumeration '[Existenzgruender, Akademiker]'. Er muss ein Wert aus der Enumeration sein.</nachr:Text>
+<nachr:Identifikationsnummer>VORGABE: line 14, col 151</nachr:Identifikationsnummer>
+</nachr:Meldung>
+</nachr:Status>
+</nachr:BiproException>
+</detail>
+</SOAP-ENV:Fault>

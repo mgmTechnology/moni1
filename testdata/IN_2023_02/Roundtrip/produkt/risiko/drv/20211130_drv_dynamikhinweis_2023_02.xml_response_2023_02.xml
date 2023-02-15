@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><tarif:getQuoteResponse xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dol="urn:de:vb:bipro:taa:dol:1.12" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:kapanl-basis="http://www.bipro.net/namespace/kapitalanlage/basis" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:vb-leben="urn:de:vb:bipro:taa:leben:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<tarif:Response>
+<nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+<nachr:Status>
+<nachr:ProzessID>2022-09-19T11:07:44.6423628985332871#R=20220400,S=2,O=1,V=0,H=VDE016,T=2022-09-19T11:07:44.938</nachr:ProzessID>
+<nachr:Zeitstempel>2022-09-19T11:07:44</nachr:Zeitstempel>
+<nachr:StatusID>OK</nachr:StatusID>
+<nachr:Schwebe>false</nachr:Schwebe>
+<nachr:Meldung>
+<nachr:ArtID>Warnung</nachr:ArtID>
+<nachr:MeldungID>00102</nachr:MeldungID>
+<nachr:Text>Der Wert 'ST_Prozent[value=4]' wurde korrigiert. Neuer Wert: 'ST_Prozent[value=3.0]'</nachr:Text>
+<nachr:Quelle>/tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/tarif:Verkaufsprodukt[1]/pm:Produkt[1]/pm:Elementarprodukt[1]/pm:Dynamik[1]/pm:Wert[1]</nachr:Quelle>
+<nachr:Identifikationsnummer>VORGABE</nachr:Identifikationsnummer>
+</nachr:Meldung>
+<nachr:Meldung>
+<nachr:ArtID>Hinweis</nachr:ArtID>
+<nachr:MeldungID>99999</nachr:MeldungID>
+<nachr:Text>VORGABE: Die Dynamik wurde gemäß Verbraucherpreisindex (mind. 3 %) angepasst.</nachr:Text>
+<nachr:Identifikationsnummer>REpDRV.7630007</nachr:Identifikationsnummer>
+</nachr:Meldung>
+</nachr:Status>
+<tarif:Tarifierung>
+<gevo:Vermittler>
+<allg:Vermittlernummer>111/222</allg:Vermittlernummer>
+<allg:PartnerID>117699083</allg:PartnerID>
+<allg:IHKRegistrierungsnummer>0-1234-56789-AB</allg:IHKRegistrierungsnummer>
+<allg:Vermittlerrolle>
+<allg:ArtID>10</allg:ArtID>
+<allg:Vermittlertyp>02</allg:Vermittlertyp>
+</allg:Vermittlerrolle>
+</gevo:Vermittler>
+<gevo:Vermittler>
+<basis:Erweiterung xsi:type="vb-leben:CT_VermittlerErweiterung"/>
+<allg:Vermittlernummer>111/222</allg:Vermittlernummer>
+<allg:PartnerID>117699083</allg:PartnerID>
+<allg:Vermittlerrolle>
+<allg:ArtID>01</allg:ArtID>
+<allg:Vermittlertyp>01</allg:Vermittlertyp>
+</allg:Vermittlerrolle>
+</gevo:Vermittler>
+<tarif:Partner xsi:type="partner:CT_JuristischePerson">
+<basis:Erweiterung xsi:type="vb-leben:CT_PersonErweiterung"/>
+<partner:PartnerID>117699083</partner:PartnerID>
+<partner:Anschrift>
+<allg:Landname>Deutschland</allg:Landname>
+<partner:ArtID>1</partner:ArtID>
+</partner:Anschrift>
+</tarif:Partner>
+<tarif:Partner xsi:type="partner:CT_Person">
+<basis:Erweiterung xsi:type="vb-leben:CT_PersonErweiterung"/>
+<partner:Anrede>1</partner:Anrede>
+<partner:PartnerID>1046740658</partner:PartnerID>
+<partner:Anschrift>
+<allg:Landname>Deutschland</allg:Landname>
+<partner:ArtID>1</partner:ArtID>
+</partner:Anschrift>
+<partner:ZusaetzlichePartnerdaten xsi:type="pm-leben:CT_Risiko">
+<basis:Erweiterung xsi:type="vb-leben:CT_RisikoErweiterung">
+<vb-leben:Raucherstatus>Raucher</vb-leben:Raucherstatus>
+</basis:Erweiterung>
+<pm-leben:Koerper>
+<partner:Groesse>180</partner:Groesse>
+<partner:Gewicht>75</partner:Gewicht>
+</pm-leben:Koerper>
+</partner:ZusaetzlichePartnerdaten>
+<partner:ZusaetzlichePartnerdaten xsi:type="pm-leben:CT_Risikopruefung">
+<pm-leben:Fragenkomplex>
+<fragen:ArtID xsi:type="dt:STE_FragenkomplexArtBasis">Gesundheit</fragen:ArtID>
+<fragen:Bezeichnung>Gesundheitsfragen zur versicherten Person</fragen:Bezeichnung>
+<fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+<fragen:Ordnungsnummer>404</fragen:Ordnungsnummer>
+<fragen:FachlicheID>A01</fragen:FachlicheID>
+<fragen:Text>Nennen Sie uns bitte Ihre Körpergröße und Ihr Gewicht (cm/kg).</fragen:Text>
+<fragen:EinfacheFrage xsi:type="fragen:CT_FrageZahl">
+<fragen:Ordnungsnummer>405</fragen:Ordnungsnummer>
+<fragen:FachlicheID>A01_A</fragen:FachlicheID>
+<fragen:TechnischeID>VP.A01.A01_A</fragen:TechnischeID>
+<fragen:Text/>
+<fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+<fragen:AntwortZahl>
+<fragen:Zahl>180</fragen:Zahl>
+</fragen:AntwortZahl>
+</fragen:EinfacheFrage>
+<fragen:EinfacheFrage xsi:type="fragen:CT_FrageZahl">
+<fragen:Ordnungsnummer>406</fragen:Ordnungsnummer>
+<fragen:FachlicheID>A01_B</fragen:FachlicheID>
+<fragen:TechnischeID>VP.A01.A01_B</fragen:TechnischeID>
+<fragen:Text/>
+<fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+<fragen:AntwortZahl>
+<fragen:Zahl>75.0</fragen:Zahl>
+</fragen:AntwortZahl>
+</fragen:EinfacheFrage>
+</fragen:Element>
+</pm-leben:Fragenkomplex>
+</partner:ZusaetzlichePartnerdaten>
+<partner:Geburtsdatum>1992-11-01</partner:Geburtsdatum>
+<partner:Geschlecht>1</partner:Geschlecht>
+<partner:Staatsangehoerigkeit>D</partner:Staatsangehoerigkeit>
+<partner:Berufstaetigkeit>
+<basis:Erweiterung xsi:type="vb-leben:CT_BerufstaetigkeitErweiterung">
+<vb-leben:DrvBerufsklasse>BK_3</vb-leben:DrvBerufsklasse>
+</basis:Erweiterung>
+<partner:Beruf>Koch</partner:Beruf>
+</partner:Berufstaetigkeit>
+</tarif:Partner>
+<tarif:Versicherungsnehmer>
+<partner:PartnerID>1046740658</partner:PartnerID>
+</tarif:Versicherungsnehmer>
+<tarif:Verkaufsprodukt>
+<basis:Erweiterung xsi:type="vb-leben:CT_VerkaufsproduktErweiterung">
+<vb-leben:Konsortium>Ohne</vb-leben:Konsortium>
+</basis:Erweiterung>
+<pm:Produkt xsi:type="pm-leben:CT_Produkt">
+<basis:Erweiterung xsi:type="vb-leben:CT_ProduktErweiterung">
+<vb-leben:Tarifgruppe>Normal</vb-leben:Tarifgruppe>
+<vb-leben:BewertungssummeDaten>
+<vb-leben:Bewertungssumme>
+<allg:Betrag>5395</allg:Betrag>
+<allg:Waehrung>EUR</allg:Waehrung>
+</vb-leben:Bewertungssumme>
+</vb-leben:BewertungssummeDaten>
+</basis:Erweiterung>
+<pm:GewuenschteZahlungsweise>1</pm:GewuenschteZahlungsweise>
+<pm:Beitrag>
+<pm:ArtID xsi:type="dt:STE_BeitragBasis">01</pm:ArtID>
+<pm:Betrag>
+<allg:Betrag>3853.60</allg:Betrag>
+<allg:Waehrung>EUR</allg:Waehrung>
+</pm:Betrag>
+<pm:Zahlungsweise>1</pm:Zahlungsweise>
+<pm:Erhebung>
+<allg:AnzahlJahre>2</allg:AnzahlJahre>
+<allg:AnzahlMonate>0</allg:AnzahlMonate>
+</pm:Erhebung>
+</pm:Beitrag>
+<pm:Beitrag>
+<pm:ArtID xsi:type="dt:STE_BeitragBasis">02</pm:ArtID>
+<pm:Betrag>
+<allg:Betrag>2572.12</allg:Betrag>
+<allg:Waehrung>EUR</allg:Waehrung>
+</pm:Betrag>
+<pm:Zahlungsweise>1</pm:Zahlungsweise>
+<pm:Erhebung>
+<allg:AnzahlJahre>2</allg:AnzahlJahre>
+<allg:AnzahlMonate>0</allg:AnzahlMonate>
+</pm:Erhebung>
+</pm:Beitrag>
+<pm:Versicherungsdauer>
+<allg:Beginn>2023-03-01T12:00</allg:Beginn>
+</pm:Versicherungsdauer>
+<pm:Paket xsi:type="dol:STE_PaketErweitert">C</pm:Paket>
+<pm:Kennung>DRV</pm:Kennung>
+<pm:Elementarprodukt xsi:type="pm-leben:CT_TodesfallAbsicherung">
+<basis:Erweiterung xsi:type="vb-leben:CT_TodesfallAbsicherungErweiterung">
+<vb-leben:BewertungssummeDaten>
+<vb-leben:Bewertungssumme>
+<allg:Betrag>5395</allg:Betrag>
+<allg:Waehrung>EUR</allg:Waehrung>
+</vb-leben:Bewertungssumme>
+<vb-leben:Beitrag>
+<allg:Betrag>3853.60</allg:Betrag>
+<allg:Waehrung>EUR</allg:Waehrung>
+</vb-leben:Beitrag>
+</vb-leben:BewertungssummeDaten>
+<vb-leben:ArtRisikoabsicherung>Familie</vb-leben:ArtRisikoabsicherung>
+</basis:Erweiterung>
+<pm:Kondition>
+<pm:KategorieID xsi:type="dt:STE_KategorieIDBasis">Zuschlag</pm:KategorieID>
+<pm:ArtID xsi:type="vb-leben:STE_KonditionErweitert">Krankheit</pm:ArtID>
+<pm:Wert>20</pm:Wert>
+<pm:Werteinheit>10</pm:Werteinheit>
+<pm:Bezeichnung>VersichertePerson</pm:Bezeichnung>
+</pm:Kondition>
+<pm:Kondition>
+<pm:KategorieID xsi:type="dt:STE_KategorieIDBasis">Zuschlag</pm:KategorieID>
+<pm:ArtID xsi:type="dt:STE_KonditionBasis">RisikoZuAbschlag</pm:ArtID>
+<pm:Wert>500</pm:Wert>
+<pm:Werteinheit>10</pm:Werteinheit>
+<pm:Bezeichnung>VersichertePerson</pm:Bezeichnung>
+</pm:Kondition>
+<pm:Beitrag>
+<pm:ArtID xsi:type="dt:STE_BeitragBasis">01</pm:ArtID>
+<pm:Betrag>
+<allg:Betrag>3853.60</allg:Betrag>
+<allg:Waehrung>EUR</allg:Waehrung>
+</pm:Betrag>
+<pm:Zahlungsweise>1</pm:Zahlungsweise>
+</pm:Beitrag>
+<pm:Versicherungsdauer>
+<allg:Ende>2024-11-01T12:00</allg:Ende>
+<allg:AnzahlJahre>2</allg:AnzahlJahre>
+<allg:AnzahlMonate>0</allg:AnzahlMonate>
+</pm:Versicherungsdauer>
+<pm:Dynamik>
+<pm:ArtID xsi:type="dt:STE_DynamikBasis">01</pm:ArtID>
+<pm:Frequenz xsi:type="dt:STE_FrequenzBasis">jaehrlich</pm:Frequenz>
+<pm:Wert>3.0</pm:Wert>
+<pm:KategorieID>Beitrag</pm:KategorieID>
+</pm:Dynamik>
+<vs-pm:VersicherungssummeOderLeistung>
+<vs-pm:ArtID xsi:type="vb-leben:STE_VersicherungssummeOderLeistungErweitert">TodesfallsummeImErstenJahr</vs-pm:ArtID>
+<vs-pm:Wert>610000</vs-pm:Wert>
+<vs-pm:Werteinheit>20</vs-pm:Werteinheit>
+<vs-pm:Waehrung>EUR</vs-pm:Waehrung>
+<vs-pm:Auszahlungsweise>6</vs-pm:Auszahlungsweise>
+</vs-pm:VersicherungssummeOderLeistung>
+<vs-pm:VersicherungssummeOderLeistung>
+<vs-pm:ArtID xsi:type="vb-leben:STE_VersicherungssummeOderLeistungErweitert">AnfaenglicheTodesfallleistung</vs-pm:ArtID>
+<vs-pm:Wert>610000</vs-pm:Wert>
+<vs-pm:Werteinheit>20</vs-pm:Werteinheit>
+<vs-pm:Waehrung>EUR</vs-pm:Waehrung>
+<vs-pm:Auszahlungsweise>6</vs-pm:Auszahlungsweise>
+</vs-pm:VersicherungssummeOderLeistung>
+<vs-pm:Bezugsrecht>
+<vs-pm:Leistungsfall>Erlebensfall</vs-pm:Leistungsfall>
+<vs-pm:IndexBerechtigter>1</vs-pm:IndexBerechtigter>
+</vs-pm:Bezugsrecht>
+<vs-pm:Bezugsrecht>
+<vs-pm:Leistungsfall>Todesfall</vs-pm:Leistungsfall>
+<vs-pm:IndexBerechtigter>3</vs-pm:IndexBerechtigter>
+</vs-pm:Bezugsrecht>
+<pm-leben:Hochrechnungszins>6</pm-leben:Hochrechnungszins>
+<pm-leben:IstHauptversicherung>true</pm-leben:IstHauptversicherung>
+<pm-leben:UeberschussverwendungVorLeistung xsi:type="dt:STE_UeberschussverwendungBasis">08</pm-leben:UeberschussverwendungVorLeistung>
+<pm-leben:Produktattribut>51</pm-leben:Produktattribut>
+<pm-leben:VersichertePerson>
+<partner:PartnerID>1046740658</partner:PartnerID>
+</pm-leben:VersichertePerson>
+</pm:Elementarprodukt>
+<pm:Dynamik>
+<pm:KategorieID>Beitrag</pm:KategorieID>
+<pm:Hochrechnung>true</pm:Hochrechnung>
+</pm:Dynamik>
+<pm-leben:Verlauf>
+<pm-leben:ArtID xsi:type="dt:STE_LeistungsArtVerlaufEintragBasis">1</pm-leben:ArtID>
+<pm-leben:Verlaufseintrag>
+<allg:Betrag>3853.60</allg:Betrag>
+<allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+</pm-leben:Verlaufseintrag>
+<pm-leben:Verlaufseintrag>
+<allg:Betrag>3968.12</allg:Betrag>
+<allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+</pm-leben:Verlaufseintrag>
+</pm-leben:Verlauf>
+<pm-leben:Verlauf>
+<pm-leben:ArtID xsi:type="dt:STE_LeistungsArtVerlaufEintragBasis">2</pm-leben:ArtID>
+<pm-leben:Verlaufseintrag>
+<allg:Betrag>2572.12</allg:Betrag>
+<allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+</pm-leben:Verlaufseintrag>
+<pm-leben:Verlaufseintrag>
+<allg:Betrag>2648.48</allg:Betrag>
+<allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+</pm-leben:Verlaufseintrag>
+</pm-leben:Verlauf>
+<pm-leben:Verlauf>
+<pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">Beitragssumme</pm-leben:ArtID>
+<pm-leben:Verlaufseintrag>
+<allg:Betrag>3853.60</allg:Betrag>
+<allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+</pm-leben:Verlaufseintrag>
+<pm-leben:Verlaufseintrag>
+<allg:Betrag>7821.72</allg:Betrag>
+<allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+</pm-leben:Verlaufseintrag>
+</pm-leben:Verlauf>
+<pm-leben:Verlauf>
+<pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">BeitragssummeOhneBeitragserhoehung</pm-leben:ArtID>
+<pm-leben:Verlaufseintrag>
+<allg:Betrag>3853.60</allg:Betrag>
+<allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+</pm-leben:Verlaufseintrag>
+<pm-leben:Verlaufseintrag>
+<allg:Betrag>7707.20</allg:Betrag>
+<allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+</pm-leben:Verlaufseintrag>
+</pm-leben:Verlauf>
+<pm-leben:Verlauf>
+<pm-leben:ArtID xsi:type="dt:STE_LeistungsArtVerlaufEintragBasis">11</pm-leben:ArtID>
+<pm-leben:Verlaufseintrag>
+<allg:Betrag>610000</allg:Betrag>
+<allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+</pm-leben:Verlaufseintrag>
+<pm-leben:Verlaufseintrag>
+<allg:Betrag>628300</allg:Betrag>
+<allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+</pm-leben:Verlaufseintrag>
+</pm-leben:Verlauf>
+<pm-leben:Verlauf>
+<pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">TodesfallleistungGarantiertOhneBeitragserhoehung</pm-leben:ArtID>
+<pm-leben:Verlaufseintrag>
+<allg:Betrag>610000</allg:Betrag>
+<allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+</pm-leben:Verlaufseintrag>
+<pm-leben:Verlaufseintrag>
+<allg:Betrag>610000</allg:Betrag>
+<allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+</pm-leben:Verlaufseintrag>
+</pm-leben:Verlauf>
+<pm-leben:Verlauf>
+<pm-leben:ArtID xsi:type="dt:STE_LeistungsArtVerlaufEintragBasis">12</pm-leben:ArtID>
+<pm-leben:Verlaufseintrag>
+<allg:Betrag>610000</allg:Betrag>
+<allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+</pm-leben:Verlaufseintrag>
+<pm-leben:Verlaufseintrag>
+<allg:Betrag>628300</allg:Betrag>
+<allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+</pm-leben:Verlaufseintrag>
+</pm-leben:Verlauf>
+<pm-leben:Verlauf>
+<pm-leben:ArtID xsi:type="vb-leben:STE_LeistungsArtVerlaufEintragErweitert">TodesfallleistungGesamtOhneBeitragserhoehung</pm-leben:ArtID>
+<pm-leben:Verlaufseintrag>
+<allg:Betrag>610000</allg:Betrag>
+<allg:Stichtag>2023-11-01T12:00</allg:Stichtag>
+</pm-leben:Verlaufseintrag>
+<pm-leben:Verlaufseintrag>
+<allg:Betrag>610000</allg:Betrag>
+<allg:Stichtag>2024-11-01T12:00</allg:Stichtag>
+</pm-leben:Verlaufseintrag>
+</pm-leben:Verlauf>
+<pm-leben:VorgabeBerechnung>
+<pm-leben:ArtID xsi:type="dt:STE_VorgabeBerechnungBasis">GarantierteTodesfallleistung</pm-leben:ArtID>
+<pm-leben:Kontext xsi:type="dt:STE_VorgabeBerechnungKontextBasis">TodesfallAbsicherung</pm-leben:Kontext>
+</pm-leben:VorgabeBerechnung>
+</pm:Produkt>
+</tarif:Verkaufsprodukt>
+</tarif:Tarifierung>
+</tarif:Response>
+</tarif:getQuoteResponse>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><SOAP-ENV:Fault xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+<faultcode>SOAP-ENV:Server</faultcode>
+<faultstring>ERROR - ExtendedSAXParseException at /tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/tarif:Verkaufsprodukt[1]/pm:Produkt[1]/pm:Elementarprodukt[1]/basis:Erweiterung[1]/vb-leben:TemporaereBUDauer[1]: de.vb.commons.xml.sax.ExtendedSAXParseException; systemId: file:/C:/Daten/git/mono-elsa/bipro-taa/taa-leben-v246112-service/target/test-classes/eingabe/produkt/arbeitskraft/stbu/20150810_stbu_dauer.xml; lineNumber: 40; columnNumber: 34; cvc-complex-type.2.4.a: Ungültiger Content wurde beginnend mit Element 'vbl:TemporaereBUDauer' gefunden. '{"urn:de:vb:bipro:taa:leben:1.12":DynamisierungDerHauptversicherungImLeistungsfall, "urn:de:vb:bipro:taa:leben:1.12":Antragsdaten, "urn:de:vb:bipro:taa:leben:1.12":BUAktion, "urn:de:vb:bipro:taa:leben:1.12":Wartezeit, "urn:de:vb:bipro:taa:leben:1.12":RenteMonatsgenau, "urn:de:vb:bipro:taa:leben:1.12":RenteEndalter}' wird erwartet.</faultstring>
+<detail>
+<nachr:BiproException xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:kapanl-basis="http://www.bipro.net/namespace/kapitalanlage/basis" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:vb-leben="urn:de:vb:bipro:taa:leben:1.12" xmlns:vbl="urn:de:vb:bipro:taa:vbl:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+<nachr:Status>
+<nachr:ProzessID>2022-09-19T11:21:27.9737596607082805#R=20220400,S=2,O=1,V=0,H=VDE016,T=2022-09-19T11:21:27.691</nachr:ProzessID>
+<nachr:Zeitstempel>2022-09-19T11:21:27</nachr:Zeitstempel>
+<nachr:StatusID>NOK</nachr:StatusID>
+<nachr:Schwebe>false</nachr:Schwebe>
+<nachr:Meldung>
+<nachr:ArtID>Fehler</nachr:ArtID>
+<nachr:MeldungID>00007</nachr:MeldungID>
+<nachr:Text>ERROR - ExtendedSAXParseException at /tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/tarif:Verkaufsprodukt[1]/pm:Produkt[1]/pm:Elementarprodukt[1]/basis:Erweiterung[1]/vb-leben:TemporaereBUDauer[1]: de.vb.commons.xml.sax.ExtendedSAXParseException; systemId: file:/C:/Daten/git/mono-elsa/bipro-taa/taa-leben-v246112-service/target/test-classes/eingabe/produkt/arbeitskraft/stbu/20150810_stbu_dauer.xml; lineNumber: 40; columnNumber: 34; cvc-complex-type.2.4.a: Ungültiger Content wurde beginnend mit Element 'vbl:TemporaereBUDauer' gefunden. '{"urn:de:vb:bipro:taa:leben:1.12":DynamisierungDerHauptversicherungImLeistungsfall, "urn:de:vb:bipro:taa:leben:1.12":Antragsdaten, "urn:de:vb:bipro:taa:leben:1.12":BUAktion, "urn:de:vb:bipro:taa:leben:1.12":Wartezeit, "urn:de:vb:bipro:taa:leben:1.12":RenteMonatsgenau, "urn:de:vb:bipro:taa:leben:1.12":RenteEndalter}' wird erwartet.</nachr:Text>
+<nachr:Identifikationsnummer>VORGABE: line 40, col 34</nachr:Identifikationsnummer>
+</nachr:Meldung>
+<nachr:Meldung>
+<nachr:ArtID>Fehler</nachr:ArtID>
+<nachr:MeldungID>00007</nachr:MeldungID>
+<nachr:Text>ERROR - ExtendedSAXParseException at /tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/tarif:Verkaufsprodukt[1]/pm:Produkt[1]/pm:Elementarprodukt[1]: de.vb.commons.xml.sax.ExtendedSAXParseException; systemId: file:/C:/Daten/git/mono-elsa/bipro-taa/taa-leben-v246112-service/target/test-classes/eingabe/produkt/arbeitskraft/stbu/20150810_stbu_dauer.xml; lineNumber: 66; columnNumber: 132; cvc-complex-type.2.2: Element 'pm-leben:Auspraegung' darf kein Element [untergeordnete Elemente] haben, und der Wert muss gültig sein.</nachr:Text>
+<nachr:Identifikationsnummer>VORGABE: line 66, col 132</nachr:Identifikationsnummer>
+</nachr:Meldung>
+<nachr:Meldung>
+<nachr:ArtID>Fehler</nachr:ArtID>
+<nachr:MeldungID>00007</nachr:MeldungID>
+<nachr:Text>ERROR - ExtendedSAXParseException at /tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/tarif:Verkaufsprodukt[1]/pm:Produkt[1]/pm:Elementarprodukt[1]: de.vb.commons.xml.sax.ExtendedSAXParseException; systemId: file:/C:/Daten/git/mono-elsa/bipro-taa/taa-leben-v246112-service/target/test-classes/eingabe/produkt/arbeitskraft/stbu/20150810_stbu_dauer.xml; lineNumber: 66; columnNumber: 132; cvc-enumeration-valid: Wert 'TBU' ist nicht Facet-gültig in Bezug auf Enumeration '[KV, AU, Psyche, BUOption, EUSchutz]'. Er muss ein Wert aus der Enumeration sein.</nachr:Text>
+<nachr:Identifikationsnummer>VORGABE: line 66, col 132</nachr:Identifikationsnummer>
+</nachr:Meldung>
+</nachr:Status>
+</nachr:BiproException>
+</detail>
+</SOAP-ENV:Fault>

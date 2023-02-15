@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><SOAP-ENV:Fault xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+<faultcode>SOAP-ENV:Server</faultcode>
+<faultstring>ERROR - ExtendedSAXParseException at /tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/tarif:Verkaufsprodukt[1]/pm:Produkt[1]/pm:Elementarprodukt[1]/basis:Erweiterung[1]/vb-leben:BasisrenteDaten[1]/vb-leben:DauerTodesfallsummeFallend[1]: de.vb.commons.xml.sax.ExtendedSAXParseException; systemId: file:/C:/Daten/git/mono-elsa/bipro-taa/taa-leben-v246112-service/target/test-classes/eingabe/produkt/rente/bir/BIR%20-%20BT.xml; lineNumber: 31; columnNumber: 34; cvc-complex-type.2.4.d: Ungültiger Content wurde beginnend mit Element 'vbl:DauerTodesfallsummeFallend' gefunden. An dieser Stelle wird kein untergeordnetes Element erwartet.</faultstring>
+<detail>
+<nachr:BiproException xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:kapanl-basis="http://www.bipro.net/namespace/kapitalanlage/basis" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:vb-leben="urn:de:vb:bipro:taa:leben:1.12" xmlns:vbl="urn:de:vb:bipro:taa:vbl:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+<nachr:Status>
+<nachr:ProzessID>2022-09-19T11:04:38.9437620276026771#R=20220400,S=2,O=1,V=0,H=VDE016,T=2022-09-19T11:04:38.549</nachr:ProzessID>
+<nachr:Zeitstempel>2022-09-19T11:04:38</nachr:Zeitstempel>
+<nachr:StatusID>NOK</nachr:StatusID>
+<nachr:Schwebe>false</nachr:Schwebe>
+<nachr:Meldung>
+<nachr:ArtID>Fehler</nachr:ArtID>
+<nachr:MeldungID>00007</nachr:MeldungID>
+<nachr:Text>ERROR - ExtendedSAXParseException at /tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/tarif:Verkaufsprodukt[1]/pm:Produkt[1]/pm:Elementarprodukt[1]/basis:Erweiterung[1]/vb-leben:BasisrenteDaten[1]/vb-leben:DauerTodesfallsummeFallend[1]: de.vb.commons.xml.sax.ExtendedSAXParseException; systemId: file:/C:/Daten/git/mono-elsa/bipro-taa/taa-leben-v246112-service/target/test-classes/eingabe/produkt/rente/bir/BIR%20-%20BT.xml; lineNumber: 31; columnNumber: 34; cvc-complex-type.2.4.d: Ungültiger Content wurde beginnend mit Element 'vbl:DauerTodesfallsummeFallend' gefunden. An dieser Stelle wird kein untergeordnetes Element erwartet.</nachr:Text>
+<nachr:Identifikationsnummer>VORGABE: line 31, col 34</nachr:Identifikationsnummer>
+</nachr:Meldung>
+<nachr:Meldung>
+<nachr:ArtID>Fehler</nachr:ArtID>
+<nachr:MeldungID>00007</nachr:MeldungID>
+<nachr:Text>ERROR - ExtendedSAXParseException at /tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/tarif:Verkaufsprodukt[1]/pm:Produkt[1]/pm:Elementarprodukt[1]/basis:Erweiterung[1]/vb-leben:BasisrenteDaten[1]: de.vb.commons.xml.sax.ExtendedSAXParseException; systemId: file:/C:/Daten/git/mono-elsa/bipro-taa/taa-leben-v246112-service/target/test-classes/eingabe/produkt/rente/bir/BIR%20-%20BT.xml; lineNumber: 29; columnNumber: 112; cvc-enumeration-valid: Wert 'Beitragsrueckgewaehr' ist nicht Facet-gültig in Bezug auf Enumeration '[Keine, AlsRente, VersicherungswertAlsHinterbliebenenrente]'. Er muss ein Wert aus der Enumeration sein.</nachr:Text>
+<nachr:Identifikationsnummer>VORGABE: line 29, col 112</nachr:Identifikationsnummer>
+</nachr:Meldung>
+<nachr:Meldung>
+<nachr:ArtID>Fehler</nachr:ArtID>
+<nachr:MeldungID>00007</nachr:MeldungID>
+<nachr:Text>ERROR - ExtendedSAXParseException at /tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/tarif:Verkaufsprodukt[1]/pm:Produkt[1]/pm:Elementarprodukt[1]/basis:Erweiterung[1]/vb-leben:BasisrenteDaten[1]: de.vb.commons.xml.sax.ExtendedSAXParseException; systemId: file:/C:/Daten/git/mono-elsa/bipro-taa/taa-leben-v246112-service/target/test-classes/eingabe/produkt/rente/bir/BIR%20-%20BT.xml; lineNumber: 29; columnNumber: 112; cvc-type.3.1.3: Wert 'Beitragsrueckgewaehr' des Elements 'vbl:VorgabeartTodesfallsumme' ist ungültig.</nachr:Text>
+<nachr:Identifikationsnummer>VORGABE: line 29, col 112</nachr:Identifikationsnummer>
+</nachr:Meldung>
+<nachr:Meldung>
+<nachr:ArtID>Fehler</nachr:ArtID>
+<nachr:MeldungID>00007</nachr:MeldungID>
+<nachr:Text>ERROR - ExtendedSAXParseException at /tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/tarif:Verkaufsprodukt[1]/pm:Produkt[1]/pm:Elementarprodukt[1]/basis:Erweiterung[1]: de.vb.commons.xml.sax.ExtendedSAXParseException; systemId: file:/C:/Daten/git/mono-elsa/bipro-taa/taa-leben-v246112-service/target/test-classes/eingabe/produkt/rente/bir/BIR%20-%20BT.xml; lineNumber: 27; columnNumber: 98; cvc-enumeration-valid: Wert 'InJahren' ist nicht Facet-gültig in Bezug auf Enumeration '[Keine, Restkapital, NatuerlicheGarantiezeit, IndividuelleGarantiezeit]'. Er muss ein Wert aus der Enumeration sein.</nachr:Text>
+<nachr:Identifikationsnummer>VORGABE: line 27, col 98</nachr:Identifikationsnummer>
+</nachr:Meldung>
+<nachr:Meldung>
+<nachr:ArtID>Fehler</nachr:ArtID>
+<nachr:MeldungID>00007</nachr:MeldungID>
+<nachr:Text>ERROR - ExtendedSAXParseException at /tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/tarif:Verkaufsprodukt[1]/pm:Produkt[1]/pm:Elementarprodukt[1]/basis:Erweiterung[1]: de.vb.commons.xml.sax.ExtendedSAXParseException; systemId: file:/C:/Daten/git/mono-elsa/bipro-taa/taa-leben-v246112-service/target/test-classes/eingabe/produkt/rente/bir/BIR%20-%20BT.xml; lineNumber: 27; columnNumber: 98; cvc-type.3.1.3: Wert 'InJahren' des Elements 'vbl:TodesfallleistungImBezug' ist ungültig.</nachr:Text>
+<nachr:Identifikationsnummer>VORGABE: line 27, col 98</nachr:Identifikationsnummer>
+</nachr:Meldung>
+</nachr:Status>
+</nachr:BiproException>
+</detail>
+</SOAP-ENV:Fault>

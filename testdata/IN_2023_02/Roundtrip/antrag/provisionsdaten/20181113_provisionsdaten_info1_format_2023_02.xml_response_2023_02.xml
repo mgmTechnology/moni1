@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><SOAP-ENV:Fault xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+<faultcode>SOAP-ENV:Server</faultcode>
+<faultstring>ERROR - ExtendedSAXParseException at /tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/gevo:Vermittler[1]/basis:Erweiterung[1]: de.vb.commons.xml.sax.ExtendedSAXParseException; systemId: file:/C:/Daten/git/mono-elsa/bipro-taa/taa-leben-v246112-service/target/test-classes/eingabe/antrag/provisionsdaten/20181113_provisionsdaten_info1_format.xml; lineNumber: 7; columnNumber: 45; cvc-maxLength-valid: Wert '1234567890a' mit Länge = '11' ist nicht Facet-gültig in Bezug auf maxLength '10' für Typ '#AnonType_Info1CT_VermittlerErweiterung'.</faultstring>
+<detail>
+<nachr:BiproException xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:kapanl-basis="http://www.bipro.net/namespace/kapitalanlage/basis" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:vb-leben="urn:de:vb:bipro:taa:leben:1.12" xmlns:vbl="urn:de:vb:bipro:taa:vbl:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+<nachr:Status>
+<nachr:ProzessID>2022-09-19T11:20:30.7804631333978864#R=20220400,S=2,O=1,V=0,H=VDE016,T=2022-09-19T11:20:30.903</nachr:ProzessID>
+<nachr:Zeitstempel>2022-09-19T11:20:30</nachr:Zeitstempel>
+<nachr:StatusID>NOK</nachr:StatusID>
+<nachr:Schwebe>false</nachr:Schwebe>
+<nachr:Meldung>
+<nachr:ArtID>Fehler</nachr:ArtID>
+<nachr:MeldungID>00007</nachr:MeldungID>
+<nachr:Text>ERROR - ExtendedSAXParseException at /tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/gevo:Vermittler[1]/basis:Erweiterung[1]: de.vb.commons.xml.sax.ExtendedSAXParseException; systemId: file:/C:/Daten/git/mono-elsa/bipro-taa/taa-leben-v246112-service/target/test-classes/eingabe/antrag/provisionsdaten/20181113_provisionsdaten_info1_format.xml; lineNumber: 7; columnNumber: 45; cvc-maxLength-valid: Wert '1234567890a' mit Länge = '11' ist nicht Facet-gültig in Bezug auf maxLength '10' für Typ '#AnonType_Info1CT_VermittlerErweiterung'.</nachr:Text>
+<nachr:Identifikationsnummer>VORGABE: line 7, col 45</nachr:Identifikationsnummer>
+</nachr:Meldung>
+<nachr:Meldung>
+<nachr:ArtID>Fehler</nachr:ArtID>
+<nachr:MeldungID>00007</nachr:MeldungID>
+<nachr:Text>ERROR - ExtendedSAXParseException at /tarif:getQuote[1]/tarif:Request[1]/tarif:Tarifierung[1]/gevo:Vermittler[1]/basis:Erweiterung[1]: de.vb.commons.xml.sax.ExtendedSAXParseException; systemId: file:/C:/Daten/git/mono-elsa/bipro-taa/taa-leben-v246112-service/target/test-classes/eingabe/antrag/provisionsdaten/20181113_provisionsdaten_info1_format.xml; lineNumber: 7; columnNumber: 45; cvc-type.3.1.3: Wert '1234567890a' des Elements 'vbl:Info1' ist ungültig.</nachr:Text>
+<nachr:Identifikationsnummer>VORGABE: line 7, col 45</nachr:Identifikationsnummer>
+</nachr:Meldung>
+</nachr:Status>
+</nachr:BiproException>
+</detail>
+</SOAP-ENV:Fault>

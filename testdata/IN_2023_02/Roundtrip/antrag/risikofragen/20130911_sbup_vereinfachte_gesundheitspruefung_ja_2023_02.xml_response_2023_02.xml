@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><tarif:getQuoteResponse xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:kapanl-basis="http://www.bipro.net/namespace/kapitalanlage/basis" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:vb-leben="urn:de:vb:bipro:taa:leben:1.12" xmlns:vbl="urn:de:vb:bipro:taa:vbl:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<tarif:Response>
+<nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+<nachr:Status>
+<nachr:ProzessID>2022-09-19T11:21:55.7718013965030251#R=20220400,S=2,O=1,V=0,H=VDE016,T=2022-09-19T11:21:55.602</nachr:ProzessID>
+<nachr:Zeitstempel>2022-09-19T11:21:55</nachr:Zeitstempel>
+<nachr:StatusID>NOK</nachr:StatusID>
+<nachr:Schwebe>false</nachr:Schwebe>
+<nachr:Meldung>
+<nachr:ArtID>Fehler</nachr:ArtID>
+<nachr:MeldungID>99999</nachr:MeldungID>
+<nachr:Text>VORGABE: Das Angebot ist nicht mehr rechenbar, da die Aktion abgelaufen ist.</nachr:Text>
+<nachr:Identifikationsnummer>RPArbeitskraftabsicherung.3510</nachr:Identifikationsnummer>
+</nachr:Meldung>
+<nachr:Meldung>
+<nachr:ArtID>Fehler</nachr:ArtID>
+<nachr:MeldungID>99999</nachr:MeldungID>
+<nachr:Text>VORGABE: Der Versicherungsbeginn darf nicht nach dem 01.07.2019 liegen.</nachr:Text>
+<nachr:Identifikationsnummer>RPArbeitskraftabsicherung.3510</nachr:Identifikationsnummer>
+</nachr:Meldung>
+<nachr:Meldung>
+<nachr:ArtID>Fehler</nachr:ArtID>
+<nachr:MeldungID>00001</nachr:MeldungID>
+<nachr:Text>Die Erfassung ist ungültig oder unvollständig</nachr:Text>
+<nachr:Identifikationsnummer>VORGABE</nachr:Identifikationsnummer>
+</nachr:Meldung>
+</nachr:Status>
+</tarif:Response>
+</tarif:getQuoteResponse>

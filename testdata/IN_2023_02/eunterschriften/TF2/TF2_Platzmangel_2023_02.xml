@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><tarif:getOffer xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:kapanl-basis="http://www.bipro.net/namespace/kapitalanlage/basis" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:vb-leben="urn:de:vb:bipro:taa:leben:1.12" xmlns:vbl="urn:de:vb:bipro:taa:vbl:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<tarif:Request>
+<nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+<tarif:Angebot>
+<gevo:Vermittler>
+<allg:PartnerID>15298052</allg:PartnerID>
+<allg:Vermittlerrolle>
+<allg:ArtID>01</allg:ArtID>
+<allg:Vermittlertyp>01</allg:Vermittlertyp>
+</allg:Vermittlerrolle>
+</gevo:Vermittler>
+<tarif:Partner xsi:type="partner:CT_JuristischePerson">
+<partner:PartnerID>15298052</partner:PartnerID>
+</tarif:Partner>
+<tarif:Partner xsi:type="partner:CT_Person">
+<basis:Erweiterung xsi:type="vb-leben:CT_PersonErweiterung"/>
+<partner:Anrede>1</partner:Anrede>
+<partner:PartnerID>12527349</partner:PartnerID>
+<partner:Anschrift>
+<allg:Landname>Deutschland</allg:Landname>
+<partner:ArtID>1</partner:ArtID>
+</partner:Anschrift>
+<partner:ZusaetzlichePartnerdaten xsi:type="pm-leben:CT_Risikopruefung">
+<pm-leben:Fragenkomplex>
+<fragen:ArtID xsi:type="dt:STE_FragenkomplexArtBasis">Gesundheit</fragen:ArtID>
+<fragen:Bezeichnung>Gesundheitsfragen zur versicherten Person</fragen:Bezeichnung>
+<fragen:Element xsi:type="fragen:CT_FrageJaNein">
+<fragen:Ordnungsnummer>1</fragen:Ordnungsnummer>
+<fragen:FachlicheID>SG_TF2</fragen:FachlicheID>
+<fragen:TechnischeID>VP.SG_TF2</fragen:TechnischeID>
+<fragen:Text>Wurden Sie in den letzten 10 Jahren wegen arteriellen Verschlusses (Herzinfarkt, Bypass-OP, Stent-OP, Ballondilatation, Lyse-Behandlung), Diabetes mellitus, Schlaganfalls, Krebs, Multipler Sklerose (MS), HIV-Infektion, chronisch entzündlichen Darmerkrankungen (Morbus Crohn, Colitis Ulcerosa) oder Nierenversagen (z.B. Dialyse-Behandlung) ärztlich behandelt?</fragen:Text>
+<fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+<fragen:AntwortJaNein>
+<fragen:Entscheidung>true</fragen:Entscheidung>
+</fragen:AntwortJaNein>
+</fragen:Element>
+<fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+<fragen:Ordnungsnummer>18</fragen:Ordnungsnummer>
+<fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+<fragen:LinkerOperand>VP.SG_TF2</fragen:LinkerOperand>
+<fragen:Operator>gleich</fragen:Operator>
+<fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+<fragen:Entscheidung>true</fragen:Entscheidung>
+</fragen:RechterOperand>
+</fragen:Bedingung>
+<fragen:FachlicheID>A22</fragen:FachlicheID>
+<fragen:Text>Wurden Sie in den nachfolgend genannten Zeiträumen wegen Erkrankungen oder Beschwerden ärztlich oder therapeutisch beraten, untersucht oder behandelt?</fragen:Text>
+<fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+<fragen:Ordnungsnummer>50</fragen:Ordnungsnummer>
+<fragen:FachlicheID>FLAGBU20_GEHIRN</fragen:FachlicheID>
+<fragen:TechnischeID>VP.SG_TF2.A22.FLAGBU20_GEHIRN</fragen:TechnischeID>
+<fragen:Text>In den letzten 5 Jahren hinsichtlich: Gehirn (z. B. Migräne, Alzheimer), Nerven (z. B. Multiple Sklerose, Epilepsie), Psyche (z. B. Depressionen, Ängste, Essstörungen, Schlafstörungen), Lernschwierigkeiten oder Entwicklungsstörungen</fragen:Text>
+<fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+<fragen:AntwortJaNein>
+<fragen:Entscheidung>true</fragen:Entscheidung>
+</fragen:AntwortJaNein>
+</fragen:EinfacheFrage>
+<fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+<fragen:Ordnungsnummer>81</fragen:Ordnungsnummer>
+<fragen:FachlicheID>FLAGBU20_WIRBELSAEULE</fragen:FachlicheID>
+<fragen:TechnischeID>VP.SG_TF2.A22.FLAGBU20_WIRBELSAEULE</fragen:TechnischeID>
+<fragen:Text>In den letzten 5 Jahren hinsichtlich: Wirbelsäule (z.B. Hexenschuss), Knochen (z.B. Brüche), Gelenke (z.B. Meniskusschaden), Muskeln (z.B. Verspannungen)</fragen:Text>
+<fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+<fragen:AntwortJaNein>
+<fragen:Entscheidung>true</fragen:Entscheidung>
+</fragen:AntwortJaNein>
+</fragen:EinfacheFrage>
+</fragen:Element>
+<fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+<fragen:Ordnungsnummer>1967</fragen:Ordnungsnummer>
+<fragen:FachlicheID>A22</fragen:FachlicheID>
+<fragen:Text>Wurden Sie in den nachfolgend genannten Zeiträumen wegen Erkrankungen oder Beschwerden ärztlich oder therapeutisch beraten, untersucht oder behandelt?</fragen:Text>
+<fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+<fragen:Ordnungsnummer>1999</fragen:Ordnungsnummer>
+<fragen:FachlicheID>FLAGBU20_GEHIRN</fragen:FachlicheID>
+<fragen:TechnischeID>VP.A22.FLAGBU20_GEHIRN</fragen:TechnischeID>
+<fragen:Text>In den letzten 5 Jahren hinsichtlich: Gehirn (z. B. Migräne, Alzheimer), Nerven (z. B. Multiple Sklerose, Epilepsie), Psyche (z. B. Depressionen, Ängste, Essstörungen, Schlafstörungen), Lernschwierigkeiten oder Entwicklungsstörungen</fragen:Text>
+<fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+<fragen:AntwortJaNein>
+<fragen:Entscheidung>true</fragen:Entscheidung>
+</fragen:AntwortJaNein>
+</fragen:EinfacheFrage>
+<fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+<fragen:Ordnungsnummer>2030</fragen:Ordnungsnummer>
+<fragen:FachlicheID>FLAGBU20_WIRBELSAEULE</fragen:FachlicheID>
+<fragen:TechnischeID>VP.A22.FLAGBU20_WIRBELSAEULE</fragen:TechnischeID>
+<fragen:Text>In den letzten 5 Jahren hinsichtlich: Wirbelsäule (z.B. Hexenschuss), Knochen (z.B. Brüche), Gelenke (z.B. Meniskusschaden), Muskeln (z.B. Verspannungen)</fragen:Text>
+<fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+<fragen:AntwortJaNein>
+<fragen:Entscheidung>true</fragen:Entscheidung>
+</fragen:AntwortJaNein>
+</fragen:EinfacheFrage>
+</fragen:Element>
+</pm-leben:Fragenkomplex>
+</partner:ZusaetzlichePartnerdaten>
+<partner:Bankverbindung>
+<partner:Einzugsermaechtigung>true</partner:Einzugsermaechtigung>
+</partner:Bankverbindung>
+<partner:Geburtsdatum>2003-01-01</partner:Geburtsdatum>
+<partner:Geschlecht>1</partner:Geschlecht>
+</tarif:Partner>
+<tarif:Partner xsi:type="partner:CT_Person">
+<partner:PartnerID>9111357</partner:PartnerID>
+<partner:Anschrift>
+<allg:Landname>Deutschland</allg:Landname>
+<partner:ArtID>1</partner:ArtID>
+</partner:Anschrift>
+<partner:Partnerbeziehung>
+<partner:PartnerID>12527349</partner:PartnerID>
+<partner:Art xsi:type="dt:STE_PartnerbeziehungBasis">03</partner:Art>
+</partner:Partnerbeziehung>
+<partner:Geburtsdatum>2013-01-01</partner:Geburtsdatum>
+<partner:Geschlecht>1</partner:Geschlecht>
+</tarif:Partner>
+<tarif:Versicherungsnehmer>
+<partner:PartnerID>12527349</partner:PartnerID>
+</tarif:Versicherungsnehmer>
+<tarif:Verkaufsprodukt>
+<basis:Erweiterung xsi:type="vb-leben:CT_VerkaufsproduktErweiterung">
+<vb-leben:Konsortium>Ohne</vb-leben:Konsortium>
+</basis:Erweiterung>
+<pm:Produkt xsi:type="pm-leben:CT_Produkt">
+<basis:Erweiterung xsi:type="vb-leben:CT_ProduktErweiterung">
+<vb-leben:Tarifgruppe>Normal</vb-leben:Tarifgruppe>
+</basis:Erweiterung>
+<pm:GewuenschteZahlungsweise>8</pm:GewuenschteZahlungsweise>
+<pm:Beitrag>
+<pm:ArtID xsi:type="dt:STE_BeitragBasis">01</pm:ArtID>
+<pm:Betrag>
+<allg:Betrag>40</allg:Betrag>
+<allg:Waehrung>EUR</allg:Waehrung>
+</pm:Betrag>
+<pm:Zahlungsweise>8</pm:Zahlungsweise>
+</pm:Beitrag>
+<pm:Versicherungsdauer>
+<allg:Beginn>2023-03-01T12:00</allg:Beginn>
+</pm:Versicherungsdauer>
+<pm:Kennung>TF2</pm:Kennung>
+<pm:Elementarprodukt xsi:type="pm-leben:CT_KapitalbildendeVersicherung">
+<basis:Erweiterung xsi:type="vb-leben:CT_KapitalbildendeVersicherungErweiterung"/>
+<pm:Versicherungsdauer>
+<allg:AnzahlJahre>25</allg:AnzahlJahre>
+<allg:AnzahlMonate>0</allg:AnzahlMonate>
+</pm:Versicherungsdauer>
+<pm:Dynamik>
+<pm:Wert>0</pm:Wert>
+<pm:KategorieID>Beitrag</pm:KategorieID>
+</pm:Dynamik>
+<vs-pm:Bezugsrecht>
+<vs-pm:Leistungsfall>Todesfall</vs-pm:Leistungsfall>
+<vs-pm:IndexBerechtigter>11</vs-pm:IndexBerechtigter>
+<vs-pm:Bezugsberechtigter>
+<partner:PartnerID>9111357</partner:PartnerID>
+</vs-pm:Bezugsberechtigter>
+</vs-pm:Bezugsrecht>
+<vs-pm:Bezugsrecht>
+<vs-pm:Leistungsfall>Erlebensfall</vs-pm:Leistungsfall>
+<vs-pm:IndexBerechtigter>1</vs-pm:IndexBerechtigter>
+</vs-pm:Bezugsrecht>
+<pm-leben:IstHauptversicherung>true</pm-leben:IstHauptversicherung>
+<pm-leben:UeberschussverwendungVorLeistung xsi:type="dt:STE_UeberschussverwendungBasis">00</pm-leben:UeberschussverwendungVorLeistung>
+<pm-leben:VersichertePerson>
+<partner:PartnerID>12527349</partner:PartnerID>
+</pm-leben:VersichertePerson>
+</pm:Elementarprodukt>
+<pm-leben:VorgabeBerechnung>
+<pm-leben:ArtID xsi:type="dt:STE_VorgabeBerechnungBasis">Bruttobeitrag</pm-leben:ArtID>
+<pm-leben:Kontext xsi:type="dt:STE_VorgabeBerechnungKontextBasis">Produkt</pm-leben:Kontext>
+</pm-leben:VorgabeBerechnung>
+</pm:Produkt>
+</tarif:Verkaufsprodukt>
+<tarif:Beitragszahler>
+<partner:PartnerID>12527349</partner:PartnerID>
+</tarif:Beitragszahler>
+</tarif:Angebot>
+</tarif:Request>
+</tarif:getOffer>

@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><tarif:getOrderQuestions xmlns:tarif="http://www.bipro.net/namespace/versicherung/tarifierung" xmlns:allg="http://www.bipro.net/namespace/allgemein" xmlns:basis="http://www.bipro.net/namespace/basis" xmlns:dol="urn:de:vb:bipro:taa:dol:1.12" xmlns:dt="http://www.bipro.net/namespace/datentypen" xmlns:fragen="http://www.bipro.net/namespace/fragen" xmlns:gevo="http://www.bipro.net/namespace/gevo" xmlns:kapanl-basis="http://www.bipro.net/namespace/kapitalanlage/basis" xmlns:nachr="http://www.bipro.net/namespace/nachrichten" xmlns:partner="http://www.bipro.net/namespace/partner" xmlns:pm="http://www.bipro.net/namespace/produktmodell" xmlns:pm-leben="http://www.bipro.net/namespace/versicherung/produktmodell/leben" xmlns:vb-leben="urn:de:vb:bipro:taa:leben:1.12" xmlns:vs-pm="http://www.bipro.net/namespace/versicherung/produktmodell" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <tarif:Request>
+      <nachr:BiPROVersion>2.4.6.1.12</nachr:BiPROVersion>
+      <tarif:Antrag>
+         <gevo:Vermittler>
+            <allg:Vermittlernummer>111/222</allg:Vermittlernummer>
+         </gevo:Vermittler>
+         <gevo:Dokumentanforderung>
+           <gevo:ArtID>Antrag</gevo:ArtID>
+         </gevo:Dokumentanforderung>
+         <tarif:Partner xsi:type="partner:CT_Person">
+            <partner:PartnerID>1</partner:PartnerID>
+            <partner:ZusaetzlichePartnerdaten xsi:type="pm-leben:CT_Risikopruefung">
+               <pm-leben:Fragenkomplex>
+                  <fragen:ArtID xsi:type="dt:STE_FragenkomplexArtBasis">Gesundheit</fragen:ArtID>
+                  <fragen:Bezeichnung>Gesundheitsfragen zur versicherten Person</fragen:Bezeichnung>
+                  <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                     <fragen:FachlicheID>A01</fragen:FachlicheID>
+                     <fragen:Text>Nennen Sie uns bitte Ihre Körpergröße und Ihr Gewicht (cm/kg).</fragen:Text>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageZahl">
+                        <fragen:FachlicheID>A01_A</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.A01.A01_A</fragen:TechnischeID>
+                        <fragen:Text/>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:AntwortZahl>
+                           <fragen:Zahl>180</fragen:Zahl>
+                        </fragen:AntwortZahl>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageZahl">
+                        <fragen:FachlicheID>A01_B</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.A01.A01_B</fragen:TechnischeID>
+                        <fragen:Text/>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:AntwortZahl>
+                           <fragen:Zahl>80.5</fragen:Zahl>
+                        </fragen:AntwortZahl>
+                     </fragen:EinfacheFrage>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageText">
+                     <fragen:FachlicheID>A07</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.A07</fragen:TechnischeID>
+                     <fragen:Text>Nennen Sie uns bitte Namen und Anschrift Ihres Hausarztes oder des Arztes, der über Ihren Gesundheitszustand am besten unterrichtet ist (sofern vorhanden)</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     <fragen:AntwortText>
+                        <fragen:Freitext>Hausarzt</fragen:Freitext>
+                     </fragen:AntwortText>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                     <fragen:FachlicheID>A08_A</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.A08_A</fragen:TechnischeID>
+                     <fragen:Text>Üben Sie in Ihrer Freizeit ein Hobby mit erhöhter Unfallgefährdung oder Verletzungsgefahr (z.B. Kampfsport, Tauchen, Flugsport, Fallschirmspringen, Motorsport, Bergsport oder Extremsport) aus?</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:AntwortJaNein>
+                        <fragen:Entscheidung>true</fragen:Entscheidung>
+                     </fragen:AntwortJaNein>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageText">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.A08_A</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>A08_B</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.A08_A.A08_B</fragen:TechnischeID>
+                     <fragen:Text>Welche?</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     <fragen:AntwortText>
+						            <fragen:Freitext>Hobbies</fragen:Freitext>
+					           </fragen:AntwortText>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                     <fragen:FachlicheID>FLAGDOL01</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL01</fragen:TechnischeID>
+                     <fragen:Text>Wurden Sie in den vergangenen 5 Jahren von Ärzten oder Therapeuten beraten, untersucht oder behandelt? Und handelte es sich dabei um Krankheiten, Beeinträchtigungen oder Beschwerden, die länger als 30 Tage gedauert haben oder mindestens 2-mal innerhalb eines Zeitraums von 12 Monaten vorkamen oder noch andauern?</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:AntwortJaNein>
+                        <fragen:Entscheidung>true</fragen:Entscheidung>
+                     </fragen:AntwortJaNein>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL01</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>DOL01</fragen:FachlicheID>
+                     <fragen:Text>Ging es dabei um</fragen:Text>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                        <fragen:FachlicheID>FLAGDOL01_SEHSTOERUNGEN</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_SEHSTOERUNGEN</fragen:TechnischeID>
+                        <fragen:Text>Sehstörungen, die Sie nicht durch eine Sehhilfe ausgleichen können?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:AntwortJaNein>
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:AntwortJaNein>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                        <fragen:FachlicheID>FLAGDOL01_HOERSTOERUNGEN</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_HOERSTOERUNGEN</fragen:TechnischeID>
+                        <fragen:Text>Hörstörungen, die Sie nicht mit einem Hörgerät ausgleichen können?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:AntwortJaNein>
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:AntwortJaNein>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                        <fragen:FachlicheID>FLAGDOL01_SPRACHVERMOEGEN</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_SPRACHVERMOEGEN</fragen:TechnischeID>
+                        <fragen:Text>Ihre Konzentration, Ihr Gedächtnis oder Ihr Sprachvermögen?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:AntwortJaNein>
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:AntwortJaNein>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                        <fragen:FachlicheID>FLAGDOL01_BEWEGUNGSAPPARAT</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_BEWEGUNGSAPPARAT</fragen:TechnischeID>
+                        <fragen:Text>Ihren Bewegungsapparat, zum Beispiel die Wirbelsäule, die Beine einschließlich der Füße, die Schultern, Arme einschließlich Hände und Finger?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:AntwortJaNein>
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:AntwortJaNein>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                        <fragen:FachlicheID>FLAGDOL01_ORGANE</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_ORGANE</fragen:TechnischeID>
+                        <fragen:Text>Ihr Herz, Ihre Lunge oder Ihre Haut?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:AntwortJaNein>
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:AntwortJaNein>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                        <fragen:FachlicheID>FLAGDOL01_GLEICHGEWICHTSCHWINDEL</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_GLEICHGEWICHTSCHWINDEL</fragen:TechnischeID>
+                        <fragen:Text>Gleichgewichtsstörungen oder Schwindel?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:AntwortJaNein>
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:AntwortJaNein>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                        <fragen:FachlicheID>FLAGDOL01_HIV</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_HIV</fragen:TechnischeID>
+                        <fragen:Text>eine festgestellte HIV-Infektion?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:AntwortJaNein>
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:AntwortJaNein>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageJaNein">
+                        <fragen:FachlicheID>FLAGDOL01_ALKOHOLDROGEN</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_ALKOHOLDROGEN</fragen:TechnischeID>
+                        <fragen:Text>eine Alkohol- oder Drogenabhängigkeit?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:AntwortJaNein>
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:AntwortJaNein>
+                     </fragen:EinfacheFrage>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL01.DOL01.FLAGDOL01_SEHSTOERUNGEN</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>A06</fragen:FachlicheID>
+                     <fragen:Text>Welcher Arzt, Heilbehandler oder Therapeut kann zu den von Ihnen mit "ja" beantworteten Gesundheitsfragen nähere Angaben machen?</fragen:Text>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_A</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_SEHSTOERUNGEN.A06[1].A06_A</fragen:TechnischeID>
+                        <fragen:Text>Art der Erkrankung, Beschwerden, Untersuchung, Beratung, Behandlung oder Operation</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                        <fragen:AntwortText>
+                           <fragen:Freitext>1A Art</fragen:Freitext>
+                        </fragen:AntwortText>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_B</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_SEHSTOERUNGEN.A06[1].A06_B</fragen:TechnischeID>
+                        <fragen:Text>Wann?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                        <fragen:AntwortText>
+                           <fragen:Freitext>1A Wann</fragen:Freitext>
+                        </fragen:AntwortText>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_C</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_SEHSTOERUNGEN.A06[1].A06_C</fragen:TechnischeID>
+                        <fragen:Text>Wie lange?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                        <fragen:AntwortText>
+                           <fragen:Freitext>1A Dauer</fragen:Freitext>
+                        </fragen:AntwortText>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_D</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_SEHSTOERUNGEN.A06[1].A06_D</fragen:TechnischeID>
+                        <fragen:Text>Heutige Folgen</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                        <fragen:AntwortText>
+                           <fragen:Freitext>1A Folgen</fragen:Freitext>
+                        </fragen:AntwortText>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_E</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_SEHSTOERUNGEN.A06[1].A06_E</fragen:TechnischeID>
+                        <fragen:Text>Name und Anschrift der behandelnden Ärzte, Heilbehandler, Therapeuten, Krankenhäuser, Heilstätten</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                        <fragen:AntwortText>
+                           <fragen:Freitext>1A Behandler</fragen:Freitext>
+                        </fragen:AntwortText>
+                     </fragen:EinfacheFrage>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL01.DOL01.FLAGDOL01_HOERSTOERUNGEN</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>A06</fragen:FachlicheID>
+                     <fragen:Text>Welcher Arzt, Heilbehandler oder Therapeut kann zu den von Ihnen mit "ja" beantworteten Gesundheitsfragen nähere Angaben machen?</fragen:Text>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_A</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_HOERSTOERUNGEN.A06[1].A06_A</fragen:TechnischeID>
+                        <fragen:Text>Art der Erkrankung, Beschwerden, Untersuchung, Beratung, Behandlung oder Operation</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_B</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_HOERSTOERUNGEN.A06[1].A06_B</fragen:TechnischeID>
+                        <fragen:Text>Wann?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_C</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_HOERSTOERUNGEN.A06[1].A06_C</fragen:TechnischeID>
+                        <fragen:Text>Wie lange?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_D</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_HOERSTOERUNGEN.A06[1].A06_D</fragen:TechnischeID>
+                        <fragen:Text>Heutige Folgen</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_E</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_HOERSTOERUNGEN.A06[1].A06_E</fragen:TechnischeID>
+                        <fragen:Text>Name und Anschrift der behandelnden Ärzte, Heilbehandler, Therapeuten, Krankenhäuser, Heilstätten</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL01.DOL01.FLAGDOL01_SPRACHVERMOEGEN</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>A06</fragen:FachlicheID>
+                     <fragen:Text>Welcher Arzt, Heilbehandler oder Therapeut kann zu den von Ihnen mit "ja" beantworteten Gesundheitsfragen nähere Angaben machen?</fragen:Text>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_A</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_SPRACHVERMOEGEN.A06[1].A06_A</fragen:TechnischeID>
+                        <fragen:Text>Art der Erkrankung, Beschwerden, Untersuchung, Beratung, Behandlung oder Operation</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_B</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_SPRACHVERMOEGEN.A06[1].A06_B</fragen:TechnischeID>
+                        <fragen:Text>Wann?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_SPRACHVERMOEGEN.A06[1].A06_C</fragen:TechnischeID>
+                        <fragen:Text>Wie lange?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_D</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_SPRACHVERMOEGEN.A06[1].A06_D</fragen:TechnischeID>
+                        <fragen:Text>Heutige Folgen</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_E</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_SPRACHVERMOEGEN.A06[1].A06_E</fragen:TechnischeID>
+                        <fragen:Text>Name und Anschrift der behandelnden Ärzte, Heilbehandler, Therapeuten, Krankenhäuser, Heilstätten</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL01.DOL01.FLAGDOL01_BEWEGUNGSAPPARAT</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>A06</fragen:FachlicheID>
+                     <fragen:Text>Welcher Arzt, Heilbehandler oder Therapeut kann zu den von Ihnen mit "ja" beantworteten Gesundheitsfragen nähere Angaben machen?</fragen:Text>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_A</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_BEWEGUNGSAPPARAT.A06[1].A06_A</fragen:TechnischeID>
+                        <fragen:Text>Art der Erkrankung, Beschwerden, Untersuchung, Beratung, Behandlung oder Operation</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_B</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_BEWEGUNGSAPPARAT.A06[1].A06_B</fragen:TechnischeID>
+                        <fragen:Text>Wann?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_C</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_BEWEGUNGSAPPARAT.A06[1].A06_C</fragen:TechnischeID>
+                        <fragen:Text>Wie lange?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_D</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_BEWEGUNGSAPPARAT.A06[1].A06_D</fragen:TechnischeID>
+                        <fragen:Text>Heutige Folgen</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_E</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_BEWEGUNGSAPPARAT.A06[1].A06_E</fragen:TechnischeID>
+                        <fragen:Text>Name und Anschrift der behandelnden Ärzte, Heilbehandler, Therapeuten, Krankenhäuser, Heilstätten</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL01.DOL01.FLAGDOL01_ORGANE</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>A06</fragen:FachlicheID>
+                     <fragen:Text>Welcher Arzt, Heilbehandler oder Therapeut kann zu den von Ihnen mit "ja" beantworteten Gesundheitsfragen nähere Angaben machen?</fragen:Text>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_A</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_ORGANE.A06[1].A06_A</fragen:TechnischeID>
+                        <fragen:Text>Art der Erkrankung, Beschwerden, Untersuchung, Beratung, Behandlung oder Operation</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_B</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_ORGANE.A06[1].A06_B</fragen:TechnischeID>
+                        <fragen:Text>Wann?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_C</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_ORGANE.A06[1].A06_C</fragen:TechnischeID>
+                        <fragen:Text>Wie lange?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_D</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_ORGANE.A06[1].A06_D</fragen:TechnischeID>
+                        <fragen:Text>Heutige Folgen</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_E</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_ORGANE.A06[1].A06_E</fragen:TechnischeID>
+                        <fragen:Text>Name und Anschrift der behandelnden Ärzte, Heilbehandler, Therapeuten, Krankenhäuser, Heilstätten</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL01.DOL01.FLAGDOL01_GLEICHGEWICHTSCHWINDEL</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>A06</fragen:FachlicheID>
+                     <fragen:Text>Welcher Arzt, Heilbehandler oder Therapeut kann zu den von Ihnen mit "ja" beantworteten Gesundheitsfragen nähere Angaben machen?</fragen:Text>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_A</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_GLEICHGEWICHTSCHWINDEL.A06[1].A06_A</fragen:TechnischeID>
+                        <fragen:Text>Art der Erkrankung, Beschwerden, Untersuchung, Beratung, Behandlung oder Operation</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_B</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_GLEICHGEWICHTSCHWINDEL.A06[1].A06_B</fragen:TechnischeID>
+                        <fragen:Text>Wann?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_C</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_GLEICHGEWICHTSCHWINDEL.A06[1].A06_C</fragen:TechnischeID>
+                        <fragen:Text>Wie lange?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_D</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_GLEICHGEWICHTSCHWINDEL.A06[1].A06_D</fragen:TechnischeID>
+                        <fragen:Text>Heutige Folgen</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_E</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_GLEICHGEWICHTSCHWINDEL.A06[1].A06_E</fragen:TechnischeID>
+                        <fragen:Text>Name und Anschrift der behandelnden Ärzte, Heilbehandler, Therapeuten, Krankenhäuser, Heilstätten</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL01.DOL01.FLAGDOL01_HIV</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>A06</fragen:FachlicheID>
+                     <fragen:Text>Welcher Arzt, Heilbehandler oder Therapeut kann zu den von Ihnen mit "ja" beantworteten Gesundheitsfragen nähere Angaben machen?</fragen:Text>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_A</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_HIV.A06[1].A06_A</fragen:TechnischeID>
+                        <fragen:Text>Art der Erkrankung, Beschwerden, Untersuchung, Beratung, Behandlung oder Operation</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_B</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_HIV.A06[1].A06_B</fragen:TechnischeID>
+                        <fragen:Text>Wann?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_C</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_HIV.A06[1].A06_C</fragen:TechnischeID>
+                        <fragen:Text>Wie lange?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_D</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_HIV.A06[1].A06_D</fragen:TechnischeID>
+                        <fragen:Text>Heutige Folgen</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_E</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_HIV.A06[1].A06_E</fragen:TechnischeID>
+                        <fragen:Text>Name und Anschrift der behandelnden Ärzte, Heilbehandler, Therapeuten, Krankenhäuser, Heilstätten</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL01.DOL01.FLAGDOL01_ALKOHOLDROGEN</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>A06</fragen:FachlicheID>
+                     <fragen:Text>Welcher Arzt, Heilbehandler oder Therapeut kann zu den von Ihnen mit "ja" beantworteten Gesundheitsfragen nähere Angaben machen?</fragen:Text>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_A</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_ALKOHOLDROGEN.A06[1].A06_A</fragen:TechnischeID>
+                        <fragen:Text>Art der Erkrankung, Beschwerden, Untersuchung, Beratung, Behandlung oder Operation</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_B</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_ALKOHOLDROGEN.A06[1].A06_B</fragen:TechnischeID>
+                        <fragen:Text>Wann?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_C</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_ALKOHOLDROGEN.A06[1].A06_C</fragen:TechnischeID>
+                        <fragen:Text>Wie lange?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_D</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_ALKOHOLDROGEN.A06[1].A06_D</fragen:TechnischeID>
+                        <fragen:Text>Heutige Folgen</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_E</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL01.DOL01.FLAGDOL01_ALKOHOLDROGEN.A06[1].A06_E</fragen:TechnischeID>
+                        <fragen:Text>Name und Anschrift der behandelnden Ärzte, Heilbehandler, Therapeuten, Krankenhäuser, Heilstätten</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                     <fragen:FachlicheID>FLAGDOL02</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL02</fragen:TechnischeID>
+                     <fragen:Text>Befanden Sie sich in den vergangenen 5 Jahren in einer medizinischen Rehabilitationsmaßnahme, einer Kur oder einer stationären Behandlung oder wurde so eine Maßnahme beantragt?</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:AntwortJaNein>
+                        <fragen:Entscheidung>true</fragen:Entscheidung>
+                     </fragen:AntwortJaNein>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageText">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL02</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>DOL02_NAEHEREANGABEN</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL02.DOL02_NAEHEREANGABEN</fragen:TechnischeID>
+                     <fragen:Text>Falls &#8222;ja&#8220;, machen Sie bitte nähere Angaben:</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     <fragen:AntwortText>
+                        <fragen:Freitext>Nähere Angaben 02</fragen:Freitext>
+                     </fragen:AntwortText>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                     <fragen:FachlicheID>FLAGDOL03</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL03</fragen:TechnischeID>
+                     <fragen:Text>Wurde Ihnen in den vergangenen 5 Jahren für einen Zeitraum von mehr als 30 Tagen ein Medikament verschrieben bzw. haben Sie über einen Zeitraum von mehr als 30 Tagen ein Medikament eingenommen oder nehmen Sie aktuell ein Medikament?</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:AntwortJaNein>
+                        <fragen:Entscheidung>true</fragen:Entscheidung>
+                     </fragen:AntwortJaNein>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageText">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL03</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>DOL03_NAEHEREANGABEN</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL03.DOL03_NAEHEREANGABEN</fragen:TechnischeID>
+                     <fragen:Text>Nennen Sie uns bitte die Medikamente:</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     <fragen:AntwortText>
+                        <fragen:Freitext>Nähere Angaben 03</fragen:Freitext>
+                     </fragen:AntwortText>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                     <fragen:FachlicheID>FLAGDOL04_GDB_MDE_GDS</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL04_GDB_MDE_GDS</fragen:TechnischeID>
+                     <fragen:Text>einen Grad der Behinderung (GdB), eine Minderung der Erwerbsfähigkeit (MdE) oder einen Grad der Schädigungsfolgen (GdS),</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:AntwortJaNein>
+                        <fragen:Entscheidung>true</fragen:Entscheidung>
+                     </fragen:AntwortJaNein>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                     <fragen:FachlicheID>FLAGDOL04_PFLEGESTUFE_GRAD</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL04_PFLEGESTUFE_GRAD</fragen:TechnischeID>
+                     <fragen:Text>eine Pflegestufe oder einen Pflegegrad,</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:AntwortJaNein>
+                        <fragen:Entscheidung>true</fragen:Entscheidung>
+                     </fragen:AntwortJaNein>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                     <fragen:FachlicheID>FLAGDOL04_BESTELLERBETREUER</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL04_BESTELLERBETREUER</fragen:TechnischeID>
+                     <fragen:Text>einen gerichtlich bestellten Betreuer,</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:AntwortJaNein>
+                        <fragen:Entscheidung>true</fragen:Entscheidung>
+                     </fragen:AntwortJaNein>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                     <fragen:FachlicheID>FLAGDOL04_RENTEGESUNDHEITLICHEGRUENDE</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL04_RENTEGESUNDHEITLICHEGRUENDE</fragen:TechnischeID>
+                     <fragen:Text>oder beziehen Sie eine Rente aus gesundheitlichen Gründen,</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:AntwortJaNein>
+                        <fragen:Entscheidung>true</fragen:Entscheidung>
+                     </fragen:AntwortJaNein>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                     <fragen:FachlicheID>FLAGDOL04_ANTRAGGESTELLT</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL04_ANTRAGGESTELLT</fragen:TechnischeID>
+                     <fragen:Text>oder wurde in den vergangenen zwölf Monaten ein Antrag für einen der oben genannten Punkte gestellt?</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:AntwortJaNein>
+                        <fragen:Entscheidung>true</fragen:Entscheidung>
+                     </fragen:AntwortJaNein>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                     <fragen:FachlicheID>FLAGDOL05</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL05</fragen:TechnischeID>
+                     <fragen:Text>Wurden Sie in den vergangenen 5 Jahren wegen psychischer Krankheiten, Störungen oder Beschwerden von einem Arzt oder Therapeuten beraten, untersucht oder behandelt oder zu einem Facharzt überwiesen?</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:AntwortJaNein>
+                        <fragen:Entscheidung>true</fragen:Entscheidung>
+                     </fragen:AntwortJaNein>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                     <fragen:FachlicheID>FLAGDOL06_GEHIRN_NERVEN</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL06_GEHIRN_NERVEN</fragen:TechnischeID>
+                     <fragen:Text>Beschwerden, die das Gehirn oder die Nerven betreffen, wie zum Beispiel Migräne, Epilepsie oder Multiple Sklerose?</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:AntwortJaNein>
+                        <fragen:Entscheidung>true</fragen:Entscheidung>
+                     </fragen:AntwortJaNein>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                     <fragen:FachlicheID>FLAGDOL06_BESCHWERDEN_MAGEN_DARM_ETC</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL06_BESCHWERDEN_MAGEN_DARM_ETC</fragen:TechnischeID>
+                     <fragen:Text>Beschwerden, die den Magen, den Darm, die Leber, die Gallenblase, die Bauchspeicheldrüse oder die Milz betreffen, wie zum Beispiel Gastritis, Morbus Crohn, Colitis Ulcerosa, Pankreatitis oder erhöhte Leberwerte?</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:AntwortJaNein>
+                        <fragen:Entscheidung>true</fragen:Entscheidung>
+                     </fragen:AntwortJaNein>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                     <fragen:FachlicheID>FLAGDOL06_ALLGERGIEN</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL06_ALLGERGIEN</fragen:TechnischeID>
+                     <fragen:Text>Allergien, wie zum Beispiel Heuschnupfen?</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:AntwortJaNein>
+                        <fragen:Entscheidung>true</fragen:Entscheidung>
+                     </fragen:AntwortJaNein>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                     <fragen:FachlicheID>FLAGDOL06_BESCHWERDEN_STOFFWECHSEL_ETC</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL06_BESCHWERDEN_STOFFWECHSEL_ETC</fragen:TechnischeID>
+                     <fragen:Text>Beschwerden, die den Stoffwechsel, die Nieren- und Harnwege oder die Drüsen betreffen, wie zum Beispiel Gicht, Diabetes Mellitus, Harnwegsentzündungen oder Lymphome?</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:AntwortJaNein>
+                        <fragen:Entscheidung>true</fragen:Entscheidung>
+                     </fragen:AntwortJaNein>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                     <fragen:FachlicheID>FLAGDOL06_AUTOIMMUNKRANKHEITEN</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL06_AUTOIMMUNKRANKHEITEN</fragen:TechnischeID>
+                     <fragen:Text>Autoimmunerkrankungen, wie zum Beispiel Lupus erythematodes, theuma, Morbus-Bechterew oder Polyarthritis?</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:AntwortJaNein>
+                        <fragen:Entscheidung>true</fragen:Entscheidung>
+                     </fragen:AntwortJaNein>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_FrageJaNein">
+                     <fragen:FachlicheID>FLAGDOL06_KREBS_TUMORE_GEWEBSNEUBILDUNGEN</fragen:FachlicheID>
+                     <fragen:TechnischeID>VP.FLAGDOL06_KREBS_TUMORE_GEWEBSNEUBILDUNGEN</fragen:TechnischeID>
+                     <fragen:Text>Krebs, Tumoren oder Gewebsneubildungen, wie zum Beispiel Karziom, Melanom oder Myom?</fragen:Text>
+                     <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                     <fragen:AntwortJaNein>
+                        <fragen:Entscheidung>true</fragen:Entscheidung>
+                     </fragen:AntwortJaNein>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL06_GEHIRN_NERVEN</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>A06_2</fragen:FachlicheID>
+                     <fragen:Text>Welcher Arzt, Heilbehandler oder Therapeut kann zu den von Ihnen mit "ja" beantworteten Gesundheitsfragen nähere Angaben machen?</fragen:Text>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_A</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_GEHIRN_NERVEN.A06_2[1].A06_2_A</fragen:TechnischeID>
+                        <fragen:Text>Art der Erkrankung, Beschwerden, Untersuchung, Beratung, Behandlung oder Operation</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                        <fragen:AntwortText>
+                           <fragen:Freitext>6A Art</fragen:Freitext>
+                        </fragen:AntwortText>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_B</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_GEHIRN_NERVEN.A06_2[1].A06_2_B</fragen:TechnischeID>
+                        <fragen:Text>Wann?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                        <fragen:AntwortText>
+                           <fragen:Freitext>6A Wann</fragen:Freitext>
+                        </fragen:AntwortText>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_C</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_GEHIRN_NERVEN.A06_2[1].A06_2_C</fragen:TechnischeID>
+                        <fragen:Text>Wie lange?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                        <fragen:AntwortText>
+                           <fragen:Freitext>6A Dauer</fragen:Freitext>
+                        </fragen:AntwortText>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_D</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_GEHIRN_NERVEN.A06_2[1].A06_2_D</fragen:TechnischeID>
+                        <fragen:Text>Heutige Folgen</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                        <fragen:AntwortText>
+                           <fragen:Freitext>6A Folgen</fragen:Freitext>
+                        </fragen:AntwortText>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_E</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_GEHIRN_NERVEN.A06_2[1].A06_2_E</fragen:TechnischeID>
+                        <fragen:Text>Name und Anschrift der behandelnden Ärzte, Heilbehandler, Therapeuten, Krankenhäuser, Heilstätten</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                        <fragen:AntwortText>
+                           <fragen:Freitext>6A Behandler</fragen:Freitext>
+                        </fragen:AntwortText>
+                     </fragen:EinfacheFrage>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL06_BESCHWERDEN_MAGEN_DARM_ETC</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>A06_2</fragen:FachlicheID>
+                     <fragen:Text>Welcher Arzt, Heilbehandler oder Therapeut kann zu den von Ihnen mit "ja" beantworteten Gesundheitsfragen nähere Angaben machen?</fragen:Text>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_A</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_BESCHWERDEN_MAGEN_DARM_ETC.A06_2[1].A06_2_A</fragen:TechnischeID>
+                        <fragen:Text>Art der Erkrankung, Beschwerden, Untersuchung, Beratung, Behandlung oder Operation</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_B</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_BESCHWERDEN_MAGEN_DARM_ETC.A06_2[1].A06_2_B</fragen:TechnischeID>
+                        <fragen:Text>Wann?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_C</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_BESCHWERDEN_MAGEN_DARM_ETC.A06_2[1].A06_2_C</fragen:TechnischeID>
+                        <fragen:Text>Wie lange?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_D</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_BESCHWERDEN_MAGEN_DARM_ETC.A06_2[1].A06_2_D</fragen:TechnischeID>
+                        <fragen:Text>Heutige Folgen</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_E</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_BESCHWERDEN_MAGEN_DARM_ETC.A06_2[1].A06_2_E</fragen:TechnischeID>
+                        <fragen:Text>Name und Anschrift der behandelnden Ärzte, Heilbehandler, Therapeuten, Krankenhäuser, Heilstätten</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL06_ALLGERGIEN</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>A06_2</fragen:FachlicheID>
+                     <fragen:Text>Welcher Arzt, Heilbehandler oder Therapeut kann zu den von Ihnen mit "ja" beantworteten Gesundheitsfragen nähere Angaben machen?</fragen:Text>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_A</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_ALLGERGIEN.A06_2[1].A06_2_A</fragen:TechnischeID>
+                        <fragen:Text>Art der Erkrankung, Beschwerden, Untersuchung, Beratung, Behandlung oder Operation</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_B</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_ALLGERGIEN.A06_2[1].A06_2_B</fragen:TechnischeID>
+                        <fragen:Text>Wann?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_C</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_ALLGERGIEN.A06_2[1].A06_2_C</fragen:TechnischeID>
+                        <fragen:Text>Wie lange?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_D</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_ALLGERGIEN.A06_2[1].A06_2_D</fragen:TechnischeID>
+                        <fragen:Text>Heutige Folgen</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_E</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_ALLGERGIEN.A06_2[1].A06_2_E</fragen:TechnischeID>
+                        <fragen:Text>Name und Anschrift der behandelnden Ärzte, Heilbehandler, Therapeuten, Krankenhäuser, Heilstätten</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL06_BESCHWERDEN_STOFFWECHSEL_ETC</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>A06_2</fragen:FachlicheID>
+                     <fragen:Text>Welcher Arzt, Heilbehandler oder Therapeut kann zu den von Ihnen mit "ja" beantworteten Gesundheitsfragen nähere Angaben machen?</fragen:Text>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_A</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_BESCHWERDEN_STOFFWECHSEL_ETC.A06_2[1].A06_2_A</fragen:TechnischeID>
+                        <fragen:Text>Art der Erkrankung, Beschwerden, Untersuchung, Beratung, Behandlung oder Operation</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_B</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_BESCHWERDEN_STOFFWECHSEL_ETC.A06_2[1].A06_2_B</fragen:TechnischeID>
+                        <fragen:Text>Wann?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_C</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_BESCHWERDEN_STOFFWECHSEL_ETC.A06_2[1].A06_2_C</fragen:TechnischeID>
+                        <fragen:Text>Wie lange?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_D</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_BESCHWERDEN_STOFFWECHSEL_ETC.A06_2[1].A06_2_D</fragen:TechnischeID>
+                        <fragen:Text>Heutige Folgen</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_E</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_BESCHWERDEN_STOFFWECHSEL_ETC.A06_2[1].A06_2_E</fragen:TechnischeID>
+                        <fragen:Text>Name und Anschrift der behandelnden Ärzte, Heilbehandler, Therapeuten, Krankenhäuser, Heilstätten</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL06_AUTOIMMUNKRANKHEITEN</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>A06_2</fragen:FachlicheID>
+                     <fragen:Text>Welcher Arzt, Heilbehandler oder Therapeut kann zu den von Ihnen mit "ja" beantworteten Gesundheitsfragen nähere Angaben machen?</fragen:Text>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_A</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_AUTOIMMUNKRANKHEITEN.A06_2[1].A06_2_A</fragen:TechnischeID>
+                        <fragen:Text>Art der Erkrankung, Beschwerden, Untersuchung, Beratung, Behandlung oder Operation</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_B</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_AUTOIMMUNKRANKHEITEN.A06_2[1].A06_2_B</fragen:TechnischeID>
+                        <fragen:Text>Wann?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_C</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_AUTOIMMUNKRANKHEITEN.A06_2[1].A06_2_C</fragen:TechnischeID>
+                        <fragen:Text>Wie lange?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_D</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_AUTOIMMUNKRANKHEITEN.A06_2[1].A06_2_D</fragen:TechnischeID>
+                        <fragen:Text>Heutige Folgen</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_E</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_AUTOIMMUNKRANKHEITEN.A06_2[1].A06_2_E</fragen:TechnischeID>
+                        <fragen:Text>Name und Anschrift der behandelnden Ärzte, Heilbehandler, Therapeuten, Krankenhäuser, Heilstätten</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                  </fragen:Element>
+                  <fragen:Element xsi:type="fragen:CT_KomplexeFrage">
+                     <fragen:Bedingung xsi:type="fragen:CT_Abhaengigkeit">
+                        <fragen:LinkerOperand>VP.FLAGDOL06_KREBS_TUMORE_GEWEBSNEUBILDUNGEN</fragen:LinkerOperand>
+                        <fragen:Operator>gleich</fragen:Operator>
+                        <fragen:RechterOperand xsi:type="fragen:CT_AntwortJaNein">
+                           <fragen:Entscheidung>true</fragen:Entscheidung>
+                        </fragen:RechterOperand>
+                     </fragen:Bedingung>
+                     <fragen:FachlicheID>A06_2</fragen:FachlicheID>
+                     <fragen:Text>Welcher Arzt, Heilbehandler oder Therapeut kann zu den von Ihnen mit "ja" beantworteten Gesundheitsfragen nähere Angaben machen?</fragen:Text>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_A</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_KREBS_TUMORE_GEWEBSNEUBILDUNGEN.A06_2[1].A06_2_A</fragen:TechnischeID>
+                        <fragen:Text>Art der Erkrankung, Beschwerden, Untersuchung, Beratung, Behandlung oder Operation</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_B</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_KREBS_TUMORE_GEWEBSNEUBILDUNGEN.A06_2[1].A06_2_B</fragen:TechnischeID>
+                        <fragen:Text>Wann?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_C</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_KREBS_TUMORE_GEWEBSNEUBILDUNGEN.A06_2[1].A06_2_C</fragen:TechnischeID>
+                        <fragen:Text>Wie lange?</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_D</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_KREBS_TUMORE_GEWEBSNEUBILDUNGEN.A06_2[1].A06_2_D</fragen:TechnischeID>
+                        <fragen:Text>Heutige Folgen</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                     <fragen:EinfacheFrage xsi:type="fragen:CT_FrageText">
+                        <fragen:FachlicheID>A06_2_E</fragen:FachlicheID>
+                        <fragen:TechnischeID>VP.FLAGDOL06_KREBS_TUMORE_GEWEBSNEUBILDUNGEN.A06_2[1].A06_2_E</fragen:TechnischeID>
+                        <fragen:Text>Name und Anschrift der behandelnden Ärzte, Heilbehandler, Therapeuten, Krankenhäuser, Heilstätten</fragen:Text>
+                        <fragen:FreitextErlaubt>false</fragen:FreitextErlaubt>
+                        <fragen:MaximaleTextlaenge>2147483647</fragen:MaximaleTextlaenge>
+                     </fragen:EinfacheFrage>
+                  </fragen:Element>
+               </pm-leben:Fragenkomplex>
+            </partner:ZusaetzlichePartnerdaten>
+            <partner:Bankverbindung>
+               <partner:Einzugsermaechtigung>false</partner:Einzugsermaechtigung>
+            </partner:Bankverbindung>
+            <partner:Vorname>A</partner:Vorname>
+            <partner:Geburtsdatum>2000-11-01</partner:Geburtsdatum>
+            <partner:Geschlecht>1</partner:Geschlecht>
+            <partner:Staatsangehoerigkeit>D</partner:Staatsangehoerigkeit>
+            <partner:Berufstaetigkeit>
+               <partner:Beruf>Softwareentwickler</partner:Beruf>
+            </partner:Berufstaetigkeit>
+         </tarif:Partner>
+         <tarif:Versicherungsnehmer>
+            <partner:PartnerID>1</partner:PartnerID>
+         </tarif:Versicherungsnehmer>
+         <tarif:Verkaufsprodukt>
+            <basis:Erweiterung xsi:type="vb-leben:CT_VerkaufsproduktErweiterung">
+               <vb-leben:Konsortium>Ohne</vb-leben:Konsortium>
+            </basis:Erweiterung>
+            <pm:Produkt xsi:type="pm-leben:CT_Produkt">
+               <basis:Erweiterung xsi:type="vb-leben:CT_ProduktErweiterung">
+                  <vb-leben:Tarifgruppe>Normal</vb-leben:Tarifgruppe>
+               </basis:Erweiterung>
+               <pm:GewuenschteZahlungsweise>8</pm:GewuenschteZahlungsweise>
+               <pm:Beitrag>
+                  <pm:ArtID xsi:type="dt:STE_BeitragBasis">01</pm:ArtID>
+                  <pm:Zahlungsweise>8</pm:Zahlungsweise>
+               </pm:Beitrag>
+               <pm:Versicherungsdauer>
+                  <allg:Beginn>2023-03-01T12:00</allg:Beginn>
+               </pm:Versicherungsdauer>
+               <pm:Paket xsi:type="dol:STE_PaketErweitert">B</pm:Paket>
+               <pm:Kennung>DGF</pm:Kennung>
+               <pm:Elementarprodukt xsi:type="pm-leben:CT_ArbeitskraftAbsicherung">
+                  <basis:Erweiterung xsi:type="vb-leben:CT_ArbeitskraftAbsicherungErweiterung">
+                     <vb-leben:Monatsgenau>true</vb-leben:Monatsgenau>
+                     <vb-leben:NachversicherungsgarantieBU>1000</vb-leben:NachversicherungsgarantieBU>
+                  </basis:Erweiterung>
+                  <pm:Versicherungsdauer>
+                     <allg:AnzahlJahre>45</allg:AnzahlJahre>
+                     <allg:AnzahlMonate>0</allg:AnzahlMonate>
+                  </pm:Versicherungsdauer>
+                  <pm:Dynamik>
+                     <pm:ArtID xsi:type="dt:STE_DynamikBasis">06</pm:ArtID>
+                     <pm:Frequenz xsi:type="dt:STE_FrequenzBasis">jaehrlich</pm:Frequenz>
+                     <pm:KategorieID>Leistung</pm:KategorieID>
+                  </pm:Dynamik>
+                  <vs-pm:VersicherungssummeOderLeistung>
+                     <vs-pm:ArtID xsi:type="dt:STE_VersicherungssummeOderLeistungBasis">GarantierteRente</vs-pm:ArtID>
+                     <vs-pm:Wert>500</vs-pm:Wert>
+                     <vs-pm:Werteinheit>20</vs-pm:Werteinheit>
+                     <vs-pm:Waehrung>EUR</vs-pm:Waehrung>
+                     <vs-pm:Auszahlungsweise>8</vs-pm:Auszahlungsweise>
+                  </vs-pm:VersicherungssummeOderLeistung>
+                  <vs-pm:Bezugsrecht>
+                     <vs-pm:Leistungsfall>Erlebensfall</vs-pm:Leistungsfall>
+                     <vs-pm:IndexBerechtigter>1</vs-pm:IndexBerechtigter>
+                  </vs-pm:Bezugsrecht>
+                  <vs-pm:Bezugsrecht>
+                     <vs-pm:Leistungsfall>Todesfall</vs-pm:Leistungsfall>
+                     <vs-pm:IndexBerechtigter>3</vs-pm:IndexBerechtigter>
+                  </vs-pm:Bezugsrecht>
+                  <pm-leben:IstHauptversicherung>true</pm-leben:IstHauptversicherung>
+                  <pm-leben:UeberschussverwendungVorLeistung xsi:type="dt:STE_UeberschussverwendungBasis">08</pm-leben:UeberschussverwendungVorLeistung>
+                  <pm-leben:Endalter>67</pm-leben:Endalter>
+                  <pm-leben:VersichertePerson>
+                     <partner:PartnerID>1</partner:PartnerID>
+                  </pm-leben:VersichertePerson>
+                  <pm-leben:Art xsi:type="vb-leben:STE_UnfaehigkeitsZusatzArtErweitert">RentePlus</pm-leben:Art>
+                  <pm-leben:Auspraegung xsi:type="dol:STE_UnfaehigkeitsZusatzAuspraegungErweitert">GF</pm-leben:Auspraegung>
+               </pm:Elementarprodukt>
+               <pm:Elementarprodukt xsi:type="pm-leben:CT_ArbeitskraftAbsicherung">
+                  <pm-leben:IstHauptversicherung>false</pm-leben:IstHauptversicherung>
+                  <pm-leben:VersichertePerson>
+                     <partner:PartnerID>1</partner:PartnerID>
+                  </pm-leben:VersichertePerson>
+                  <pm-leben:Art xsi:type="vb-leben:STE_UnfaehigkeitsZusatzArtErweitert">RentePlus</pm-leben:Art>
+                  <pm-leben:Auspraegung xsi:type="vb-leben:STE_UnfaehigkeitsZusatzAuspraegungErweitert">BUOption</pm-leben:Auspraegung>
+               </pm:Elementarprodukt>
+               <pm:Dynamik>
+                  <pm:KategorieID>Beitrag</pm:KategorieID>
+                  <pm:Hochrechnung>true</pm:Hochrechnung>
+               </pm:Dynamik>
+               <pm-leben:VorgabeBerechnung>
+                  <pm-leben:ArtID xsi:type="dt:STE_VorgabeBerechnungBasis">GarantierteRente</pm-leben:ArtID>
+                  <pm-leben:Kontext xsi:type="dt:STE_VorgabeBerechnungKontextBasis">ArbeitskraftAbsicherung</pm-leben:Kontext>
+               </pm-leben:VorgabeBerechnung>
+            </pm:Produkt>
+         </tarif:Verkaufsprodukt>
+         <tarif:BesondereVereinbarungen>keine</tarif:BesondereVereinbarungen>
+         <tarif:Unterschriftsverfahren>03</tarif:Unterschriftsverfahren>
+         <tarif:Antragsart>01</tarif:Antragsart>
+         <tarif:Beitragszahler>
+            <partner:PartnerID>1</partner:PartnerID>
+         </tarif:Beitragszahler>
+      </tarif:Antrag>
+   </tarif:Request>
+</tarif:getOrderQuestions>
